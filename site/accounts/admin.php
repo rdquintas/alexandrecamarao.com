@@ -6,7 +6,7 @@ password: >
   $2a$10$NJ.V9HKL1l1S8DC8SveZlOp1JtHeAaA1MqmWv2D8ywb3.0kPqteYm
 language: en
 role: admin
-token: e44315518a8dc6ae308e79ff8c27e0de763d2738
+token: a970b95e84776a38c8140360f33ccbd94670b33f
 history:
   - bibliography
   - artwork/teste
