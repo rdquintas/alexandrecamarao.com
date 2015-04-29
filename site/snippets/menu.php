@@ -13,19 +13,19 @@
       <?php if($p->title()->html() == "Artwork") { ?>
         <ul class="submenu">          
           <li>
-            <a href=<?php echo $p->url()."?tag=drawing"?>>Drawings</a>
+            <a href=<?php echo $p->url()."/tag:drawing"?>>Drawings</a>
           </li>
           <li>
-            <a href=<?php echo $p->url()."?tag=painting"?>>Paintings</a>
+            <a href=<?php echo $p->url()."/tag:painting"?>>Paintings</a>
           </li>
           <li>
-            <a href=<?php echo $p->url()."?tag=photographs"?>>Photographs</a>
+            <a href=<?php echo $p->url()."/tag:photographs"?>>Photographs</a>
           </li>
           <li>
-            <a href=<?php echo $p->url()."?tag=video"?>>Video</a>
+            <a href=<?php echo $p->url()."/tag:video"?>>Video</a>
           </li>
           <li>
-            <a href=<?php echo $p->url()."?tag=sound"?>>Sound</a>
+            <a href=<?php echo $p->url()."/tag:sound"?>>Sound</a>
           </li>                                        
         </ul>
       <?php } ?>  
@@ -33,10 +33,10 @@
       <?php if($p->title()->html() == "Exibithions") { ?>
         <ul class="submenu">          
           <li>
-            <a href=<?php echo $p->url()."?tag=solo"?>>Solo</a>
+            <a href=<?php echo $p->url()."/tag:solo"?>>Solo</a>
           </li>
           <li>
-            <a href=<?php echo $p->url()."?tag=group"?>>Group</a>
+            <a href=<?php echo $p->url()."/tag:group"?>>Group</a>
           </li>                                      
         </ul>
       <?php } ?> 
