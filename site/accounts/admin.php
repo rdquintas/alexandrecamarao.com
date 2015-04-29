@@ -7,3 +7,6 @@ password: >
 language: en
 role: admin
 token: e44315518a8dc6ae308e79ff8c27e0de763d2738
+history:
+  - artwork/teste
+  - exibithions
