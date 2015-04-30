@@ -3,7 +3,7 @@
 title: Artwork entry
 pages: true
 files: true
-fields: 
+fields: false
   title:
     label: Title
     type:  text
