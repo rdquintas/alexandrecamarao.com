@@ -1,10 +1,15 @@
-<?php if(!defined('KIRBY')) exit ?>
+<?php if (!defined('KIRBY')) {
+	exit;
+}
+?>
 
 title: Home
 pages: false
+files:
+    type: image
 fields:
   title:
-    label: Title
+    label: Title2
     type:  text
   text:
     label: Text
