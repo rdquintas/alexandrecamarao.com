@@ -12,6 +12,10 @@ fields:
     label: Title2
     type:  text
   text:
-    label: Text
+    label: Noticias
     type:  textarea
     size:  large
+  header:
+    label: Mostrar Noticias ?
+    type: checkbox
+    text: Queres mostrar a caixa das noticias na HOME page?
