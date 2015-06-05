@@ -6,12 +6,4 @@ Author: Ricardo Quintas
 
 ----
 
-Description: 
-
-----
-
-Keywords: 
-
-----
-
-Copyright: © 2015
+Copyright: © 2015 Ricardo Quintas - (link: http://www.ricardoquintas.com text: ricardoquintas.com)

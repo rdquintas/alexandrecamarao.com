@@ -6,15 +6,12 @@ fields:
   title:
     label: Title
     type:  text
+    readonly: true
   author:
     label: Author
     type:  text
-  description:
-    label: Description
-    type:  textarea
-  keywords:
-    label: Keywords
-    type:  tags
+    readonly: true
   copyright:
     label: Copyright
     type:  textarea
+    readonly: true
