@@ -121,22 +121,16 @@ class __TwigTemplate_a2d6b9eb8f01ac53bbac8f3c06b25d6eccbf62b68bd3dccd62eca08cabd
     {
         // line 12
         echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css-compiled/nucleus.css", 1 => 102), "method");
         // line 13
         echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css-compiled/template.css", 1 => 101), "method");
         // line 14
         echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css/custom.css", 1 => 100), "method");
         // line 15
         echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css/font-awesome.min.css", 1 => 100), "method");
         // line 16
         echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css/slidebars.min.css"), "method");
         // line 17
         echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css/slideme.css"), "method");
         // line 18
         echo "        ";
         if ((($this->getAttribute((isset($context["browser"]) ? $context["browser"] : null), "getBrowser", array()) == "msie") && ($this->getAttribute((isset($context["browser"]) ? $context["browser"] : null), "getVersion", array()) == 10))) {
@@ -151,13 +145,10 @@ class __TwigTemplate_a2d6b9eb8f01ac53bbac8f3c06b25d6eccbf62b68bd3dccd62eca08cabd
         if (((($this->getAttribute((isset($context["browser"]) ? $context["browser"] : null), "getBrowser", array()) == "msie") && ($this->getAttribute((isset($context["browser"]) ? $context["browser"] : null), "getVersion", array()) >= 8)) && ($this->getAttribute((isset($context["browser"]) ? $context["browser"] : null), "getVersion", array()) <= 9))) {
             // line 22
             echo "            ";
-            $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css/nucleus-ie9.css"), "method");
             // line 23
             echo "            ";
-            $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css/pure-0.5.0/grids-min.css"), "method");
             // line 24
             echo "            ";
-            $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://js/html5shiv-printshiv.min.js"), "method");
             // line 25
             echo "        ";
         }
@@ -173,16 +164,12 @@ class __TwigTemplate_a2d6b9eb8f01ac53bbac8f3c06b25d6eccbf62b68bd3dccd62eca08cabd
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "jquery", 1 => 101), "method");
         // line 31
         echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/modernizr.custom.71422.js", 1 => 100), "method");
         // line 32
         echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/deliver.js"), "method");
         // line 33
         echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/slidebars.min.js"), "method");
         // line 34
         echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/jquery.slideme2.js"), "method");
         // line 35
         echo "    ";
     }
@@ -315,6 +302,6 @@ class __TwigTemplate_a2d6b9eb8f01ac53bbac8f3c06b25d6eccbf62b68bd3dccd62eca08cabd
 
     public function getDebugInfo()
     {
-        return array (  293 => 80,  290 => 79,  286 => 69,  283 => 68,  280 => 67,  275 => 65,  270 => 70,  268 => 67,  265 => 66,  263 => 65,  258 => 64,  255 => 63,  250 => 61,  246 => 54,  243 => 53,  240 => 52,  235 => 51,  231 => 48,  228 => 47,  225 => 46,  218 => 56,  215 => 55,  212 => 52,  210 => 51,  206 => 49,  204 => 46,  198 => 45,  194 => 43,  191 => 42,  187 => 35,  184 => 34,  181 => 33,  178 => 32,  175 => 31,  172 => 30,  169 => 29,  165 => 26,  162 => 25,  159 => 24,  156 => 23,  153 => 22,  150 => 21,  147 => 20,  144 => 19,  141 => 18,  138 => 17,  135 => 16,  132 => 15,  129 => 14,  126 => 13,  123 => 12,  120 => 11,  112 => 36,  110 => 29,  104 => 27,  102 => 11,  97 => 9,  94 => 8,  92 => 7,  84 => 6,  81 => 5,  78 => 4,  72 => 91,  70 => 79,  66 => 77,  64 => 76,  58 => 72,  56 => 63,  53 => 62,  51 => 61,  48 => 60,  46 => 42,  41 => 40,  38 => 39,  36 => 4,  31 => 1,);
+        return array (  280 => 80,  277 => 79,  273 => 69,  270 => 68,  267 => 67,  262 => 65,  257 => 70,  255 => 67,  252 => 66,  250 => 65,  245 => 64,  242 => 63,  237 => 61,  233 => 54,  230 => 53,  227 => 52,  222 => 51,  218 => 48,  215 => 47,  212 => 46,  205 => 56,  202 => 55,  199 => 52,  197 => 51,  193 => 49,  191 => 46,  185 => 45,  181 => 43,  178 => 42,  174 => 35,  172 => 34,  170 => 33,  168 => 32,  166 => 31,  163 => 30,  160 => 29,  156 => 26,  153 => 25,  151 => 24,  149 => 23,  147 => 22,  144 => 21,  141 => 20,  138 => 19,  135 => 18,  133 => 17,  131 => 16,  129 => 15,  127 => 14,  125 => 13,  123 => 12,  120 => 11,  112 => 36,  110 => 29,  104 => 27,  102 => 11,  97 => 9,  94 => 8,  92 => 7,  84 => 6,  81 => 5,  78 => 4,  72 => 91,  70 => 79,  66 => 77,  64 => 76,  58 => 72,  56 => 63,  53 => 62,  51 => 61,  48 => 60,  46 => 42,  41 => 40,  38 => 39,  36 => 4,  31 => 1,);
     }
 }
