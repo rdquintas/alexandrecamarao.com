@@ -1,0 +1,17 @@
+name: zrq_camarao
+version: 1.0.0
+description: "ZRQ Camarao is a theme developed for alexandrecamarao.com"
+icon: newspaper-o
+author:
+  name: Ricardo Quintas
+  email: rqcenter-web@yahoo.com
+  url: http://www.ricardoquintas.com
+homepage: http://www.alexandrecamarao.com.com
+demo: http://www.alexandrecamarao.com.com
+keywords: camarao, ricardo, quintas, responsive, html5, css3
+bugs: 
+license: MIT
+
+form:
+  validation: strict
+  fields:
