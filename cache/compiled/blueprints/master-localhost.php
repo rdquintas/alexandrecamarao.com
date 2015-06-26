@@ -1,66 +1,50 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'checksum' => '2e0e617aa7fc3d41d59ddc368790de40:be3fb9d792cd9de7118b70b55ab9d4ee',
+    'checksum' => '8d489bd816d11737a305ca70a3c63e69:99c9801f538509c34f77ee8136757ce0',
     'files' => [
         'user/plugins' => [
             'plugins/archives' => [
                 'file' => 'user/plugins/archives/blueprints.yaml',
-                'modified' => 1435226652
-            ],
-            'plugins/breadcrumbs' => [
-                'file' => 'user/plugins/breadcrumbs/blueprints.yaml',
-                'modified' => 1435226652
+                'modified' => 1435313987
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/blueprints.yaml',
-                'modified' => 1435226653
-            ],
-            'plugins/feed' => [
-                'file' => 'user/plugins/feed/blueprints.yaml',
-                'modified' => 1435226654
-            ],
-            'plugins/jscomments' => [
-                'file' => 'user/plugins/jscomments/blueprints.yaml',
-                'modified' => 1435226654
+                'modified' => 1435313987
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
-                'modified' => 1435226654
-            ],
-            'plugins/relatedpages' => [
-                'file' => 'user/plugins/relatedpages/blueprints.yaml',
-                'modified' => 1435226655
+                'modified' => 1435313987
             ],
             'plugins/simplesearch' => [
                 'file' => 'user/plugins/simplesearch/blueprints.yaml',
-                'modified' => 1435226655
+                'modified' => 1435313987
             ],
             'plugins/simple_form' => [
                 'file' => 'user/plugins/simple_form/blueprints.yaml',
-                'modified' => 1435226655
+                'modified' => 1435313987
             ],
             'plugins/taxonomylist' => [
                 'file' => 'user/plugins/taxonomylist/blueprints.yaml',
-                'modified' => 1435226656
+                'modified' => 1435313987
             ]
         ],
         'system/blueprints/config' => [
             'media' => [
                 'file' => 'system/blueprints/config/media.yaml',
-                'modified' => 1435226599
+                'modified' => 1435313987
             ],
             'site' => [
                 'file' => 'system/blueprints/config/site.yaml',
-                'modified' => 1435226599
+                'modified' => 1435313987
             ],
             'streams' => [
                 'file' => 'system/blueprints/config/streams.yaml',
-                'modified' => 1435226599
+                'modified' => 1435313987
             ],
             'system' => [
                 'file' => 'system/blueprints/config/system.yaml',
-                'modified' => 1435226599
+                'modified' => 1435313987
             ]
         ]
     ],
@@ -178,48 +162,6 @@ return [
                 ],
                 'name' => 'plugins.archives.filter_combinator'
             ],
-            'plugins.breadcrumbs.enabled' => [
-                'type' => 'toggle',
-                'label' => 'Plugin status',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.breadcrumbs.enabled'
-            ],
-            'plugins.breadcrumbs.built_in_css' => [
-                'type' => 'toggle',
-                'label' => 'Use built in CSS',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.breadcrumbs.built_in_css'
-            ],
-            'plugins.breadcrumbs.show_all' => [
-                'type' => 'toggle',
-                'label' => 'Show even with one item',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.breadcrumbs.show_all'
-            ],
             'plugins.error.enabled' => [
                 'type' => 'toggle',
                 'label' => 'Plugin status',
@@ -234,68 +176,6 @@ return [
                 ],
                 'name' => 'plugins.error.enabled'
             ],
-            'plugins.feed.enabled' => [
-                'type' => 'toggle',
-                'label' => 'Plugin status',
-                'highlight' => 1,
-                'default' => 0,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.feed.enabled'
-            ],
-            'plugins.feed.count' => [
-                'type' => 'text',
-                'label' => 'Feed count',
-                'validate' => [
-                    'type' => 'int',
-                    'min' => 10,
-                    'max' => 1000
-                ],
-                'name' => 'plugins.feed.count'
-            ],
-            'plugins.feed.description' => [
-                'type' => 'textarea',
-                'label' => 'Description',
-                'name' => 'plugins.feed.description'
-            ],
-            'plugins.feed.lang' => [
-                'type' => 'text',
-                'label' => 'Feed language code',
-                'placeholder' => 'en-us',
-                'validate' => [
-                    'pattern' => '[a-zA-Z]{2,3}-a-zA-Z]{2,3}'
-                ],
-                'name' => 'plugins.feed.lang'
-            ],
-            'plugins.feed.length' => [
-                'type' => 'text',
-                'label' => 'Feed Length',
-                'validate' => [
-                    'type' => 'int',
-                    'min' => 10,
-                    'max' => 10000
-                ],
-                'name' => 'plugins.feed.length'
-            ],
-            'plugins.jscomments.enabled' => [
-                'type' => 'toggle',
-                'label' => 'Plugin status',
-                'highlight' => 1,
-                'default' => 0,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.jscomments.enabled'
-            ],
             'plugins.problems.enabled' => [
                 'type' => 'toggle',
                 'label' => 'Plugin status',
@@ -309,20 +189,6 @@ return [
                     'type' => 'bool'
                 ],
                 'name' => 'plugins.problems.enabled'
-            ],
-            'plugins.relatedpages.enabled' => [
-                'type' => 'toggle',
-                'label' => 'Plugin Status',
-                'highlight' => 1,
-                'default' => 0,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.relatedpages.enabled'
             ],
             'plugins.simplesearch.enabled' => [
                 'type' => 'toggle',
@@ -1470,29 +1336,11 @@ return [
                     'filters' => 'plugins.archives.filters',
                     'filter_combinator' => 'plugins.archives.filter_combinator'
                 ],
-                'breadcrumbs' => [
-                    'enabled' => 'plugins.breadcrumbs.enabled',
-                    'built_in_css' => 'plugins.breadcrumbs.built_in_css',
-                    'show_all' => 'plugins.breadcrumbs.show_all'
-                ],
                 'error' => [
                     'enabled' => 'plugins.error.enabled'
                 ],
-                'feed' => [
-                    'enabled' => 'plugins.feed.enabled',
-                    'count' => 'plugins.feed.count',
-                    'description' => 'plugins.feed.description',
-                    'lang' => 'plugins.feed.lang',
-                    'length' => 'plugins.feed.length'
-                ],
-                'jscomments' => [
-                    'enabled' => 'plugins.jscomments.enabled'
-                ],
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled'
-                ],
-                'relatedpages' => [
-                    'enabled' => 'plugins.relatedpages.enabled'
                 ],
                 'simplesearch' => [
                     'enabled' => 'plugins.simplesearch.enabled',

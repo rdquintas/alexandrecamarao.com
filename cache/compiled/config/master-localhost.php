@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'timestamp' => 1435229557,
-    'checksum' => '7bce06392224f73a8b74172500ce00d1',
+    'timestamp' => 1435320481,
+    'checksum' => '3257dfe6c55760ad75c4efe1f94d6333',
     'data' => [
         'streams' => [
             'schemes' => [
@@ -134,107 +134,15 @@ return [
                     'category' => 'blog'
                 ]
             ],
-            'breadcrumbs' => [
-                'enabled' => true,
-                'show_all' => true,
-                'built_in_css' => true,
-                'include_home' => true,
-                'icon_home' => '',
-                'icon_divider_classes' => 'fa fa-angle-right',
-                'link_trailing' => false
-            ],
             'error' => [
                 'enabled' => true,
                 'routes' => [
                     404 => '/error'
                 ]
             ],
-            'feed' => [
-                'enabled' => true,
-                'limit' => 10,
-                'description' => 'My Feed Description',
-                'lang' => 'en-us',
-                'length' => 500
-            ],
-            'jscomments' => [
-                'enabled' => false,
-                'provider' => '',
-                'providers' => [
-                    'disqus' => [
-                        'shortname' => ''
-                    ],
-                    'intensedebate' => [
-                        'acct' => ''
-                    ],
-                    'facebook' => [
-                        'appId' => '',
-                        'lang' => 'en_US',
-                        'numposts' => 5,
-                        'colorscheme' => 'light',
-                        'width' => '100%'
-                    ],
-                    'muut' => [
-                        'forum' => '',
-                        'channel' => 'General',
-                        'show_online' => false,
-                        'show_title' => false,
-                        'upload' => false,
-                        'share' => true,
-                        'widget' => false,
-                        'lang' => 'en'
-                    ]
-                ]
-            ],
             'problems' => [
                 'enabled' => true,
                 'built_in_css' => true
-            ],
-            'relatedpages' => [
-                'enabled' => true,
-                'limit' => 5,
-                'show_score' => true,
-                'score_threshold' => 20,
-                'filter' => [
-                    'items' => [
-                        '@page' => '/blog'
-                    ],
-                    'order' => [
-                        'by' => 'date',
-                        'dir' => 'desc'
-                    ]
-                ],
-                'page_in_filter' => true,
-                'explicit_pages' => [
-                    'process' => true,
-                    'score' => 100
-                ],
-                'taxonomy_match' => [
-                    'taxonomy' => 'tag',
-                    'taxonomy_taxonomy' => [
-                        'process' => true,
-                        'score_scale' => [
-                            1 => 50,
-                            2 => 75,
-                            3 => 100
-                        ]
-                    ],
-                    'taxonomy_content' => [
-                        'process' => true,
-                        'score_scale' => [
-                            1 => 20,
-                            2 => 30,
-                            3 => 45,
-                            4 => 60,
-                            5 => 70,
-                            6 => 80,
-                            7 => 90,
-                            8 => 100
-                        ]
-                    ]
-                ],
-                'content_match' => [
-                    'process' => true
-                ]
             ],
             'simplesearch' => [
                 'enabled' => true,
@@ -289,6 +197,35 @@ return [
             'taxonomylist' => [
                 'enabled' => true,
                 'route' => '/blog'
+            ],
+            'jscomments' => [
+                'enabled' => false,
+                'provider' => '',
+                'providers' => [
+                    'disqus' => [
+                        'shortname' => ''
+                    ],
+                    'intensedebate' => [
+                        'acct' => ''
+                    ],
+                    'facebook' => [
+                        'appId' => '',
+                        'lang' => 'en_US',
+                        'numposts' => 5,
+                        'colorscheme' => 'light',
+                        'width' => '100%'
+                    ],
+                    'muut' => [
+                        'forum' => '',
+                        'channel' => 'General',
+                        'show_online' => false,
+                        'show_title' => false,
+                        'upload' => false,
+                        'share' => true,
+                        'widget' => false,
+                        'lang' => 'en'
+                    ]
+                ]
             ]
         ],
         'media' => [

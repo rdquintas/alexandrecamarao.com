@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'user/plugins/taxonomylist/blueprints.yaml',
-    'modified' => 1435226656,
+    'modified' => 1435313987,
     'data' => [
         'name' => 'Taxonomy List',
         'version' => '1.2.4',
