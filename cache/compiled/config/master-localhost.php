@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'timestamp' => 1435320481,
-    'checksum' => '3257dfe6c55760ad75c4efe1f94d6333',
+    'timestamp' => 1435331978,
+    'checksum' => '9e76465036b1a90c5a5a353eac3cf197',
     'data' => [
         'streams' => [
             'schemes' => [
@@ -119,21 +119,6 @@ return [
             ]
         ],
         'plugins' => [
-            'archives' => [
-                'enabled' => true,
-                'built_in_css' => true,
-                'date_display_format' => 'F Y',
-                'show_count' => true,
-                'limit' => 12,
-                'order' => [
-                    'by' => 'date',
-                    'dir' => 'desc'
-                ],
-                'filter_combinator' => 'and',
-                'filters' => [
-                    'category' => 'blog'
-                ]
-            ],
             'error' => [
                 'enabled' => true,
                 'routes' => [
@@ -143,60 +128,6 @@ return [
             'problems' => [
                 'enabled' => true,
                 'built_in_css' => true
-            ],
-            'simplesearch' => [
-                'enabled' => true,
-                'built_in_css' => true,
-                'route' => '/search',
-                'template' => 'simplesearch_results',
-                'filters' => [
-                    'category' => 'blog'
-                ],
-                'filter_combinator' => 'and'
-            ],
-            'simple_form' => [
-                'enabled' => false,
-                'token' => '',
-                'template_file' => 'simple_form',
-                'fields' => [
-                    'name' => [
-                        'type' => 'text',
-                        'title' => 'Name',
-                        'default' => '',
-                        'placeholder' => 'Add your name',
-                        'class' => '',
-                        'required' => true
-                    ],
-                    'email' => [
-                        'type' => 'email',
-                        'title' => 'Email',
-                        'default' => '',
-                        'placeholder' => 'Add your email',
-                        'class' => '',
-                        'required' => true
-                    ],
-                    'message' => [
-                        'type' => 'textarea',
-                        'title' => 'Message',
-                        'default' => '',
-                        'placeholder' => 'Add your message',
-                        'class' => '',
-                        'required' => true
-                    ],
-                    'submit' => [
-                        'type' => 'submit',
-                        'title' => 'Submit',
-                        'default' => '',
-                        'class' => ''
-                    ]
-                ],
-                'messages' => [
-                    'success' => 'Your message has been sent.'
-                ]
-            ],
-            'taxonomylist' => [
-                'enabled' => true,
-                'route' => '/blog'
             ],
             'jscomments' => [
                 'enabled' => false,
@@ -418,7 +349,7 @@ return [
                 'alias' => '/home'
             ],
             'pages' => [
-                'theme' => 'zrq_camarao',
+                'theme' => 'zrq',
                 'order' => [
                     'by' => 'default',
                     'dir' => 'asc'

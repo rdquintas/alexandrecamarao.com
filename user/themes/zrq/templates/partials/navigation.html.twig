@@ -18,7 +18,7 @@
 {% endmacro %}
 
 <ul class="navigation">
-    {% if config.themes.zrq_camarao.dropdown.enabled %}
+    {% if config.themes.zrq.dropdown.enabled %}
         {{ _self.loop(pages) }}
     {% else %}
         {% for page in pages.children %}

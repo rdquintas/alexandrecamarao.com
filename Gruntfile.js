@@ -8,7 +8,7 @@ module.exports = function(grunt) {
     ];
 
     var _js_custom = [
-        'user/themes/zrq_camarao/js/app.js'
+        'user/themes/zrq/js/app.js'
     ];
 
     // grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
                 }
             },
             css_custom: {
-                files: "user/themes/zrq_camarao/less/*.less",
+                files: "user/themes/zrq/less/*.less",
                 tasks: [
                     'less:css_custom'
                 ],
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
             },
             js_custom: {
                 src: _js_custom,
-                dest: 'user/themes/zrq_camarao/js/app.dist.js'
+                dest: 'user/themes/zrq/js/app.dist.js'
             }
         },
 
@@ -138,12 +138,12 @@ module.exports = function(grunt) {
             css_custom: {
                 options: {
                     sourceMap: true,
-                    sourceMapFilename: "user/themes/zrq_camarao/css/app.dist.css.map",
+                    sourceMapFilename: "user/themes/zrq/css/app.dist.css.map",
                     cleancss: false,
                     compress: false
                 },
                 files: {
-                    "user/themes/zrq_camarao/css/app.dist.css": "user/themes/zrq_camarao/less/start_here.less"
+                    "user/themes/zrq/css/app.dist.css": "user/themes/zrq/less/start_here.less"
                 }
             }
         }

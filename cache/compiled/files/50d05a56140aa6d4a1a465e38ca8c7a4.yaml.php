@@ -2,13 +2,13 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'user/config/system.yaml',
-    'modified' => 1435313987,
+    'modified' => 1435331815,
     'data' => [
         'home' => [
             'alias' => '/home'
         ],
         'pages' => [
-            'theme' => 'zrq_camarao',
+            'theme' => 'zrq',
             'markdown_extra' => false,
             'process' => [
                 'markdown' => true,

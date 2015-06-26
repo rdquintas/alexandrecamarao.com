@@ -1,31 +1,15 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'checksum' => '8d489bd816d11737a305ca70a3c63e69:99c9801f538509c34f77ee8136757ce0',
+    'checksum' => '8d489bd816d11737a305ca70a3c63e69:7bb21a3ec4eedf4d3c652f3d8196d903',
     'files' => [
         'user/plugins' => [
-            'plugins/archives' => [
-                'file' => 'user/plugins/archives/blueprints.yaml',
-                'modified' => 1435313987
-            ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/blueprints.yaml',
                 'modified' => 1435313987
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
-                'modified' => 1435313987
-            ],
-            'plugins/simplesearch' => [
-                'file' => 'user/plugins/simplesearch/blueprints.yaml',
-                'modified' => 1435313987
-            ],
-            'plugins/simple_form' => [
-                'file' => 'user/plugins/simple_form/blueprints.yaml',
-                'modified' => 1435313987
-            ],
-            'plugins/taxonomylist' => [
-                'file' => 'user/plugins/taxonomylist/blueprints.yaml',
                 'modified' => 1435313987
             ]
         ],
@@ -50,118 +34,6 @@ return [
     ],
     'data' => [
         'items' => [
-            'plugins.archives.enabled' => [
-                'type' => 'toggle',
-                'label' => 'Plugin status',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.archives.enabled'
-            ],
-            'plugins.archives.built_in_css' => [
-                'type' => 'toggle',
-                'label' => 'Use built in CSS',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.archives.built_in_css'
-            ],
-            'plugins.archives.date_display_format' => [
-                'type' => 'select',
-                'size' => 'medium',
-                'classes' => 'fancy',
-                'label' => 'Date Format',
-                'default' => 'jS M Y',
-                'options' => [
-                    'F jS Y' => 'January 1st 2014',
-                    'l jS of F' => 'Monday 1st of January',
-                    'D, m M Y' => 'Mon, 01 Jan 2014',
-                    'd-m-y' => '01-01-14',
-                    'jS M Y' => '10th Feb 2014'
-                ],
-                'name' => 'plugins.archives.date_display_format'
-            ],
-            'plugins.archives.show_count' => [
-                'type' => 'toggle',
-                'label' => 'Show Count',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.archives.show_count'
-            ],
-            'plugins.archives.limit' => [
-                'type' => 'text',
-                'size' => 'x-small',
-                'label' => 'Count Limit',
-                'validate' => [
-                    'type' => 'number',
-                    'min' => 1
-                ],
-                'name' => 'plugins.archives.limit'
-            ],
-            'plugins.archives.order.dir' => [
-                'type' => 'toggle',
-                'label' => 'Order Direction',
-                'highlight' => 'asc',
-                'default' => 'desc',
-                'options' => [
-                    'asc' => 'Ascending',
-                    'desc' => 'Descending'
-                ],
-                'name' => 'plugins.archives.order.dir'
-            ],
-            'plugins.archives.order.by' => [
-                'type' => 'select',
-                'size' => 'medium',
-                'classes' => 'fancy',
-                'label' => 'Order Type',
-                'options' => [
-                    'default' => 'Default - based on folder name',
-                    'folder' => 'Folder - based on prefix-less folder name',
-                    'title' => 'Title - based on title field in header',
-                    'date' => 'Date - based on date field in header'
-                ],
-                'name' => 'plugins.archives.order.by'
-            ],
-            'plugins.archives.filters' => [
-                'type' => 'text',
-                'label' => 'Category filter',
-                'help' => 'Comma separated list of category names',
-                'validate' => [
-                    'type' => 'commalist'
-                ],
-                'name' => 'plugins.archives.filters'
-            ],
-            'plugins.archives.filter_combinator' => [
-                'type' => 'select',
-                'size' => 'medium',
-                'classes' => 'fancy',
-                'label' => 'Filter Combinator',
-                'default' => 'and',
-                'options' => [
-                    'and' => 'And - Boolean &&',
-                    'or' => 'Or - Boolean ||'
-                ],
-                'name' => 'plugins.archives.filter_combinator'
-            ],
             'plugins.error.enabled' => [
                 'type' => 'toggle',
                 'label' => 'Plugin status',
@@ -189,110 +61,6 @@ return [
                     'type' => 'bool'
                 ],
                 'name' => 'plugins.problems.enabled'
-            ],
-            'plugins.simplesearch.enabled' => [
-                'type' => 'toggle',
-                'label' => 'Plugin status',
-                'highlight' => 1,
-                'default' => 0,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.simplesearch.enabled'
-            ],
-            'plugins.simplesearch.built_in_css' => [
-                'type' => 'toggle',
-                'label' => 'Use built in CSS',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.simplesearch.built_in_css'
-            ],
-            'plugins.simplesearch.filters' => [
-                'type' => 'text',
-                'label' => 'Category filter',
-                'help' => 'Comma separated list of category names',
-                'validate' => [
-                    'type' => 'commalist'
-                ],
-                'name' => 'plugins.simplesearch.filters'
-            ],
-            'plugins.simplesearch.filter_combinator' => [
-                'type' => 'select',
-                'size' => 'medium',
-                'classes' => 'fancy',
-                'label' => 'Filter Combinator',
-                'default' => 'and',
-                'options' => [
-                    'and' => 'And - Boolean &&',
-                    'or' => 'Or - Boolean ||'
-                ],
-                'name' => 'plugins.simplesearch.filter_combinator'
-            ],
-            'plugins.simple_form.enabled' => [
-                'type' => 'toggle',
-                'label' => 'Plugin status',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.simple_form.enabled'
-            ],
-            'plugins.simple_form.token' => [
-                'type' => 'text',
-                'label' => 'SimpleForm.com Token',
-                'placeholder' => 'Insert your API key here.',
-                'help' => 'API key from https://simpleform.com site.',
-                'name' => 'plugins.simple_form.token'
-            ],
-            'plugins.simple_form.template_file' => [
-                'type' => 'text',
-                'label' => 'Template filename',
-                'placeholder' => 'Default template filename',
-                'name' => 'plugins.simple_form.template_file'
-            ],
-            'plugins.simple_form.messages' => [
-                'type' => 'array',
-                'label' => 'Form messages',
-                'name' => 'plugins.simple_form.messages'
-            ],
-            'plugins.taxonomylist.enabled' => [
-                'type' => 'toggle',
-                'label' => 'Plugin status',
-                'highlight' => 1,
-                'default' => 0,
-                'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.taxonomylist.enabled'
-            ],
-            'plugins.taxonomylist.route' => [
-                'type' => 'text',
-                'label' => 'Route to blog',
-                'placeholder' => '/blog',
-                'validate' => [
-                    'pattern' => '/([a-z\\-_]+/?)+'
-                ],
-                'name' => 'plugins.taxonomylist.route'
             ],
             'site.title' => [
                 'type' => 'text',
@@ -1323,40 +1091,11 @@ return [
         ],
         'nested' => [
             'plugins' => [
-                'archives' => [
-                    'enabled' => 'plugins.archives.enabled',
-                    'built_in_css' => 'plugins.archives.built_in_css',
-                    'date_display_format' => 'plugins.archives.date_display_format',
-                    'show_count' => 'plugins.archives.show_count',
-                    'limit' => 'plugins.archives.limit',
-                    'order' => [
-                        'dir' => 'plugins.archives.order.dir',
-                        'by' => 'plugins.archives.order.by'
-                    ],
-                    'filters' => 'plugins.archives.filters',
-                    'filter_combinator' => 'plugins.archives.filter_combinator'
-                ],
                 'error' => [
                     'enabled' => 'plugins.error.enabled'
                 ],
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled'
-                ],
-                'simplesearch' => [
-                    'enabled' => 'plugins.simplesearch.enabled',
-                    'built_in_css' => 'plugins.simplesearch.built_in_css',
-                    'filters' => 'plugins.simplesearch.filters',
-                    'filter_combinator' => 'plugins.simplesearch.filter_combinator'
-                ],
-                'simple_form' => [
-                    'enabled' => 'plugins.simple_form.enabled',
-                    'token' => 'plugins.simple_form.token',
-                    'template_file' => 'plugins.simple_form.template_file',
-                    'messages' => 'plugins.simple_form.messages'
-                ],
-                'taxonomylist' => [
-                    'enabled' => 'plugins.taxonomylist.enabled',
-                    'route' => 'plugins.taxonomylist.route'
                 ]
             ],
             'site' => [

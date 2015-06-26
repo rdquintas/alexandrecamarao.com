@@ -1,0 +1,17 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+	{% set images = [img01.jpg,img02.jpg,img03.jpg,img04.jpg,img05.jpg,img06.jpg,img07.jpg,img08.jpg,img09.jpg,img10.jpg] %}
+	
+	{# <img src="{{ images|first }}">	 #}
+
+	{% if page.header.noticia.mostra_noticia %}
+       <strong>News</strong>
+		<p>{{ page.header.noticia.texto }}</p>
+       
+		{% if page.header.noticia.link_para_mais_info %}
+			<a target="_blank" href="{{ page.header.noticia.link_para_mais_info }}">More info</a>	
+	    {% endif %}
+    {% endif %}	    
+	{{ page.content }}
+{% endblock %}

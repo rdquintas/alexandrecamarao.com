@@ -2,7 +2,7 @@ home:
   alias: '/home'
 
 pages:
-  theme: zrq_camarao
+  theme: zrq
   markdown_extra: false
   process:
     markdown: true
