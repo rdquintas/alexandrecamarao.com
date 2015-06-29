@@ -1,5 +1,15 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
+{% set currentYear = "now"|date("Y") %}
+	YEAR: 
+	<select>
+		<option value="ALL">ALL</option>
+		{% for i in range(currentYear,2010) %}    	
+    	<option value="{{ i }}">{{ i }}</option>
+		{% endfor %}
+	</select>
+
+
 	{{ page.content }}
 {% endblock %}
