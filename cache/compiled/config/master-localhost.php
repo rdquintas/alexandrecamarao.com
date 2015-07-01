@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'timestamp' => 1435604860,
-    'checksum' => '94509500e0ce0066b79ab5e6724e7b72',
+    'timestamp' => 1435741050,
+    'checksum' => '23f7fb78432d91040ef514f2e5bf4e4a',
     'data' => [
         'streams' => [
             'schemes' => [
@@ -283,7 +283,9 @@ return [
             'author' => [
                 'name' => 'Ricardo Quintas',
                 'email' => 'rqcenter-web@yahoo.com',
-                'copyright' => 'Copyright 2015 Deliver. All Rights Reserved.'
+                'copyright' => '©2015 Ricardo Quintas',
+                'url' => 'http://www.ricardoquintas.com',
+                'url_name' => 'ricardoquintas.com'
             ],
             'taxonomies' => [
                 0 => 'category',
@@ -302,9 +304,7 @@ return [
                 'delimiter' => '==='
             ],
             'routes' => [
-                '/something/else' => '/blog/sample-3',
-                '/another/one/here' => '/blog/sample-3',
-                '/new/*' => '/blog/*'
+                '/artwork' => '/artwork/drawings'
             ],
             'othermenu' => [
                 0 => [

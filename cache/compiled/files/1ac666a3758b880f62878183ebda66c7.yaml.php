@@ -2,13 +2,15 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'user/config/site.yaml',
-    'modified' => 1435604572,
+    'modified' => 1435740959,
     'data' => [
         'title' => 'Alexandre Camarao',
         'author' => [
             'name' => 'Ricardo Quintas',
             'email' => 'rqcenter-web@yahoo.com',
-            'copyright' => 'Copyright 2015 Deliver. All Rights Reserved.'
+            'copyright' => '©2015 Ricardo Quintas',
+            'url' => 'http://www.ricardoquintas.com',
+            'url_name' => 'ricardoquintas.com'
         ],
         'othermenu' => [
             0 => [
@@ -38,9 +40,7 @@ return [
             'size' => 300
         ],
         'routes' => [
-            '/something/else' => '/blog/sample-3',
-            '/another/one/here' => '/blog/sample-3',
-            '/new/*' => '/blog/*'
+            '/artwork' => '/artwork/drawings'
         ],
         'header_options' => [
             'arrows' => 'true',

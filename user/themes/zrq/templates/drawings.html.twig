@@ -1,23 +1,20 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	{% set img = random(page.media.images) %}
-	<div>
-		<img src="{{ img.url }}">	
-	</div>
+	{% set var = uri.query('ano') %}
 
-	CENAS: {{ img.cenas }}
+	{% if not var %}
+		{% set var = "ALL" %}
+	{% endif %}
 
-
-	{% if page.header.noticia.mostra_noticia %}
-		<div>
-		<p>{{ page.header.noticia.texto1 }}</p>       
-		<p>{{ page.header.noticia.texto2 }}</p>       
-		{% if page.header.noticia.link_para_mais_info %}
-			<a target="_blank" href="{{ page.header.noticia.link_para_mais_info }}">More info</a>	
+	{% for imagem in page.media.images %}	    
+	    {% if imagem.ano == var or var == "ALL"%}
+ 			<div>
+				<img src="{{ imagem.url }}">
+				<p>{{ imagem.ano }}</p>
+				<p>{{ imagem.descricao }}</p>
+			</div>
 	    {% endif %}
-		</div>
-    {% endif %}
-
+	{% endfor %}
 	{{ page.content }}
 {% endblock %}

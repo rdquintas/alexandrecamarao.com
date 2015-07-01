@@ -2,7 +2,9 @@ title: Alexandre Camarao
 author:
   name: Ricardo Quintas                      # Default author name
   email: 'rqcenter-web@yahoo.com'                   # Default author email
-  copyright: "Copyright 2015 Deliver. All Rights Reserved."
+  copyright: "©2015 Ricardo Quintas"
+  url: http://www.ricardoquintas.com
+  url_name: ricardoquintas.com 
 # social:
 #   - url: 'https://twitter.com/getgrav'
 #     icon: 'twitter'
@@ -44,9 +46,10 @@ metadata:
 summary:
   size: 300                                 # Maximum length of summary (characters)
 routes:
-  /something/else: '/blog/sample-3'         # Alias for /blog/sample-3
-  /another/one/here: '/blog/sample-3'       # Another alias for /blog/sample-3
-  /new/*: '/blog/*'                         # Wildcard any /new/my-page URL to /blog/my-page Route
+  /artwork: '/artwork/drawings'             # ZRQ: This is just to invalidate the "artwork" page. There's nothing there
+  # /something/else: '/'         # Alias for /blog/sample-3
+  # /another/one/here: '/blog/sample-3'       # Another alias for /blog/sample-3
+  # /new/*: '/blog/*'                         # Wildcard any /new/my-page URL to /blog/my-page Route
 
 header_options:
   arrows: 'true'                            # Create Next and previous button
