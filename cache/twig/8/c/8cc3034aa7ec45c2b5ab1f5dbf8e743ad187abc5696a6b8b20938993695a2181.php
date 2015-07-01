@@ -28,48 +28,51 @@ class __TwigTemplate_8cc3034aa7ec45c2b5ab1f5dbf8e743ad187abc5696a6b8b20938993695
     public function block_content($context, array $blocks = array())
     {
         // line 4
-        echo "\t";
-        $context["img"] = twig_random($this->env, $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "media", array()), "images", array()));
+        echo "\t<div class=\"page-home\">
+\t\t";
         // line 5
-        echo "\t<div>
-\t\t<img src=\"";
+        $context["img"] = twig_random($this->env, $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "media", array()), "images", array()));
         // line 6
+        echo "\t\t<div class=\"hero-img\">
+\t\t\t<img src=\"";
+        // line 7
         echo $this->getAttribute((isset($context["img"]) ? $context["img"] : null), "url", array());
         echo "\">\t
-\t</div>
+\t\t</div>
 
-\t";
-        // line 9
+\t\t";
+        // line 10
         if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "noticia", array()), "mostra_noticia", array())) {
-            // line 10
-            echo "\t\t<div>
-\t\t<p>";
             // line 11
+            echo "\t\t\t<div class=\"news\">
+\t\t\t\t<p>";
+            // line 12
             echo $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "noticia", array()), "texto1", array());
             echo "</p>       
-\t\t<p>";
-            // line 12
+\t\t\t\t<p>";
+            // line 13
             echo $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "noticia", array()), "texto2", array());
             echo "</p>       
-\t\t";
-            // line 13
+\t\t\t\t";
+            // line 14
             if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "noticia", array()), "link_para_mais_info", array())) {
-                // line 14
-                echo "\t\t\t<a target=\"_blank\" href=\"";
+                // line 15
+                echo "\t\t\t\t\t<a target=\"_blank\" href=\"";
                 echo $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "noticia", array()), "link_para_mais_info", array());
-                echo "\">More info</a>\t
-\t    ";
+                echo "\">More info</a>
+\t\t\t    ";
             }
-            // line 16
-            echo "\t\t</div>
-    ";
+            // line 17
+            echo "\t\t\t</div>
+\t    ";
         }
-        // line 18
-        echo "
-\t";
         // line 19
+        echo "\t    
+\t\t";
+        // line 20
         echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
         echo "
+\t</div>
 ";
     }
 
@@ -85,6 +88,6 @@ class __TwigTemplate_8cc3034aa7ec45c2b5ab1f5dbf8e743ad187abc5696a6b8b20938993695
 
     public function getDebugInfo()
     {
-        return array (  71 => 19,  68 => 18,  64 => 16,  58 => 14,  56 => 13,  52 => 12,  48 => 11,  45 => 10,  43 => 9,  37 => 6,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  73 => 20,  70 => 19,  66 => 17,  60 => 15,  58 => 14,  54 => 13,  50 => 12,  47 => 11,  45 => 10,  39 => 7,  36 => 6,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

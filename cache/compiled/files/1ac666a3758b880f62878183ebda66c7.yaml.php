@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'user/config/site.yaml',
-    'modified' => 1435740959,
+    'modified' => 1435765099,
     'data' => [
         'title' => 'Alexandre Camarao',
         'author' => [
@@ -40,7 +40,8 @@ return [
             'size' => 300
         ],
         'routes' => [
-            '/artwork' => '/artwork/drawings'
+            '/artwork' => '/artwork/drawings',
+            '/exhibitions' => '/exhibitions/solo'
         ],
         'header_options' => [
             'arrows' => 'true',

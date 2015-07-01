@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'timestamp' => 1435741050,
-    'checksum' => '23f7fb78432d91040ef514f2e5bf4e4a',
+    'timestamp' => 1435765129,
+    'checksum' => 'b18a483c47c6a44eead94faa90db72cb',
     'data' => [
         'streams' => [
             'schemes' => [
@@ -304,7 +304,8 @@ return [
                 'delimiter' => '==='
             ],
             'routes' => [
-                '/artwork' => '/artwork/drawings'
+                '/artwork' => '/artwork/drawings',
+                '/exhibitions' => '/exhibitions/solo'
             ],
             'othermenu' => [
                 0 => [

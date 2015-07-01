@@ -1,20 +1,22 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	{% set img = random(page.media.images) %}
-	<div>
-		<img src="{{ img.url }}">	
-	</div>
-
-	{% if page.header.noticia.mostra_noticia %}
-		<div>
-		<p>{{ page.header.noticia.texto1 }}</p>       
-		<p>{{ page.header.noticia.texto2 }}</p>       
-		{% if page.header.noticia.link_para_mais_info %}
-			<a target="_blank" href="{{ page.header.noticia.link_para_mais_info }}">More info</a>	
-	    {% endif %}
+	<div class="page-home">
+		{% set img = random(page.media.images) %}
+		<div class="hero-img">
+			<img src="{{ img.url }}">	
 		</div>
-    {% endif %}
 
-	{{ page.content }}
+		{% if page.header.noticia.mostra_noticia %}
+			<div class="news">
+				<p>{{ page.header.noticia.texto1 }}</p>       
+				<p>{{ page.header.noticia.texto2 }}</p>       
+				{% if page.header.noticia.link_para_mais_info %}
+					<a target="_blank" href="{{ page.header.noticia.link_para_mais_info }}">More info</a>
+			    {% endif %}
+			</div>
+	    {% endif %}
+	    
+		{{ page.content }}
+	</div>
 {% endblock %}
