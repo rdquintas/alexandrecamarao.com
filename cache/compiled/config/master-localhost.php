@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'timestamp' => 1435765129,
-    'checksum' => 'b18a483c47c6a44eead94faa90db72cb',
+    'timestamp' => 1435836715,
+    'checksum' => 'b4db69023d0761cfaddbd96665cef0ae',
     'data' => [
         'streams' => [
             'schemes' => [
@@ -124,6 +124,12 @@ return [
                 'routes' => [
                     404 => '/error'
                 ]
+            ],
+            'pagination' => [
+                'enabled' => true,
+                'path' => '/blog',
+                'built_in_css' => true,
+                'delta' => 0
             ],
             'problems' => [
                 'enabled' => true,

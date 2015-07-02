@@ -50,11 +50,5 @@
 		    {% endif %}
 		{% endfor %}
 		{{ page.content }}
-
-		<script>
-		$("#year").change(function (e) {
-			window.location.href = "?year=" + $(this).val();
-		})
-		</script>
 	</div>
 {% endblock %}

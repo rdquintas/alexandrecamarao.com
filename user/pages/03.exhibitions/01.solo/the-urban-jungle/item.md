@@ -1,8 +1,6 @@
 ---
 title: The Urban Jungle
-date: 17:34 07/04/2014
-author: Kermit Frog
-body_classes: header-lite fullwidth blogstyling
+date: 17:34 07/04/2014 
 taxonomy:
     category: blog
     tag: [travel, photography, city]

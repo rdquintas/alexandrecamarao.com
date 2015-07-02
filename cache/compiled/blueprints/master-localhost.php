@@ -1,12 +1,16 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'checksum' => '2e0e617aa7fc3d41d59ddc368790de40:d1efceb20a56bd3e0adf711081c973bc',
+    'checksum' => '2e0e617aa7fc3d41d59ddc368790de40:2630eff4d81f419da3de6d7f27451eaa',
     'files' => [
         'user/plugins' => [
             'plugins/error' => [
                 'file' => 'user/plugins/error/blueprints.yaml',
                 'modified' => 1435226653
+            ],
+            'plugins/pagination' => [
+                'file' => 'user/plugins/pagination/blueprints.yaml',
+                'modified' => 1435518760
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
@@ -47,6 +51,34 @@ return [
                     'type' => 'bool'
                 ],
                 'name' => 'plugins.error.enabled'
+            ],
+            'plugins.pagination.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.pagination.enabled'
+            ],
+            'plugins.pagination.built_in_css' => [
+                'type' => 'toggle',
+                'label' => 'Use built in CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.pagination.built_in_css'
             ],
             'plugins.problems.enabled' => [
                 'type' => 'toggle',
@@ -1093,6 +1125,10 @@ return [
             'plugins' => [
                 'error' => [
                     'enabled' => 'plugins.error.enabled'
+                ],
+                'pagination' => [
+                    'enabled' => 'plugins.pagination.enabled',
+                    'built_in_css' => 'plugins.pagination.built_in_css'
                 ],
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled'

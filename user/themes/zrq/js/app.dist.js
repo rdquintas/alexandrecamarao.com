@@ -1,8 +1,9 @@
 $(document).ready(function() {
-// 
+    //
 });
 
 
-$('xxxx').on('click', function() {
-
+// Dropdown event
+$("#year").change(function(e) {
+    window.location.href = "?year=" + $(this).val();
 });

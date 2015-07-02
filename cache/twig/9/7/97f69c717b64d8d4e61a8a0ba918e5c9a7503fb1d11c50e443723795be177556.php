@@ -12,7 +12,6 @@ class __TwigTemplate_97f69c717b64d8d4e61a8a0ba918e5c9a7503fb1d11c50e443723795be1
         $this->blocks = array(
             'head' => array($this, 'block_head'),
             'stylesheets' => array($this, 'block_stylesheets'),
-            'javascripts' => array($this, 'block_javascripts'),
             'header' => array($this, 'block_header'),
             'header_extra' => array($this, 'block_header_extra'),
             'header_navigation' => array($this, 'block_header_navigation'),
@@ -20,6 +19,7 @@ class __TwigTemplate_97f69c717b64d8d4e61a8a0ba918e5c9a7503fb1d11c50e443723795be1
             'body' => array($this, 'block_body'),
             'content' => array($this, 'block_content'),
             'footer' => array($this, 'block_footer'),
+            'javascripts' => array($this, 'block_javascripts'),
         );
     }
 
@@ -50,32 +50,38 @@ class __TwigTemplate_97f69c717b64d8d4e61a8a0ba918e5c9a7503fb1d11c50e443723795be1
 ";
         // line 22
         $this->displayBlock('head', $context, $blocks);
-        // line 45
+        // line 35
         echo "</head>
 <body id=\"top\" class=\"";
-        // line 46
+        // line 36
         echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "body_classes", array());
         echo "\">
     <div id=\"sb-site\">
         ";
-        // line 48
+        // line 38
         $this->displayBlock('header', $context, $blocks);
-        // line 62
+        // line 52
         echo "
         ";
-        // line 63
+        // line 53
         $this->displayBlock('showcase', $context, $blocks);
-        // line 64
+        // line 54
         echo "
         ";
-        // line 65
+        // line 55
         $this->displayBlock('body', $context, $blocks);
-        // line 74
+        // line 64
         echo "        
     </div>
   ";
-        // line 93
-        echo "</body>
+        // line 83
+        echo "    ";
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 91
+        echo "    ";
+        echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "js", array(), "method");
+        echo "    
+</body>
 </html>
 ";
     }
@@ -111,14 +117,6 @@ class __TwigTemplate_97f69c717b64d8d4e61a8a0ba918e5c9a7503fb1d11c50e443723795be1
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "css", array(), "method");
         echo "
 
-    ";
-        // line 34
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 42
-        echo "    ";
-        echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "js", array(), "method");
-        echo "
-
 ";
     }
 
@@ -132,35 +130,14 @@ class __TwigTemplate_97f69c717b64d8d4e61a8a0ba918e5c9a7503fb1d11c50e443723795be1
         echo "    ";
     }
 
-    // line 34
-    public function block_javascripts($context, array $blocks = array())
-    {
-        // line 35
-        echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "jquery", 1 => 101), "method");
-        // line 36
-        echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/app.dist.js", 1 => 100), "method");
-        // line 37
-        echo "        ";
-        // line 38
-        echo "        ";
-        // line 39
-        echo "        ";
-        // line 40
-        echo "        ";
-        // line 41
-        echo "    ";
-    }
-
-    // line 48
+    // line 38
     public function block_header($context, array $blocks = array())
     {
-        // line 49
+        // line 39
         echo "        <header id=\"header\">
                 <div class=\"logo\">
                     <h3><a href=\"";
-        // line 51
+        // line 41
         echo (isset($context["base_url_absolute"]) ? $context["base_url_absolute"] : null);
         echo "\">";
         echo $this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "site", array()), "title", array());
@@ -168,71 +145,92 @@ class __TwigTemplate_97f69c717b64d8d4e61a8a0ba918e5c9a7503fb1d11c50e443723795be1
                 </div>
                 <div id=\"navbar\">
                     ";
-        // line 54
+        // line 44
         $this->displayBlock('header_extra', $context, $blocks);
-        // line 55
+        // line 45
         echo "                    ";
         $this->displayBlock('header_navigation', $context, $blocks);
-        // line 58
+        // line 48
         echo "                    <span class=\"panel-activation sb-toggle-left navbar-left menu-btn fa fa-bars\"></span>
                 </div>
         </header>
         ";
     }
 
-    // line 54
+    // line 44
     public function block_header_extra($context, array $blocks = array())
     {
     }
 
-    // line 55
+    // line 45
     public function block_header_navigation($context, array $blocks = array())
     {
-        // line 56
+        // line 46
         echo "                    ";
-        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 56)->display($context);
-        // line 57
+        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 46)->display($context);
+        // line 47
         echo "                    ";
     }
 
-    // line 63
+    // line 53
     public function block_showcase($context, array $blocks = array())
     {
     }
 
-    // line 65
+    // line 55
     public function block_body($context, array $blocks = array())
     {
-        // line 66
+        // line 56
         echo "        <section id=\"body\" class=\"";
         echo (isset($context["class"]) ? $context["class"] : null);
         echo "\">
             ";
-        // line 67
+        // line 57
         $this->displayBlock('content', $context, $blocks);
-        // line 68
+        // line 58
         echo "            
             ";
-        // line 69
+        // line 59
         $this->displayBlock('footer', $context, $blocks);
-        // line 72
+        // line 62
         echo "        </section>
         ";
     }
 
-    // line 67
+    // line 57
     public function block_content($context, array $blocks = array())
     {
     }
 
-    // line 69
+    // line 59
     public function block_footer($context, array $blocks = array())
     {
-        // line 70
+        // line 60
         echo "            ";
-        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 70)->display($context);
-        // line 71
+        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 60)->display($context);
+        // line 61
         echo "            ";
+    }
+
+    // line 83
+    public function block_javascripts($context, array $blocks = array())
+    {
+        // line 84
+        echo "        ";
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "jquery", 1 => 101), "method");
+        // line 85
+        echo "        ";
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/app.dist.js", 1 => 100), "method");
+        // line 86
+        echo "        ";
+        // line 87
+        echo "        ";
+        // line 88
+        echo "        ";
+        // line 89
+        echo "        ";
+        // line 90
+        echo "    ";
     }
 
     public function getTemplateName()
@@ -247,6 +245,6 @@ class __TwigTemplate_97f69c717b64d8d4e61a8a0ba918e5c9a7503fb1d11c50e443723795be1
 
     public function getDebugInfo()
     {
-        return array (  235 => 71,  232 => 70,  229 => 69,  224 => 67,  219 => 72,  217 => 69,  214 => 68,  212 => 67,  207 => 66,  204 => 65,  199 => 63,  195 => 57,  192 => 56,  189 => 55,  184 => 54,  177 => 58,  174 => 55,  172 => 54,  164 => 51,  160 => 49,  157 => 48,  153 => 41,  151 => 40,  149 => 39,  147 => 38,  145 => 37,  142 => 36,  139 => 35,  136 => 34,  132 => 31,  129 => 30,  126 => 29,  118 => 42,  116 => 34,  110 => 32,  108 => 29,  103 => 27,  100 => 26,  98 => 25,  90 => 24,  87 => 23,  84 => 22,  78 => 93,  74 => 74,  72 => 65,  69 => 64,  67 => 63,  64 => 62,  62 => 48,  57 => 46,  54 => 45,  52 => 22,  29 => 1,);
+        return array (  233 => 90,  231 => 89,  229 => 88,  227 => 87,  225 => 86,  222 => 85,  219 => 84,  216 => 83,  212 => 61,  209 => 60,  206 => 59,  201 => 57,  196 => 62,  194 => 59,  191 => 58,  189 => 57,  184 => 56,  181 => 55,  176 => 53,  172 => 47,  169 => 46,  166 => 45,  161 => 44,  154 => 48,  151 => 45,  149 => 44,  141 => 41,  137 => 39,  134 => 38,  130 => 31,  127 => 30,  124 => 29,  116 => 32,  114 => 29,  109 => 27,  106 => 26,  104 => 25,  96 => 24,  93 => 23,  90 => 22,  81 => 91,  78 => 83,  74 => 64,  72 => 55,  69 => 54,  67 => 53,  64 => 52,  62 => 38,  57 => 36,  54 => 35,  52 => 22,  29 => 1,);
     }
 }

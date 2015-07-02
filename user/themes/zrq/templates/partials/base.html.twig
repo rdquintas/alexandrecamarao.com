@@ -31,16 +31,6 @@
     {% endblock %}
     {{ assets.css() }}
 
-    {% block javascripts %}
-        {% do assets.add('jquery', 101) %}
-        {% do assets.addJs('theme://js/app.dist.js',100) %}
-        {# {% do assets.addJs('theme://js/modernizr.custom.71422.js',100) %} #}
-        {# {% do assets.addJs('theme://js/deliver.js') %} #}
-        {# {% do assets.addJs('theme://js/slidebars.min.js') %} #}
-        {# {% do assets.addJs('theme://js/jquery.slideme2.js') %} #}
-    {% endblock %}
-    {{ assets.js() }}
-
 {% endblock head%}
 </head>
 <body id="top" class="{{ page.header.body_classes }}">
@@ -90,5 +80,14 @@
     });
     </script>
     {% endblock %} #}
+    {% block javascripts %}
+        {% do assets.add('jquery', 101) %}
+        {% do assets.addJs('theme://js/app.dist.js',100) %}
+        {# {% do assets.addJs('theme://js/modernizr.custom.71422.js',100) %} #}
+        {# {% do assets.addJs('theme://js/deliver.js') %} #}
+        {# {% do assets.addJs('theme://js/slidebars.min.js') %} #}
+        {# {% do assets.addJs('theme://js/jquery.slideme2.js') %} #}
+    {% endblock %}
+    {{ assets.js() }}    
 </body>
 </html>

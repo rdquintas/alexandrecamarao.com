@@ -16,8 +16,8 @@ class __TwigTemplate_9bd13f154b838c7761903958d58ea338871d19b01bedf327f208c9ba3b9
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        $this->loadTemplate("exhibitions.html.twig", "exhibitions.html.twig", 1, "740680642")->display($context);
-        // line 47
+        $this->loadTemplate("exhibitions.html.twig", "exhibitions.html.twig", 1, "1616935076")->display($context);
+        // line 48
         echo "
 
 ";
@@ -35,13 +35,13 @@ class __TwigTemplate_9bd13f154b838c7761903958d58ea338871d19b01bedf327f208c9ba3b9
 
     public function getDebugInfo()
     {
-        return array (  21 => 47,  19 => 1,);
+        return array (  21 => 48,  19 => 1,);
     }
 }
 
 
 /* exhibitions.html.twig */
-class __TwigTemplate_9bd13f154b838c7761903958d58ea338871d19b01bedf327f208c9ba3b97f2d9_740680642 extends Twig_Template
+class __TwigTemplate_9bd13f154b838c7761903958d58ea338871d19b01bedf327f208c9ba3b97f2d9_1616935076 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -63,60 +63,58 @@ class __TwigTemplate_9bd13f154b838c7761903958d58ea338871d19b01bedf327f208c9ba3b9
     {
         // line 3
         $context["collection"] = $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "collection", array(), "method");
-        // line 4
-        $context["base_url"] = $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "url", array());
         // line 5
+        $context["base_url"] = $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "url", array());
+        // line 6
         $context["feed_url"] = (isset($context["base_url"]) ? $context["base_url"] : null);
-        // line 7
+        // line 8
         if (((isset($context["base_url"]) ? $context["base_url"] : null) == "/")) {
-            // line 8
+            // line 9
             $context["base_url"] = "";
         }
-        // line 11
+        // line 12
         if (((isset($context["base_url"]) ? $context["base_url"] : null) == (isset($context["base_url_relative"]) ? $context["base_url_relative"] : null))) {
-            // line 12
+            // line 13
             $context["feed_url"] = (((isset($context["base_url"]) ? $context["base_url"] : null) . "/") . $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "slug", array()));
         }
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 15
+    // line 16
     public function block_content($context, array $blocks = array())
     {
-        // line 16
-        echo "\t\t";
-        $context["blog_image"] = twig_first($this->env, $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "media", array()), "images", array()));
         // line 17
-        echo "        
-\t\t";
+        echo "\t\t";
+        $context["blog_image"] = $this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute(twig_first($this->env, $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "media", array()), "images", array())), "grayscale", array(), "method"), "contrast", array(0 => 20), "method"), "brightness", array(0 =>  -100), "method"), "colorize", array(0 =>  -35, 1 => 81, 2 => 122), "method");
         // line 18
+        echo "
+\t\t";
+        // line 19
         if ((isset($context["blog_image"]) ? $context["blog_image"] : null)) {
-            // line 19
-            echo "\t\t<div class=\"flush-top blog-header blog-header-image\" style=\"background: ";
-            echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "bg_color", array());
-            echo " url(";
+            // line 20
+            echo "\t\t<div class=\"flush-top blog-header blog-header-image\" style=\"background-image: url(";
             echo $this->getAttribute((isset($context["blog_image"]) ? $context["blog_image"] : null), "url", array());
-            echo ") no-repeat right;\">
+            echo ");\">
 \t\t";
         } else {
-            // line 21
+            // line 22
             echo "\t\t<div class=\"blog-header\">
 \t\t";
         }
-        // line 23
+        // line 24
         echo "\t\t\t";
         echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
         echo "
 \t\t</div>
 
-  ";
-        // line 29
+";
+        // line 30
         echo "
-\t\t<div class=\"content-wrapper blog-content-list g-grid pure-g-r\">
-\t\t\t<div id=\"listing\" class=\"g-block pure-u-2-3\">
+\t\t<div class=\"content-wrapper blog-content-list grid pure-g\">
+\t\t\t<div id=\"listing\" class=\"block pure-u-2-3\">
 \t\t\t\t";
-        // line 32
+        // line 33
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["collection"]) ? $context["collection"] : null));
         $context['loop'] = array(
@@ -133,10 +131,10 @@ class __TwigTemplate_9bd13f154b838c7761903958d58ea338871d19b01bedf327f208c9ba3b9
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["child"]) {
-            // line 33
-            echo "\t\t\t        ";
-            $this->loadTemplate("partials/blog_item.html.twig", "exhibitions.html.twig", 33)->display(array_merge($context, array("page" => $context["child"], "truncate" => true)));
             // line 34
+            echo "\t\t\t        ";
+            $this->loadTemplate("partials/blog_item.html.twig", "exhibitions.html.twig", 34)->display(array_merge($context, array("page" => $context["child"], "truncate" => true)));
+            // line 35
             echo "\t\t\t    ";
             ++$context['loop']['index0'];
             ++$context['loop']['index'];
@@ -150,21 +148,21 @@ class __TwigTemplate_9bd13f154b838c7761903958d58ea338871d19b01bedf327f208c9ba3b9
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['child'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 36
         echo "
                 ";
-        // line 36
+        // line 37
         if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "plugins", array()), "pagination", array()), "enabled", array()) && $this->getAttribute($this->getAttribute((isset($context["collection"]) ? $context["collection"] : null), "params", array()), "pagination", array()))) {
-            // line 37
-            echo "                    ";
-            $this->loadTemplate("pagination.html.twig", "exhibitions.html.twig", 37)->display(array_merge($context, array("pagination" => $this->getAttribute($this->getAttribute((isset($context["collection"]) ? $context["collection"] : null), "params", array()), "pagination", array()))));
             // line 38
+            echo "                    ";
+            $this->loadTemplate("partials/pagination.html.twig", "exhibitions.html.twig", 38)->display(array_merge($context, array("pagination" => $this->getAttribute($this->getAttribute((isset($context["collection"]) ? $context["collection"] : null), "params", array()), "pagination", array()))));
+            // line 39
             echo "                ";
         }
-        // line 39
+        // line 40
         echo "\t\t\t</div>
 \t\t";
-        // line 43
+        // line 44
         echo "\t\t</div>
 \t";
     }
@@ -181,6 +179,6 @@ class __TwigTemplate_9bd13f154b838c7761903958d58ea338871d19b01bedf327f208c9ba3b9
 
     public function getDebugInfo()
     {
-        return array (  168 => 43,  165 => 39,  162 => 38,  159 => 37,  157 => 36,  154 => 35,  140 => 34,  137 => 33,  120 => 32,  115 => 29,  108 => 23,  104 => 21,  96 => 19,  94 => 18,  91 => 17,  88 => 16,  85 => 15,  81 => 1,  78 => 12,  76 => 11,  73 => 8,  71 => 7,  69 => 5,  67 => 4,  65 => 3,  51 => 1,  21 => 47,  19 => 1,);
+        return array (  166 => 44,  163 => 40,  160 => 39,  157 => 38,  155 => 37,  152 => 36,  138 => 35,  135 => 34,  118 => 33,  113 => 30,  106 => 24,  102 => 22,  96 => 20,  94 => 19,  91 => 18,  88 => 17,  85 => 16,  81 => 1,  78 => 13,  76 => 12,  73 => 9,  71 => 8,  69 => 6,  67 => 5,  65 => 3,  51 => 1,  21 => 48,  19 => 1,);
     }
 }
