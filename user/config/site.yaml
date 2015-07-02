@@ -18,13 +18,13 @@ author:
 #     - line: "Saskatoon, Saskatchewan"
 #     - line: "Canada S7K 2N5"
 #   gps: 1.306.222.3456  
-othermenu:
-  - text: "About"
-    url: "about"
-  - text: "Privacy Policy"
-    url: "#"
-  - text: "Contact"
-    url: "contact"
+# othermenu:
+#   - text: "About"
+#     url: "about"
+#   - text: "Privacy Policy"
+#     url: "#"
+#   - text: "Contact"
+#     url: "contact"
 # quicklinks:
 #   - text: "Portfolio"
 #     url: "base_url:portfolio"
@@ -52,24 +52,24 @@ routes:
   # /another/one/here: '/blog/sample-3'       # Another alias for /blog/sample-3
   # /new/*: '/blog/*'                         # Wildcard any /new/my-page URL to /blog/my-page Route
 
-header_options:
-  arrows: 'true'                            # Create Next and previous button
-  autoslide: 'false'                        # Auto slideshow mode
-  autoslideHoverStop: 'false'               # Pause auto slideshow mode on mouseover
-  interval: '2000'                          # The interval between each slide (Interval in millisecond)
-  loop: 'false'                             # Infinite slideshow             
-  transition : zoom                         # Set the animation kind (fade/slide/page/zoom)
-  itemsForSlide: '0'                        # Wrap each 'n' item
-  touch: 'true'                             # Set a native slide for touch device
-  swipe : 'true'                            # Enable swipe for touch device
+# header_options:
+#   arrows: 'true'                            # Create Next and previous button
+#   autoslide: 'false'                        # Auto slideshow mode
+#   autoslideHoverStop: 'false'               # Pause auto slideshow mode on mouseover
+#   interval: '2000'                          # The interval between each slide (Interval in millisecond)
+#   loop: 'false'                             # Infinite slideshow             
+#   transition : zoom                         # Set the animation kind (fade/slide/page/zoom)
+#   itemsForSlide: '0'                        # Wrap each 'n' item
+#   touch: 'true'                             # Set a native slide for touch device
+#   swipe : 'true'                            # Enable swipe for touch device
 
-footer:
-    description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
-    contact_title: "Contact Info"
-    links_title: "Quick Links"
-    newsletter_title: "Newsletter"
-    newsletter_description: "Etiam porta sem malesuada magna mollis euismod."
-    copyright_text: "Copyright 2013 Deliver. All Rights Reserved."
-    feedburner: ""   # Your feedburner id for Newsletter footer modul
+# footer:
+#     description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+#     contact_title: "Contact Info"
+#     links_title: "Quick Links"
+#     newsletter_title: "Newsletter"
+#     newsletter_description: "Etiam porta sem malesuada magna mollis euismod."
+#     copyright_text: "Copyright 2013 Deliver. All Rights Reserved."
+#     feedburner: ""   # Your feedburner id for Newsletter footer modul
 
 

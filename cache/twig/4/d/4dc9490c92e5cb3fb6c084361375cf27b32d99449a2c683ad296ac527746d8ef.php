@@ -22,7 +22,11 @@ class __TwigTemplate_4dc9490c92e5cb3fb6c084361375cf27b32d99449a2c683ad296ac52774
         ";
         // line 4
         echo $this->getAttribute($this->getAttribute((isset($context["site"]) ? $context["site"] : null), "author", array()), "copyright", array());
-        echo "
+        echo " - <a target=\"_blank\" href=\"";
+        echo $this->getAttribute($this->getAttribute((isset($context["site"]) ? $context["site"] : null), "author", array()), "url", array());
+        echo " \">";
+        echo $this->getAttribute($this->getAttribute((isset($context["site"]) ? $context["site"] : null), "author", array()), "url_name", array());
+        echo " </a>
     </div>
 </div>
 </div>";
