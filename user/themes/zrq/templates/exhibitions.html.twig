@@ -1,7 +1,8 @@
 {% embed 'partials/base.html.twig' %}
 	{% set collection = page.collection() %}
-	{% block content %}	
-		{% for page in collection %}
+	{% block content %}			
+		{% for page in collection %}			
+			{% if page.date|date("Y") == "2015" %}
 		    <div class="exhibition-item">
 		    	<hr>
 			    <div class="image">
@@ -14,6 +15,7 @@
 			        <p class="continue"><a href="{{ page.url }}">Continue Reading...</a></p>
 				</div>
 			</div>
+	    {% endif %}
 	    {% endfor %}
 
         {% if config.plugins.pagination.enabled and collection.params.pagination %}

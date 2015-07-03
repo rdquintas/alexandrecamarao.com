@@ -1,6 +1,6 @@
 ---
 title: Just Some Text Today
-date: 13:34 07/10/2014
+date: 13:34 07-10-2014
 continue_link: true
 link: http://daringfireball.net
 taxonomy:
