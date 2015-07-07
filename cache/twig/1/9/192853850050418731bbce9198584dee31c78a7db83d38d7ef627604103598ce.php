@@ -77,7 +77,7 @@ class __TwigTemplate_192853850050418731bbce9198584dee31c78a7db83d38d7ef627604103
         // line 83
         echo "    ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 91
+        // line 92
         echo "    ";
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "js", array(), "method");
         echo "    
@@ -143,7 +143,7 @@ class __TwigTemplate_192853850050418731bbce9198584dee31c78a7db83d38d7ef627604103
         echo $this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "site", array()), "title", array());
         echo "</a></h3>                 
                 </div>
-                <div id=\"navbar\">
+                <div class=\"navigation-menu clearfix\">
                     ";
         // line 44
         $this->displayBlock('header_extra', $context, $blocks);
@@ -220,9 +220,10 @@ class __TwigTemplate_192853850050418731bbce9198584dee31c78a7db83d38d7ef627604103
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "jquery", 1 => 101), "method");
         // line 85
         echo "        ";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/app.dist.js", 1 => 100), "method");
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/libs.dist.js", 1 => 100), "method");
         // line 86
         echo "        ";
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/app.dist.js"), "method");
         // line 87
         echo "        ";
         // line 88
@@ -230,6 +231,8 @@ class __TwigTemplate_192853850050418731bbce9198584dee31c78a7db83d38d7ef627604103
         // line 89
         echo "        ";
         // line 90
+        echo "        ";
+        // line 91
         echo "    ";
     }
 
@@ -245,6 +248,6 @@ class __TwigTemplate_192853850050418731bbce9198584dee31c78a7db83d38d7ef627604103
 
     public function getDebugInfo()
     {
-        return array (  233 => 90,  231 => 89,  229 => 88,  227 => 87,  225 => 86,  222 => 85,  219 => 84,  216 => 83,  212 => 61,  209 => 60,  206 => 59,  201 => 57,  196 => 62,  194 => 59,  191 => 58,  189 => 57,  184 => 56,  181 => 55,  176 => 53,  172 => 47,  169 => 46,  166 => 45,  161 => 44,  154 => 48,  151 => 45,  149 => 44,  141 => 41,  137 => 39,  134 => 38,  130 => 31,  127 => 30,  124 => 29,  116 => 32,  114 => 29,  109 => 27,  106 => 26,  104 => 25,  96 => 24,  93 => 23,  90 => 22,  81 => 91,  78 => 83,  74 => 64,  72 => 55,  69 => 54,  67 => 53,  64 => 52,  62 => 38,  57 => 36,  54 => 35,  52 => 22,  29 => 1,);
+        return array (  236 => 91,  234 => 90,  232 => 89,  230 => 88,  228 => 87,  225 => 86,  222 => 85,  219 => 84,  216 => 83,  212 => 61,  209 => 60,  206 => 59,  201 => 57,  196 => 62,  194 => 59,  191 => 58,  189 => 57,  184 => 56,  181 => 55,  176 => 53,  172 => 47,  169 => 46,  166 => 45,  161 => 44,  154 => 48,  151 => 45,  149 => 44,  141 => 41,  137 => 39,  134 => 38,  130 => 31,  127 => 30,  124 => 29,  116 => 32,  114 => 29,  109 => 27,  106 => 26,  104 => 25,  96 => 24,  93 => 23,  90 => 22,  81 => 92,  78 => 83,  74 => 64,  72 => 55,  69 => 54,  67 => 53,  64 => 52,  62 => 38,  57 => 36,  54 => 35,  52 => 22,  29 => 1,);
     }
 }

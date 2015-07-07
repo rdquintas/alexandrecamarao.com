@@ -16,10 +16,9 @@ class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        $this->loadTemplate("exhibitions.html.twig", "exhibitions.html.twig", 1, "2117101017")->display($context);
-        // line 28
+        $this->loadTemplate("exhibitions.html.twig", "exhibitions.html.twig", 1, "1603105479")->display($context);
+        // line 62
         echo "
-
 ";
     }
 
@@ -35,13 +34,13 @@ class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22
 
     public function getDebugInfo()
     {
-        return array (  21 => 28,  19 => 1,);
+        return array (  21 => 62,  19 => 1,);
     }
 }
 
 
 /* exhibitions.html.twig */
-class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22fc110_2117101017 extends Twig_Template
+class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22fc110_1603105479 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -61,99 +60,197 @@ class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 2
+        // line 3
         $context["collection"] = $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "collection", array(), "method");
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 3
+    // line 5
     public function block_content($context, array $blocks = array())
     {
-        echo "\t\t\t
+        echo "\t\t
+
+\t";
+        // line 14
+        echo "
+\t<div class=\"page-exhibitions\">
+\t\t<h1>";
+        // line 16
+        echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "title", array());
+        echo "</h1>
 \t\t";
-        // line 4
-        $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["collection"]) ? $context["collection"] : null));
-        $context['loop'] = array(
-          'parent' => $context['_parent'],
-          'index0' => 0,
-          'index'  => 1,
-          'first'  => true,
-        );
-        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof Countable)) {
-            $length = count($context['_seq']);
-            $context['loop']['revindex0'] = $length - 1;
-            $context['loop']['revindex'] = $length;
-            $context['loop']['length'] = $length;
-            $context['loop']['last'] = 1 === $length;
+        // line 17
+        $context["currentYear"] = twig_date_format_filter($this->env, "now", "Y");
+        echo "\t
+\t\t";
+        // line 18
+        $context["yearURLparam"] = $this->getAttribute((isset($context["uri"]) ? $context["uri"] : null), "query", array(0 => "year"), "method");
+        // line 19
+        echo "
+\t\t";
+        // line 20
+        if ( !(isset($context["yearURLparam"]) ? $context["yearURLparam"] : null)) {
+            // line 21
+            echo "\t\t\t";
+            $context["yearURLparam"] = "ALL";
+            // line 22
+            echo "\t\t";
         }
-        foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
-            echo "\t\t\t
+        // line 23
+        echo "\t\t
+\t\t<label for=\"year\">YEAR:</label>
+\t\t<select id=\"year\">
 \t\t\t";
-            // line 5
-            echo $this->env->getExtension('GravTwigExtension')->dump($this->env, $context, $this->getAttribute($context["loop"], "index", array()));
+        // line 26
+        if (((isset($context["yearURLparam"]) ? $context["yearURLparam"] : null) == "ALL")) {
+            echo "\t\t
+\t\t\t\t";
+            // line 27
+            echo $this->getAttribute($this, "createSelectEntry", array(0 => "true", 1 => "ALL"), "method");
             echo "
 \t\t\t";
-            // line 6
-            if ((twig_date_format_filter($this->env, $this->getAttribute($context["page"], "date", array()), "Y") == "2015")) {
-                // line 7
-                echo "\t\t    <div class=\"exhibition-item\">
-\t\t    \t<hr>
-\t\t\t    <div class=\"image\">
-\t\t\t        ";
-                // line 10
-                echo $this->getAttribute($this->getAttribute(twig_first($this->env, $this->getAttribute($this->getAttribute($context["page"], "media", array()), "images", array())), "cropZoom", array(0 => 300, 1 => 300), "method"), "html", array());
+        } else {
+            // line 28
+            echo "\t
+\t\t\t\t";
+            // line 29
+            echo $this->getAttribute($this, "createSelectEntry", array(0 => "false", 1 => "ALL"), "method");
+            echo "
+\t\t\t";
+        }
+        // line 31
+        echo "
+\t\t\t";
+        // line 32
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable(range((isset($context["currentYear"]) ? $context["currentYear"] : null), $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "ano_inicial", array())));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            echo "    \t
+\t    \t\t";
+            // line 33
+            if (($context["i"] == (isset($context["yearURLparam"]) ? $context["yearURLparam"] : null))) {
+                echo "\t\t
+\t\t\t\t\t";
+                // line 34
+                echo $this->getAttribute($this, "createSelectEntry", array(0 => "true", 1 => $context["i"]), "method");
                 echo "
-\t\t\t    </div>
-\t\t\t    <div class=\"text\">
-\t\t\t        <p class=\"title\">";
-                // line 13
-                echo $this->getAttribute($context["page"], "title", array());
-                echo "</p>
-\t\t\t        <p class=\"date\">";
-                // line 14
-                echo twig_date_format_filter($this->env, $this->getAttribute($context["page"], "date", array()), "d/M/Y");
-                echo "</p>
-\t\t\t        <p class=\"summary\">";
-                // line 15
-                echo $this->env->getExtension('GravTwigExtension')->truncateFilter($this->getAttribute($context["page"], "content", array()), 350);
-                echo "</p>
-\t\t\t        <p class=\"continue\"><a href=\"";
-                // line 16
-                echo $this->getAttribute($context["page"], "url", array());
-                echo "\">Continue Reading...</a></p>
-\t\t\t\t</div>
-\t\t\t</div>
-\t    ";
+\t\t\t\t";
+            } else {
+                // line 35
+                echo "\t
+\t\t\t\t\t";
+                // line 36
+                echo $this->getAttribute($this, "createSelectEntry", array(0 => "false", 1 => $context["i"]), "method");
+                echo "
+\t\t\t\t";
             }
-            // line 20
-            echo "\t    ";
-            ++$context['loop']['index0'];
-            ++$context['loop']['index'];
-            $context['loop']['first'] = false;
-            if (isset($context['loop']['length'])) {
-                --$context['loop']['revindex0'];
-                --$context['loop']['revindex'];
-                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
-            }
+            // line 38
+            echo "\t\t\t";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['page'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 21
-        echo "
-        ";
-        // line 22
-        if (($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "plugins", array()), "pagination", array()), "enabled", array()) && $this->getAttribute($this->getAttribute((isset($context["collection"]) ? $context["collection"] : null), "params", array()), "pagination", array()))) {
-            // line 23
-            echo "            ";
-            $this->loadTemplate("partials/pagination.html.twig", "exhibitions.html.twig", 23)->display(array_merge($context, array("pagination" => $this->getAttribute($this->getAttribute((isset($context["collection"]) ? $context["collection"] : null), "params", array()), "pagination", array()))));
-            // line 24
-            echo "        ";
+        // line 39
+        echo "\t\t</select>
+
+\t\t";
+        // line 41
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["collection"]) ? $context["collection"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            echo "\t\t\t
+\t\t    ";
+            // line 42
+            if (((twig_date_format_filter($this->env, $this->getAttribute($context["item"], "date", array()), "Y") == (isset($context["yearURLparam"]) ? $context["yearURLparam"] : null)) || ((isset($context["yearURLparam"]) ? $context["yearURLparam"] : null) == "ALL"))) {
+                // line 43
+                echo "\t\t\t    <div class=\"exhibition-item\">
+\t\t\t    \t<hr>
+\t\t\t\t    <div class=\"image\">
+\t\t\t\t    \t<a href=\"";
+                // line 46
+                echo $this->getAttribute($context["item"], "url", array());
+                echo "\">
+\t\t\t\t        \t";
+                // line 47
+                echo $this->getAttribute($this->getAttribute(twig_first($this->env, $this->getAttribute($this->getAttribute($context["item"], "media", array()), "images", array())), "cropZoom", array(0 => 300, 1 => 300), "method"), "html", array());
+                echo "
+\t\t\t\t        </a>
+\t\t\t\t    </div>
+\t\t\t\t    <div class=\"text\">
+\t\t\t\t        <p class=\"title\">";
+                // line 51
+                echo $this->getAttribute($context["item"], "title", array());
+                echo "</p>
+\t\t\t\t        <p class=\"date\">";
+                // line 52
+                echo twig_date_format_filter($this->env, $this->getAttribute($context["item"], "date", array()), "d/M/Y");
+                echo "</p>
+\t\t\t\t        <p class=\"summary\">";
+                // line 53
+                echo $this->env->getExtension('GravTwigExtension')->truncateFilter($this->getAttribute($context["item"], "content", array()), 350);
+                echo "</p>
+\t\t\t\t        <p class=\"continue\"><a href=\"";
+                // line 54
+                echo $this->getAttribute($context["item"], "url", array());
+                echo "\">Continue Reading...</a></p>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t    \t";
+            }
+            // line 58
+            echo "\t    ";
         }
-        // line 25
-        echo "\t";
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 59
+        echo "\t</div>
+\t";
+    }
+
+    // line 7
+    public function getcreateSelectEntry($__selected__ = null, $__value__ = null)
+    {
+        $context = $this->env->mergeGlobals(array(
+            "selected" => $__selected__,
+            "value" => $__value__,
+        ));
+
+        $blocks = array();
+
+        ob_start();
+        try {
+            // line 8
+            echo "\t\t";
+            if (((isset($context["selected"]) ? $context["selected"] : null) == "true")) {
+                // line 9
+                echo "\t\t\t<option value=\"";
+                echo (isset($context["value"]) ? $context["value"] : null);
+                echo "\" selected=\"selected\">";
+                echo (isset($context["value"]) ? $context["value"] : null);
+                echo "</option>
+\t\t";
+            } else {
+                // line 10
+                echo "\t\t\t
+\t\t\t<option value=\"";
+                // line 11
+                echo (isset($context["value"]) ? $context["value"] : null);
+                echo "\">";
+                echo (isset($context["value"]) ? $context["value"] : null);
+                echo "</option>
+\t\t";
+            }
+            // line 13
+            echo "\t";
+        } catch (Exception $e) {
+            ob_end_clean();
+
+            throw $e;
+        }
+
+        return ('' === $tmp = ob_get_clean()) ? '' : new Twig_Markup($tmp, $this->env->getCharset());
     }
 
     public function getTemplateName()
@@ -168,6 +265,6 @@ class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22
 
     public function getDebugInfo()
     {
-        return array (  156 => 25,  153 => 24,  150 => 23,  148 => 22,  145 => 21,  131 => 20,  124 => 16,  120 => 15,  116 => 14,  112 => 13,  106 => 10,  101 => 7,  99 => 6,  95 => 5,  76 => 4,  71 => 3,  67 => 1,  65 => 2,  51 => 1,  21 => 28,  19 => 1,);
+        return array (  246 => 13,  239 => 11,  236 => 10,  228 => 9,  225 => 8,  213 => 7,  208 => 59,  202 => 58,  195 => 54,  191 => 53,  187 => 52,  183 => 51,  176 => 47,  172 => 46,  167 => 43,  165 => 42,  159 => 41,  155 => 39,  149 => 38,  144 => 36,  141 => 35,  136 => 34,  132 => 33,  126 => 32,  123 => 31,  118 => 29,  115 => 28,  110 => 27,  106 => 26,  101 => 23,  98 => 22,  95 => 21,  93 => 20,  90 => 19,  88 => 18,  84 => 17,  80 => 16,  76 => 14,  70 => 5,  66 => 1,  64 => 3,  50 => 1,  21 => 62,  19 => 1,);
     }
 }

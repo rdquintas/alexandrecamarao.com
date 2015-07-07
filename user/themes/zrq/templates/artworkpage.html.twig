@@ -1,7 +1,5 @@
 {% extends 'partials/base.html.twig' %}
 
-
-
 {% block content %}
 
 	{% macro createSelectEntry(selected, value) %}
@@ -29,7 +27,7 @@
 				{{ _self.createSelectEntry("false", "ALL") }}
 			{% endif %}
 
-			{% for i in range(currentYear,2010) %}    	
+			{% for i in range(currentYear, page.header.ano_inicial) %}    	
 	    		{% if i == yearURLparam  %}		
 					{{ _self.createSelectEntry("true", i) }}
 				{% else %}	
@@ -42,13 +40,14 @@
 		    {% if img.ano == yearURLparam or yearURLparam == "ALL"%}
 	 			<div class="image">		
 					<a href="{{ img.url }}">
-						{{ img.resize(200, 200) }}
+					<img src="{{ theme_url }}/images/loading_spinner.gif" alt="xxx" data-echo="{{ img.resize(200, 200).url }}">
 					</a>
 					<p class="year">{{ img.ano }}</p>
 					<p class="description">{{ img.descricao }}</p>
 				</div>
 		    {% endif %}
-		{% endfor %}
+		{% endfor %}		
 		{{ page.content }}
 	</div>
+
 {% endblock %}

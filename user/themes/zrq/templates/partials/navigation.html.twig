@@ -7,7 +7,7 @@
                     {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
                     {{ p.menu }}
                 </a>
-                {% if p.children.count > 0 %}
+                {% if p.children.count > 0 and p.title != "Solo" and p.title != "Group" %}
                     <ul>
                         {{ _self.loop(p) }}
                     </ul>
@@ -17,7 +17,7 @@
     {% endfor %}
 {% endmacro %}
 
-<ul class="navigation">
+<ul class="sf-menu" id="super-fish-menu">
     {% if config.themes.zrq.dropdown.enabled %}
         {{ _self.loop(pages) }}
     {% else %}
@@ -25,8 +25,7 @@
             {% if page.visible %}
                 {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
                 <li class="{{ current_page }}">
-                    <a href="{{ page.url }}">
-                        {% if page.header.icon %}<i class="fa fa-{{ page.header.icon }}"></i>{% endif %}
+                    <a href="{{ page.url }}">                     
                         {{ page.menu }}
                     </a>
                 </li>
@@ -36,7 +35,6 @@
     {% for mitem in site.menu %}
         <li>
             <a href="{{ mitem.url }}">
-                {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
                 {{ mitem.text }}
             </a>
         </li>

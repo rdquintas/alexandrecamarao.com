@@ -17,7 +17,7 @@ class __TwigTemplate_f243f0c6c63c8b0ef50de9fca76780dc4c0a8048dc080a007c7c42efb47
     {
         // line 19
         echo "
-<ul class=\"navigation\">
+<ul class=\"sf-menu\" id=\"super-fish-menu\">
     ";
         // line 21
         if ($this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "themes", array()), "zrq", array()), "dropdown", array()), "enabled", array())) {
@@ -45,51 +45,37 @@ class __TwigTemplate_f243f0c6c63c8b0ef50de9fca76780dc4c0a8048dc080a007c7c42efb47
                     <a href=\"";
                     // line 28
                     echo $this->getAttribute($context["page"], "url", array());
-                    echo "\">
+                    echo "\">                     
                         ";
                     // line 29
-                    if ($this->getAttribute($this->getAttribute($context["page"], "header", array()), "icon", array())) {
-                        echo "<i class=\"fa fa-";
-                        echo $this->getAttribute($this->getAttribute($context["page"], "header", array()), "icon", array());
-                        echo "\"></i>";
-                    }
-                    // line 30
-                    echo "                        ";
                     echo $this->getAttribute($context["page"], "menu", array());
                     echo "
                     </a>
                 </li>
             ";
                 }
-                // line 34
+                // line 33
                 echo "        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['page'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 35
+            // line 34
             echo "    ";
         }
-        // line 36
+        // line 35
         echo "    ";
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["site"]) ? $context["site"] : null), "menu", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["mitem"]) {
-            // line 37
+            // line 36
             echo "        <li>
             <a href=\"";
-            // line 38
+            // line 37
             echo $this->getAttribute($context["mitem"], "url", array());
             echo "\">
                 ";
-            // line 39
-            if ($this->getAttribute($context["mitem"], "icon", array())) {
-                echo "<i class=\"fa fa-";
-                echo $this->getAttribute($context["mitem"], "icon", array());
-                echo "\"></i>";
-            }
-            // line 40
-            echo "                ";
+            // line 38
             echo $this->getAttribute($context["mitem"], "text", array());
             echo "
             </a>
@@ -99,7 +85,7 @@ class __TwigTemplate_f243f0c6c63c8b0ef50de9fca76780dc4c0a8048dc080a007c7c42efb47
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['mitem'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 44
+        // line 42
         echo "</ul>           ";
     }
 
@@ -147,7 +133,7 @@ class __TwigTemplate_f243f0c6c63c8b0ef50de9fca76780dc4c0a8048dc080a007c7c42efb47
                 </a>
                 ";
                     // line 10
-                    if (($this->getAttribute($this->getAttribute($context["p"], "children", array()), "count", array()) > 0)) {
+                    if (((($this->getAttribute($this->getAttribute($context["p"], "children", array()), "count", array()) > 0) && ($this->getAttribute($context["p"], "title", array()) != "Solo")) && ($this->getAttribute($context["p"], "title", array()) != "Group"))) {
                         // line 11
                         echo "                    <ul>
                         ";
@@ -188,6 +174,6 @@ class __TwigTemplate_f243f0c6c63c8b0ef50de9fca76780dc4c0a8048dc080a007c7c42efb47
 
     public function getDebugInfo()
     {
-        return array (  165 => 17,  161 => 15,  155 => 12,  152 => 11,  150 => 10,  144 => 8,  138 => 7,  134 => 6,  129 => 5,  126 => 4,  123 => 3,  118 => 2,  107 => 1,  103 => 44,  92 => 40,  86 => 39,  82 => 38,  79 => 37,  74 => 36,  71 => 35,  65 => 34,  57 => 30,  51 => 29,  47 => 28,  42 => 27,  39 => 26,  36 => 25,  31 => 24,  25 => 22,  23 => 21,  19 => 19,);
+        return array (  151 => 17,  147 => 15,  141 => 12,  138 => 11,  136 => 10,  130 => 8,  124 => 7,  120 => 6,  115 => 5,  112 => 4,  109 => 3,  104 => 2,  93 => 1,  89 => 42,  79 => 38,  75 => 37,  72 => 36,  67 => 35,  64 => 34,  58 => 33,  51 => 29,  47 => 28,  42 => 27,  39 => 26,  36 => 25,  31 => 24,  25 => 22,  23 => 21,  19 => 19,);
     }
 }

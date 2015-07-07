@@ -1,0 +1,51 @@
+
+{% block content %}
+
+	{% macro createSelectEntry(selected, value) %}
+		{% if selected == "true"  %}
+			<option value="{{ value }}" selected="selected">{{ value }}</option>
+		{% else %}			
+			<option value="{{ value }}">{{ value }}</option>
+		{% endif %}
+	{% endmacro %}
+
+	<div class="page-artwork">
+		<h1>{{ page.header.title }}</h1>
+		{% set currentYear = "now"|date("Y") %}	
+		{% set yearURLparam = uri.query('year') %}
+
+		{% if not yearURLparam %}
+			{% set yearURLparam = "ALL" %}
+		{% endif %}
+		
+		<label for="year">YEAR:</label>
+		<select id="year">
+			{% if yearURLparam == "ALL"  %}		
+				{{ _self.createSelectEntry("true", "ALL") }}
+			{% else %}	
+				{{ _self.createSelectEntry("false", "ALL") }}
+			{% endif %}
+
+			{% for i in range(currentYear,2010) %}    	
+	    		{% if i == yearURLparam  %}		
+					{{ _self.createSelectEntry("true", i) }}
+				{% else %}	
+					{{ _self.createSelectEntry("false", i) }}
+				{% endif %}
+			{% endfor %}
+		</select>
+
+		{% for img in page.media.images %}	    
+		    {% if img.ano == yearURLparam or yearURLparam == "ALL"%}
+	 			<div class="image">		
+					<a href="{{ img.url }}">
+						{{ img.resize(200, 200) }}
+					</a>
+					<p class="year">{{ img.ano }}</p>
+					<p class="description">{{ img.descricao }}</p>
+				</div>
+		    {% endif %}
+		{% endfor %}
+		{{ page.content }}
+	</div>
+{% endblock %}

@@ -1,10 +1,9 @@
 module.exports = function(grunt) {
 
     var _js_libs = [
-        // 'bower_components/jquery/dist/jquery.min.js'
-        // 'bower_components/handlebars/handlebars.min.js',
-        // 'bower_components/packery/dist/packery.pkgd.min.js',
-        // 'bower_components/slick-carousel/slick/slick.min.js'
+        "bower_components/echojs/dist/echo.min.js",
+        "bower_components/superfish/dist/js/hoverIntent.js",
+        "bower_components/superfish/dist/js/superfish.min.js"
     ];
 
     var _js_custom = [
@@ -30,6 +29,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         // 'concat:js_libs',
         'jshint:js_custom',
+        'concat:js_libs',
         'concat:js_custom',
         // 'uglify:js_custom',
         'less:css_custom'
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
         concat: {
             js_libs: {
                 src: _js_libs,
-                dest: 'js/libs.dist.js'
+                dest: 'user/themes/zrq/js/libs.dist.js'
             },
             js_custom: {
                 src: _js_custom,
