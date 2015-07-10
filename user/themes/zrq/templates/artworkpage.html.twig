@@ -36,24 +36,43 @@
 			{% endfor %}
 		</select>
 
+		{% set counter = 0 %}	
+		
 		{% for img in page.media.images %}	    
-		    {% if img.ano == yearURLparam or yearURLparam == "ALL"%}
-	 			<div class="image">		
-					<a href="{{ img.url }}">
-					<img src="{{ theme_url }}/images/loading_spinner.gif" alt="xxx" data-echo="{{ img.resize(200, 200).url }}">
-					</a>
-					<p class="year">{{ img.ano }}</p>
-					<p class="description">{{ img.descricao }}</p>
-				</div>
+			{% if img.ano == yearURLparam or yearURLparam == "ALL"%}
+			    {% set counter = counter + 1 %}
 		    {% endif %}
-		{% endfor %}		
+		{% endfor %} 
+
+  		<section class="container">
+  			{% if counter == 0 %}
+		    	<h4>No results found for that year</h4>
+			{% else %}			
+	            <ul id="da-thumbs" class="da-thumbs">
+				{% for img in page.media.images %}	    
+				    {% if img.ano == yearURLparam or yearURLparam == "ALL"%}
+					<li>
+						<a href="{{ img.url }}">
+						<img src="{{ theme_url }}/images/loading_spinner.gif" alt="" data-echo="{{ img.crop(0,0,300, 300).url }}">
+						<div class="texto">
+							<p class="description">{{ img.descricao }}</p>
+						</div>
+						</a>
+					</li>
+				    {% endif %}
+				{% endfor %}            	
+	            </ul>
+			{% endif %}
+        </section>		
 		{{ page.content }}
 	</div>
 	<script type="text/javascript">
-		/************************************
-		 * Initializes the lazy-load library
-		 ************************************/
+	
 		$(document).ready(function() {
+			// Initializes the hoverdir stuff
+			$(' #da-thumbs > li ').hoverdir();
+
+			// Initializes the lazy-load library
 		    echo.init({
 		        offset: 100,
 		        throttle: 250,

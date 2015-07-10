@@ -33,27 +33,27 @@ h6 {
 
 h1 {
     font-size: @body_font_size * @scale * @scale * @scale * @scale;
-    line-height: @body_font_size * @scale * @scale * @scale * @scale;
+    line-height: @body_font_size * @scale * @scale * @scale * @scale * @scale;
 }
 
 h2 {
     font-size: @body_font_size * @scale * @scale * @scale;
-    line-height: @body_font_size * @scale * @scale * @scale;
+    line-height: @body_font_size * @scale * @scale * @scale * @scale;
 }
 
 h3 {
     font-size: @body_font_size * @scale * @scale;
-    line-height: @body_font_size * @scale * @scale;
+    line-height: @body_font_size * @scale * @scale * @scale;
 }
 
 h4 {
     font-size: @body_font_size * @scale;
-    line-height: @body_font_size * @scale;
+    line-height: @body_font_size * @scale * @scale;
 }
 
 h5 {
     font-size: @body_font_size;
-    line-height: @body_font_size;
+    line-height: @body_font_size * @scale;
 }
 
 h6 {
@@ -76,4 +76,26 @@ hr {
     border-style: none;
     border-top-style: solid;
     color: lighten(@primary_color, 90%);
+}
+
+.browserupdate {
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    display: block;
+    margin-bottom: 3em;
+    padding: 2em;
+    color: #fff;
+    text-align: center;
+    background-color: red;
+    a {
+        color: #fff;
+        text-decoration: underline;
+        &:hover {
+            color: #ddd;
+        }
+    }
 }

@@ -14,7 +14,7 @@
 /***********************************************************
  * adds necessary stuff for each page
  ***********************************************************/
-.initializePage {
+.initializePage(@isMobile) when (@isMobile = false){
     margin-top: @header_height;
     clear: both;
     padding-top: 1rem * @scale;
@@ -22,3 +22,14 @@
     padding-left: 8rem * @scale;
     padding-right: 8rem * @scale;
 }
+
+.initializePage(@isMobile) when (@isMobile = true){
+    margin-top: @header_height;
+    clear: both;
+    padding-top: 1rem * @scale;
+    padding-bottom: 1rem * @scale;
+    padding-left: 1rem * @scale;
+    padding-right: 1rem * @scale;
+}
+
+

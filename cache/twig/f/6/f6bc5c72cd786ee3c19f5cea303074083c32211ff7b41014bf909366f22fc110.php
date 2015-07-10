@@ -16,8 +16,8 @@ class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        $this->loadTemplate("exhibitions.html.twig", "exhibitions.html.twig", 1, "307580691")->display($context);
-        // line 67
+        $this->loadTemplate("exhibitions.html.twig", "exhibitions.html.twig", 1, "1534849383")->display($context);
+        // line 79
         echo "
 ";
     }
@@ -34,13 +34,13 @@ class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22
 
     public function getDebugInfo()
     {
-        return array (  21 => 67,  19 => 1,);
+        return array (  21 => 79,  19 => 1,);
     }
 }
 
 
 /* exhibitions.html.twig */
-class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22fc110_307580691 extends Twig_Template
+class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22fc110_1534849383 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -156,71 +156,111 @@ class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22
 
 \t\t";
         // line 41
+        $context["counter"] = 0;
+        echo "\t
+\t\t
+\t\t";
+        // line 43
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["collection"]) ? $context["collection"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            echo "\t\t\t
-\t\t    ";
-            // line 42
+            echo "\t    
+\t\t\t";
+            // line 44
             if (((twig_date_format_filter($this->env, $this->getAttribute($context["item"], "date", array()), "Y") == (isset($context["yearURLparam"]) ? $context["yearURLparam"] : null)) || ((isset($context["yearURLparam"]) ? $context["yearURLparam"] : null) == "ALL"))) {
-                // line 43
-                echo "\t\t\t    <div class=\"exhibition-item\">
-\t\t\t    \t<hr>
-\t\t\t    \t";
                 // line 45
-                $context["img"] = $this->getAttribute(twig_first($this->env, $this->getAttribute($this->getAttribute($context["item"], "media", array()), "images", array())), "cropZoom", array(0 => 300, 1 => 300), "method");
-                echo "\t
-\t\t\t    \t<h4 class=\"title\">";
+                echo "\t\t\t    ";
+                $context["counter"] = ((isset($context["counter"]) ? $context["counter"] : null) + 1);
                 // line 46
-                echo $this->getAttribute($context["item"], "title", array());
-                echo "</h4>
-\t\t\t\t    ";
-                // line 47
-                if ((isset($context["img"]) ? $context["img"] : null)) {
-                    // line 48
-                    echo "\t\t\t\t\t    <div class=\"image\">
-\t\t\t\t\t    \t<a href=\"";
-                    // line 49
-                    echo $this->getAttribute($context["item"], "url", array());
-                    echo "\">
-\t\t\t\t\t        \t";
-                    // line 50
-                    echo $this->getAttribute((isset($context["img"]) ? $context["img"] : null), "html", array());
-                    echo "
-\t\t\t\t\t        </a>
-\t\t\t\t\t    </div>
-\t\t\t\t    ";
-                }
-                // line 54
-                echo "\t\t\t\t\t<div class=\"text\">
-\t\t\t\t\t\t";
-                // line 55
-                if ($this->getAttribute($context["item"], "date", array())) {
-                    // line 56
-                    echo "\t\t\t\t        \t<p class=\"date\">";
-                    echo twig_date_format_filter($this->env, $this->getAttribute($context["item"], "date", array()), "d/M/Y");
-                    echo "</p>
-\t\t\t\t        ";
-                }
-                // line 58
-                echo "\t\t\t\t        <p class=\"summary\">";
-                echo $this->env->getExtension('GravTwigExtension')->truncateFilter($this->getAttribute($context["item"], "content", array()), 350);
-                echo "</p>
-\t\t\t\t        <p class=\"continue\"><a href=\"";
-                // line 59
-                echo $this->getAttribute($context["item"], "url", array());
-                echo "\">Continue Reading...</a></p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t    \t";
+                echo "\t\t    ";
             }
-            // line 63
-            echo "\t    ";
+            // line 47
+            echo "\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 64
+        echo " 
+
+\t\t";
+        // line 49
+        if (((isset($context["counter"]) ? $context["counter"] : null) == 0)) {
+            // line 50
+            echo "\t    \t<h4>No results found for that year</h4>
+\t\t";
+        } else {
+            // line 51
+            echo "\t
+\t\t\t";
+            // line 52
+            $context['_parent'] = (array) $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["collection"]) ? $context["collection"] : null));
+            foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+                echo "\t
+\t\t\t    ";
+                // line 53
+                if (((twig_date_format_filter($this->env, $this->getAttribute($context["item"], "date", array()), "Y") == (isset($context["yearURLparam"]) ? $context["yearURLparam"] : null)) || ((isset($context["yearURLparam"]) ? $context["yearURLparam"] : null) == "ALL"))) {
+                    // line 54
+                    echo "\t\t\t\t    <div class=\"exhibition-item\">
+\t\t\t\t    \t<hr>
+\t\t\t\t    \t";
+                    // line 56
+                    $context["img"] = $this->getAttribute(twig_first($this->env, $this->getAttribute($this->getAttribute($context["item"], "media", array()), "images", array())), "cropZoom", array(0 => 300, 1 => 300), "method");
+                    echo "\t
+\t\t\t\t    \t<h4 class=\"title\">";
+                    // line 57
+                    echo $this->getAttribute($context["item"], "title", array());
+                    echo "</h4>
+\t\t\t\t\t    ";
+                    // line 58
+                    if ((isset($context["img"]) ? $context["img"] : null)) {
+                        // line 59
+                        echo "\t\t\t\t\t\t    <div class=\"image\">
+\t\t\t\t\t\t    \t<a href=\"";
+                        // line 60
+                        echo $this->getAttribute($context["item"], "url", array());
+                        echo "\">
+\t\t\t\t\t\t        \t";
+                        // line 61
+                        echo $this->getAttribute((isset($context["img"]) ? $context["img"] : null), "html", array());
+                        echo "
+\t\t\t\t\t\t        </a>
+\t\t\t\t\t\t    </div>
+\t\t\t\t\t    ";
+                    }
+                    // line 65
+                    echo "\t\t\t\t\t\t<div class=\"text\">
+\t\t\t\t\t\t\t";
+                    // line 66
+                    if ($this->getAttribute($context["item"], "date", array())) {
+                        // line 67
+                        echo "\t\t\t\t\t        \t<p class=\"date\">";
+                        echo twig_date_format_filter($this->env, $this->getAttribute($context["item"], "date", array()), "d/M/Y");
+                        echo "</p>
+\t\t\t\t\t        ";
+                    }
+                    // line 69
+                    echo "\t\t\t\t\t        <p class=\"summary\">";
+                    echo $this->env->getExtension('GravTwigExtension')->truncateFilter($this->getAttribute($context["item"], "content", array()), 350);
+                    echo "</p>
+\t\t\t\t\t        <p class=\"continue\"><a href=\"";
+                    // line 70
+                    echo $this->getAttribute($context["item"], "url", array());
+                    echo "\">Continue Reading...</a></p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t    \t";
+                }
+                // line 74
+                echo "\t\t    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 75
+            echo "\t\t";
+        }
+        // line 76
         echo "\t</div>
 \t";
     }
@@ -281,6 +321,6 @@ class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22
 
     public function getDebugInfo()
     {
-        return array (  262 => 13,  255 => 11,  252 => 10,  244 => 9,  241 => 8,  229 => 7,  224 => 64,  218 => 63,  211 => 59,  206 => 58,  200 => 56,  198 => 55,  195 => 54,  188 => 50,  184 => 49,  181 => 48,  179 => 47,  175 => 46,  171 => 45,  167 => 43,  165 => 42,  159 => 41,  155 => 39,  149 => 38,  144 => 36,  141 => 35,  136 => 34,  132 => 33,  126 => 32,  123 => 31,  118 => 29,  115 => 28,  110 => 27,  106 => 26,  101 => 23,  98 => 22,  95 => 21,  93 => 20,  90 => 19,  88 => 18,  84 => 17,  80 => 16,  76 => 14,  70 => 5,  66 => 1,  64 => 3,  50 => 1,  21 => 67,  19 => 1,);
+        return array (  302 => 13,  295 => 11,  292 => 10,  284 => 9,  281 => 8,  269 => 7,  264 => 76,  261 => 75,  255 => 74,  248 => 70,  243 => 69,  237 => 67,  235 => 66,  232 => 65,  225 => 61,  221 => 60,  218 => 59,  216 => 58,  212 => 57,  208 => 56,  204 => 54,  202 => 53,  196 => 52,  193 => 51,  189 => 50,  187 => 49,  178 => 47,  175 => 46,  172 => 45,  170 => 44,  164 => 43,  159 => 41,  155 => 39,  149 => 38,  144 => 36,  141 => 35,  136 => 34,  132 => 33,  126 => 32,  123 => 31,  118 => 29,  115 => 28,  110 => 27,  106 => 26,  101 => 23,  98 => 22,  95 => 21,  93 => 20,  90 => 19,  88 => 18,  84 => 17,  80 => 16,  76 => 14,  70 => 5,  66 => 1,  64 => 3,  50 => 1,  21 => 79,  19 => 1,);
     }
 }

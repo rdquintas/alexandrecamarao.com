@@ -38,29 +38,41 @@
 			{% endfor %}
 		</select>
 
-		{% for item in collection %}			
-		    {% if item.date|date("Y") == yearURLparam or yearURLparam == "ALL"%}
-			    <div class="exhibition-item">
-			    	<hr>
-			    	{% set img = item.media.images|first.cropZoom(300,300) %}	
-			    	<h4 class="title">{{ item.title }}</h4>
-				    {% if img %}
-					    <div class="image">
-					    	<a href="{{ item.url }}">
-					        	{{ img.html }}
-					        </a>
-					    </div>
-				    {% endif %}
-					<div class="text">
-						{% if item.date %}
-				        	<p class="date">{{ item.date|date("d/M/Y") }}</p>
-				        {% endif %}
-				        <p class="summary">{{ item.content|truncate(350) }}</p>
-				        <p class="continue"><a href="{{ item.url }}">Continue Reading...</a></p>
+		{% set counter = 0 %}	
+		
+		{% for item in collection %}	    
+			{% if item.date|date("Y") == yearURLparam or yearURLparam == "ALL"%}
+			    {% set counter = counter + 1 %}
+		    {% endif %}
+		{% endfor %} 
+
+		{% if counter == 0 %}
+	    	<h4>No results found for that year</h4>
+		{% else %}	
+			{% for item in collection %}	
+			    {% if item.date|date("Y") == yearURLparam or yearURLparam == "ALL"%}
+				    <div class="exhibition-item">
+				    	<hr>
+				    	{% set img = item.media.images|first.cropZoom(300,300) %}	
+				    	<h4 class="title">{{ item.title }}</h4>
+					    {% if img %}
+						    <div class="image">
+						    	<a href="{{ item.url }}">
+						        	{{ img.html }}
+						        </a>
+						    </div>
+					    {% endif %}
+						<div class="text">
+							{% if item.date %}
+					        	<p class="date">{{ item.date|date("d/M/Y") }}</p>
+					        {% endif %}
+					        <p class="summary">{{ item.content|truncate(350) }}</p>
+					        <p class="continue"><a href="{{ item.url }}">Continue Reading...</a></p>
+						</div>
 					</div>
-				</div>
-	    	{% endif %}
-	    {% endfor %}
+		    	{% endif %}
+		    {% endfor %}
+		{% endif %}
 	</div>
 	{% endblock %}
 {% endembed %}

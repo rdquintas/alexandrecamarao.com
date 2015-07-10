@@ -114,54 +114,98 @@ class __TwigTemplate_0ed884b5d43b572db91849b7861ec448dee45d4c27ed7c042f72d03a266
 
 \t\t";
         // line 39
+        $context["counter"] = 0;
+        echo "\t
+\t\t
+\t\t";
+        // line 41
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "media", array()), "images", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
             echo "\t    
-\t\t    ";
-            // line 40
+\t\t\t";
+            // line 42
             if ((($this->getAttribute($context["img"], "ano", array()) == (isset($context["yearURLparam"]) ? $context["yearURLparam"] : null)) || ((isset($context["yearURLparam"]) ? $context["yearURLparam"] : null) == "ALL"))) {
-                // line 41
-                echo "\t \t\t\t<div class=\"image\">\t\t
-\t\t\t\t\t<a href=\"";
-                // line 42
-                echo $this->getAttribute($context["img"], "url", array());
-                echo "\">
-\t\t\t\t\t<img src=\"";
                 // line 43
-                echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
-                echo "/images/loading_spinner.gif\" alt=\"xxx\" data-echo=\"";
-                echo $this->getAttribute($this->getAttribute($context["img"], "resize", array(0 => 200, 1 => 200), "method"), "url", array());
-                echo "\">
-\t\t\t\t\t</a>
-\t\t\t\t\t<p class=\"year\">";
-                // line 45
-                echo $this->getAttribute($context["img"], "ano", array());
-                echo "</p>
-\t\t\t\t\t<p class=\"description\">";
-                // line 46
-                echo $this->getAttribute($context["img"], "descricao", array());
-                echo "</p>
-\t\t\t\t</div>
-\t\t    ";
+                echo "\t\t\t    ";
+                $context["counter"] = ((isset($context["counter"]) ? $context["counter"] : null) + 1);
+                // line 44
+                echo "\t\t    ";
             }
-            // line 49
+            // line 45
             echo "\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['img'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        echo "\t\t
+        echo " 
+
+  \t\t<section class=\"container\">
+  \t\t\t";
+        // line 48
+        if (((isset($context["counter"]) ? $context["counter"] : null) == 0)) {
+            // line 49
+            echo "\t\t    \t<h4>No results found for that year</h4>
+\t\t\t";
+        } else {
+            // line 50
+            echo "\t\t\t
+\t            <ul id=\"da-thumbs\" class=\"da-thumbs\">
+\t\t\t\t";
+            // line 52
+            $context['_parent'] = (array) $context;
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "media", array()), "images", array()));
+            foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
+                echo "\t    
+\t\t\t\t    ";
+                // line 53
+                if ((($this->getAttribute($context["img"], "ano", array()) == (isset($context["yearURLparam"]) ? $context["yearURLparam"] : null)) || ((isset($context["yearURLparam"]) ? $context["yearURLparam"] : null) == "ALL"))) {
+                    // line 54
+                    echo "\t\t\t\t\t<li>
+\t\t\t\t\t\t<a href=\"";
+                    // line 55
+                    echo $this->getAttribute($context["img"], "url", array());
+                    echo "\">
+\t\t\t\t\t\t<img src=\"";
+                    // line 56
+                    echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
+                    echo "/images/loading_spinner.gif\" alt=\"\" data-echo=\"";
+                    echo $this->getAttribute($this->getAttribute($context["img"], "crop", array(0 => 0, 1 => 0, 2 => 300, 3 => 300), "method"), "url", array());
+                    echo "\">
+\t\t\t\t\t\t<div class=\"texto\">
+\t\t\t\t\t\t\t<p class=\"description\">";
+                    // line 58
+                    echo $this->getAttribute($context["img"], "descricao", array());
+                    echo "</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</a>
+\t\t\t\t\t</li>
+\t\t\t\t    ";
+                }
+                // line 63
+                echo "\t\t\t\t";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['img'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            echo "            \t
+\t            </ul>
+\t\t\t";
+        }
+        // line 66
+        echo "        </section>\t\t
 \t\t";
-        // line 50
+        // line 67
         echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
         echo "
 \t</div>
 \t<script type=\"text/javascript\">
-\t\t/************************************
-\t\t * Initializes the lazy-load library
-\t\t ************************************/
+\t
 \t\t\$(document).ready(function() {
+\t\t\t// Initializes the hoverdir stuff
+\t\t\t\$(' #da-thumbs > li ').hoverdir();
+
+\t\t\t// Initializes the lazy-load library
 \t\t    echo.init({
 \t\t        offset: 100,
 \t\t        throttle: 250,
@@ -228,6 +272,6 @@ class __TwigTemplate_0ed884b5d43b572db91849b7861ec448dee45d4c27ed7c042f72d03a266
 
     public function getDebugInfo()
     {
-        return array (  209 => 11,  202 => 9,  199 => 8,  191 => 7,  188 => 6,  176 => 5,  157 => 50,  149 => 49,  143 => 46,  139 => 45,  132 => 43,  128 => 42,  125 => 41,  123 => 40,  117 => 39,  113 => 37,  107 => 36,  102 => 34,  99 => 33,  94 => 32,  90 => 31,  84 => 30,  81 => 29,  76 => 27,  73 => 26,  68 => 25,  64 => 24,  59 => 21,  56 => 20,  53 => 19,  51 => 18,  48 => 17,  46 => 16,  42 => 15,  38 => 14,  34 => 12,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  253 => 11,  246 => 9,  243 => 8,  235 => 7,  232 => 6,  220 => 5,  199 => 67,  196 => 66,  186 => 63,  178 => 58,  171 => 56,  167 => 55,  164 => 54,  162 => 53,  156 => 52,  152 => 50,  148 => 49,  146 => 48,  136 => 45,  133 => 44,  130 => 43,  128 => 42,  122 => 41,  117 => 39,  113 => 37,  107 => 36,  102 => 34,  99 => 33,  94 => 32,  90 => 31,  84 => 30,  81 => 29,  76 => 27,  73 => 26,  68 => 25,  64 => 24,  59 => 21,  56 => 20,  53 => 19,  51 => 18,  48 => 17,  46 => 16,  42 => 15,  38 => 14,  34 => 12,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

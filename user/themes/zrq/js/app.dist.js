@@ -46,13 +46,13 @@ $("#year").change(function(e) {
 });
 
 
-/************************************
- * Initializes the lazy-load library
- ************************************/
-$(document).ready(function() {
-    echo.init({
-        offset: 100,
-        throttle: 250,
-        unload: false
-    });
-});
+// /************************************
+//  * Initializes the lazy-load library
+//  ************************************/
+// $(document).ready(function() {
+//     echo.init({
+//         offset: 100,
+//         throttle: 250,
+//         unload: false
+//     });
+// });

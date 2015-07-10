@@ -3,7 +3,8 @@ module.exports = function(grunt) {
     var _js_libs = [
         "bower_components/echojs/dist/echo.min.js",
         "bower_components/superfish/dist/js/hoverIntent.js",
-        "bower_components/superfish/dist/js/superfish.min.js"
+        "bower_components/superfish/dist/js/superfish.min.js",
+        'user/themes/zrq/js/jquery.hoverdir.js'
     ];
 
     var _js_custom = [

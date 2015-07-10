@@ -30,10 +30,27 @@
         {% do assets.addCss('theme://css/app.dist.css',100) %}
     {% endblock %}
     {{ assets.css() }}
+
+    {% do assets.addJs('theme://js/modernizr.custom.31616.js', 100) %}
+    {{ assets.js() }} 
 {% endblock head%}
+
 </head>
 
 <body>
+   <!--[if lte IE 9]>
+    <div class="browserupdate">
+        You are using an obsolete browser which can harm your experience and cause security troubles.
+        <br> Please <a href="http://browsehappy.com/" target="_blank">update your browser!</a>
+    </div>
+  <![endif]-->
+    <noscript>
+        <div class="browserupdate">
+            Oh, no! You don't have JavaScript enabled on your browser!
+            <br> This website only works with JavaScript. Sorry.
+        </div>
+    </noscript>
+    
     {% block header %}
     <header class="header">
             <div class="logo">
