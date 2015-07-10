@@ -33,6 +33,12 @@ class __TwigTemplate_de9b18ea2881c944ac31aee2ae950065b6f06fc912a0fce1b2b41e066e7
         // line 4
         echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
         echo "
+\t\t<div class=\"image\">
+\t\t\t";
+        // line 6
+        echo twig_first($this->env, $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "media", array()), "images", array()));
+        echo "
+\t\t</div>
 \t</div>
 ";
     }
@@ -49,6 +55,6 @@ class __TwigTemplate_de9b18ea2881c944ac31aee2ae950065b6f06fc912a0fce1b2b41e066e7
 
     public function getDebugInfo()
     {
-        return array (  34 => 4,  28 => 2,  11 => 1,);
+        return array (  39 => 6,  34 => 4,  28 => 2,  11 => 1,);
     }
 }

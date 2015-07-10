@@ -55,7 +55,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         // ================================
-        // watch: WATCH me now
+        // WATCH
         // ================================          
         watch: {
             js_custom: {
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
 
 
         // ================================
-        // jshint: JS Hint
+        // JSHINT
         // ================================          
         jshint: {
             js_custom: {
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
 
 
         // ================================
-        // concat: Concatenation
+        // CONCAT
         // ================================          
         concat: {
             js_libs: {
@@ -108,7 +108,7 @@ module.exports = function(grunt) {
 
 
         // // ================================
-        // // uglify: JS minify
+        // // UGLIFY: JS minify
         // // ================================  
         // uglify: {
         //     js_custom: {
@@ -119,7 +119,7 @@ module.exports = function(grunt) {
 
 
         // // ================================
-        // // cssmin: CSS minify
+        // // CSSMIN
         // // ================================        
         // cssmin: {
         //     css_custom: {
@@ -132,15 +132,15 @@ module.exports = function(grunt) {
 
 
         // ================================
-        // less: LESS compilation
+        // LESS
         // ================================  
         less: {
             css_custom: {
                 options: {
                     sourceMap: true,
                     sourceMapFilename: "user/themes/zrq/css/app.dist.css.map",
-                    cleancss: false,
-                    compress: false
+                    cleancss: true,
+                    compress: true
                 },
                 files: {
                     "user/themes/zrq/css/app.dist.css": "user/themes/zrq/less/start_here.less"
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
 
 
         // // ================================
-        // // copy: Copy files
+        // // COPY
         // // ================================  
         // copy: {
         //     purecss: {
@@ -162,13 +162,13 @@ module.exports = function(grunt) {
 
 
         // // ================================
-        // // clean: Deletes files
+        // // CLEAN
         // // ================================          
         // clean: ['js/<%= pkg.name %>.js'],
 
 
         // // ================================
-        // // rename: Rename files
+        // // RENAME
         // // ================================          
         // rename: {
         //     // css: {
@@ -181,7 +181,7 @@ module.exports = function(grunt) {
 
 
         // // ================================
-        // // connect: HTTP server
+        // // CONNECT
         // // ================================
         // connect: {
         //     server: {

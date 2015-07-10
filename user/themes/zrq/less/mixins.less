@@ -1,0 +1,24 @@
+/***********************************************************
+ * sets borders for the main TD cells
+ ***********************************************************/
+.clearfix {
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+/***********************************************************
+ * adds necessary stuff for each page
+ ***********************************************************/
+.initializePage {
+    margin-top: @header_height;
+    clear: both;
+    padding-top: 1rem * @scale;
+    padding-bottom: 1rem * @scale;
+    padding-left: 8rem * @scale;
+    padding-right: 8rem * @scale;
+}

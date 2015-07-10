@@ -13,7 +13,7 @@
 	{% endmacro %}
 
 	<div class="page-exhibitions">
-		<h1>{{ page.header.title }}</h1>
+		<h2>{{ page.header.title }}</h2>
 		{% set currentYear = "now"|date("Y") %}	
 		{% set yearURLparam = uri.query('year') %}
 
@@ -42,14 +42,19 @@
 		    {% if item.date|date("Y") == yearURLparam or yearURLparam == "ALL"%}
 			    <div class="exhibition-item">
 			    	<hr>
-				    <div class="image">
-				    	<a href="{{ item.url }}">
-				        	{{ item.media.images|first.cropZoom(300,300).html }}
-				        </a>
-				    </div>
-				    <div class="text">
-				        <p class="title">{{ item.title }}</p>
-				        <p class="date">{{ item.date|date("d/M/Y") }}</p>
+			    	{% set img = item.media.images|first.cropZoom(300,300) %}	
+			    	<h4 class="title">{{ item.title }}</h4>
+				    {% if img %}
+					    <div class="image">
+					    	<a href="{{ item.url }}">
+					        	{{ img.html }}
+					        </a>
+					    </div>
+				    {% endif %}
+					<div class="text">
+						{% if item.date %}
+				        	<p class="date">{{ item.date|date("d/M/Y") }}</p>
+				        {% endif %}
 				        <p class="summary">{{ item.content|truncate(350) }}</p>
 				        <p class="continue"><a href="{{ item.url }}">Continue Reading...</a></p>
 					</div>

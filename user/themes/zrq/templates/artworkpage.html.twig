@@ -11,7 +11,7 @@
 	{% endmacro %}
 
 	<div class="page-artwork">
-		<h1>{{ page.header.title }}</h1>
+		<h2>{{ page.header.title }}</h2>
 		{% set currentYear = "now"|date("Y") %}	
 		{% set yearURLparam = uri.query('year') %}
 
@@ -49,5 +49,16 @@
 		{% endfor %}		
 		{{ page.content }}
 	</div>
-
+	<script type="text/javascript">
+		/************************************
+		 * Initializes the lazy-load library
+		 ************************************/
+		$(document).ready(function() {
+		    echo.init({
+		        offset: 100,
+		        throttle: 250,
+		        unload: false
+		    });
+		});	
+	</script>
 {% endblock %}

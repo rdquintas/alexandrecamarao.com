@@ -1,20 +1,17 @@
-
-
 /************************************
  * Superfish navigation menu
  ************************************/
 $(document).ready(function() {
     var example = $('#super-fish-menu').superfish({
-        delay: 1000, // one second delay on mouseout
-        animation: {
-            opacity: 'show',
-            height: 'show'
-        }, // fade-in and slide-down animation
-        speed: 'fast', // faster animation speed
+        delay: 0,
+        speed: 0,
+        speedOut: 0,
         // cssArrows: false,
         autoArrows: false // disable generation of arr
     });
 });
+
+
 // $("#zrq").on("click", function(e) {
 //     $.ajax({
 //             // url: "/user/themes/zrq/templates/teste.php",
@@ -25,6 +22,20 @@ $(document).ready(function() {
 //             $(".teste_zrq").append(html);
 //         });
 // });
+
+
+
+/************************************
+ * Onscroll event to shrink header
+ ************************************/
+$(window).scroll(function() {
+    if ($(document).scrollTop() > 100) {
+        // console.log($(document).scrollTop());
+        $('.header').addClass('smaller');
+    } else {
+        $('.header').removeClass('smaller');
+    }
+});
 
 
 /************************************
@@ -38,8 +49,10 @@ $("#year").change(function(e) {
 /************************************
  * Initializes the lazy-load library
  ************************************/
-echo.init({
-    offset: 100,
-    throttle: 250,
-    unload: false
+$(document).ready(function() {
+    echo.init({
+        offset: 100,
+        throttle: 250,
+        unload: false
+    });
 });

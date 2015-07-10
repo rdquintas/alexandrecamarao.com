@@ -16,20 +16,17 @@ class __TwigTemplate_4dc9490c92e5cb3fb6c084361375cf27b32d99449a2c683ad296ac52774
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<hr>
-<div class=\"footer-modules\">
-    <div class=\"footer-copyright\">
-        ";
-        // line 4
+        echo "<section class=\"footer\">
+\t";
+        // line 2
         echo $this->getAttribute($this->getAttribute((isset($context["site"]) ? $context["site"] : null), "author", array()), "copyright", array());
         echo " - <a target=\"_blank\" href=\"";
         echo $this->getAttribute($this->getAttribute((isset($context["site"]) ? $context["site"] : null), "author", array()), "url", array());
         echo " \">";
         echo $this->getAttribute($this->getAttribute((isset($context["site"]) ? $context["site"] : null), "author", array()), "url_name", array());
         echo " </a>
-    </div>
-</div>
-</div>";
+</section>
+";
     }
 
     public function getTemplateName()
@@ -44,6 +41,6 @@ class __TwigTemplate_4dc9490c92e5cb3fb6c084361375cf27b32d99449a2c683ad296ac52774
 
     public function getDebugInfo()
     {
-        return array (  24 => 4,  19 => 1,);
+        return array (  22 => 2,  19 => 1,);
     }
 }

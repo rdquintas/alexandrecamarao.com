@@ -33,10 +33,10 @@ class __TwigTemplate_0ed884b5d43b572db91849b7861ec448dee45d4c27ed7c042f72d03a266
         // line 12
         echo "
 \t<div class=\"page-artwork\">
-\t\t<h1>";
+\t\t<h2>";
         // line 14
         echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "title", array());
-        echo "</h1>
+        echo "</h2>
 \t\t";
         // line 15
         $context["currentYear"] = twig_date_format_filter($this->env, "now", "Y");
@@ -157,7 +157,18 @@ class __TwigTemplate_0ed884b5d43b572db91849b7861ec448dee45d4c27ed7c042f72d03a266
         echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
         echo "
 \t</div>
-
+\t<script type=\"text/javascript\">
+\t\t/************************************
+\t\t * Initializes the lazy-load library
+\t\t ************************************/
+\t\t\$(document).ready(function() {
+\t\t    echo.init({
+\t\t        offset: 100,
+\t\t        throttle: 250,
+\t\t        unload: false
+\t\t    });
+\t\t});\t
+\t</script>
 ";
     }
 
@@ -217,6 +228,6 @@ class __TwigTemplate_0ed884b5d43b572db91849b7861ec448dee45d4c27ed7c042f72d03a266
 
     public function getDebugInfo()
     {
-        return array (  198 => 11,  191 => 9,  188 => 8,  180 => 7,  177 => 6,  165 => 5,  157 => 50,  149 => 49,  143 => 46,  139 => 45,  132 => 43,  128 => 42,  125 => 41,  123 => 40,  117 => 39,  113 => 37,  107 => 36,  102 => 34,  99 => 33,  94 => 32,  90 => 31,  84 => 30,  81 => 29,  76 => 27,  73 => 26,  68 => 25,  64 => 24,  59 => 21,  56 => 20,  53 => 19,  51 => 18,  48 => 17,  46 => 16,  42 => 15,  38 => 14,  34 => 12,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  209 => 11,  202 => 9,  199 => 8,  191 => 7,  188 => 6,  176 => 5,  157 => 50,  149 => 49,  143 => 46,  139 => 45,  132 => 43,  128 => 42,  125 => 41,  123 => 40,  117 => 39,  113 => 37,  107 => 36,  102 => 34,  99 => 33,  94 => 32,  90 => 31,  84 => 30,  81 => 29,  76 => 27,  73 => 26,  68 => 25,  64 => 24,  59 => 21,  56 => 20,  53 => 19,  51 => 18,  48 => 17,  46 => 16,  42 => 15,  38 => 14,  34 => 12,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
