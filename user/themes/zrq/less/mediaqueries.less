@@ -1,58 +1,91 @@
-@media screen and (max-width: 1200px) {
-    .header {
-        .logo {
-            max-width: 10%;
-            margin-top: -1rem;
-        }
-    }
-    .page-artwork {
-        .da-thumbs {
-            li {
-                width: 30%;
-                padding: 0.2em;
-                .texto {
-                    padding: 1rem;
-                }
-            }
-        }
-    }
-}
+// @media screen and (max-width: 1200px) {
+//     .header {
+//         .logo {
+//             max-width: 10%;
+//             margin-top: -1rem;
+//         }
+//     }
+//     .page-artwork {
+//         .da-thumbs {
+//             li {
+//                 width: 30%;
+//                 padding: 0.2em;
+//                 .texto {
+//                     padding: 1rem;
+//                 }
+//             }
+//         }
+//     }
+// }
 
-@media screen and (max-width: 980px) {
-    .header {
-        nav {
-            float: left;
-        }
-        .logo {
-            display: none;
-        }
-    }
-    .page-artwork {
-        .da-thumbs {
-            li {
-                width: 50%;
-                padding: 0.2em;
-                .texto {
-                    padding: 1rem;
-                }
-            }
-        }
-    }
-}
+// @media screen and (max-width: 980px) {
+//     .header {
+//         nav {
+//             float: left;
+//         }
+//         .logo {
+//             display: none;
+//         }
+//     }
+//     .page-artwork {
+//         h2 {
+//             font-size: @body_font_size * @scale * @scale;
+//         }
+//         .da-thumbs {
+//             li {
+//                 width: 50%;
+//                 padding: 0.2em;
+//                 .texto {
+//                     padding: 1rem;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 @media screen and (max-width: 850px) {
-    .header {
-        nav {
-            display: none;
-        }
-    }
-    .page-home {
-        .initializePage(true);
-        padding: 0;
-    }
-    .page-artwork {
-        .initializePage(true);
-    }
+    // .header {
+    //     height: @header_height_small;
+    //     nav {
+    //         // display: none;
+    //     }
+    // }
+    // .page-home {
+    //     .initializePage(true);
+    //     padding: 0;
+    //     .news {
+    //         max-width: 100%;
+    //         width: 100%;
+    //         position: static;
+    //         top: 0;
+    //         padding: 1rem * @scale * @scale;
+    //         background-color: lighten(@primary_color, 50%);
+    //         color: contrast(@primary_color);
+    //         padding: 1rem * @scale;
+    //         opacity: 1;
+    //         h4 {
+    //             font-size: @body_font_size;
+    //         }
+    //     }
+    // }
+    // .page-artwork {
+    //     .initializePage(true);
+    //     .da-thumbs {
+    //         li {
+    //             width: 100%;
+    //             padding: 0.2em;
+    //             margin-bottom: 2rem;
+    //             img {
+    //                 float: left;
+    //             }
+    //             .texto {
+    //                 position: static;
+    //                 float: left;
+    //                 padding: 1rem;
+    //             }
+    //         }
+    //     }
+    // }
     .page-exhibitions {
         .initializePage(true);
     }
@@ -68,23 +101,7 @@
     .page-contacts {
         .initializePage(true);
     }
-    .header {
-        nav {
-            float: left;
-        }
-        .logo {
-            display: none;
-        }
-    }
-    .page-artwork {
-        .da-thumbs {
-            li {
-                width: 100%;
-                padding: 0.2em;
-                .texto {
-                    padding: 1rem;
-                }
-            }
-        }
+    .footer {
+        font-size: @body_font_size / @scale;
     }
 }

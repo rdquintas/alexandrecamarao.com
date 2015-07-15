@@ -14,22 +14,36 @@
 /***********************************************************
  * adds necessary stuff for each page
  ***********************************************************/
-.initializePage(@isMobile) when (@isMobile = false){
-    margin-top: @header_height;
+ .initializePage(@height; @side-rems){
+    margin-top: @height / @scale / @scale;
     clear: both;
     padding-top: 1rem * @scale;
     padding-bottom: 1rem * @scale;
-    padding-left: 8rem * @scale;
-    padding-right: 8rem * @scale;
+    padding-left: @side-rems * @scale;
+    padding-right: @side-rems * @scale;
 }
 
-.initializePage(@isMobile) when (@isMobile = true){
-    margin-top: @header_height;
-    clear: both;
-    padding-top: 1rem * @scale;
-    padding-bottom: 1rem * @scale;
-    padding-left: 1rem * @scale;
-    padding-right: 1rem * @scale;
+/***********************************************************
+ * adds necessary stuff for each page
+ ***********************************************************/
+ .menu-animation(@margin; @duration; @function; @delay){
+     -webkit-transition-property: @margin;
+    -moz-transition-property: @margin;
+    -o-transition-property: @margin;
+    transition-property: @margin;
+    -webkit-transition-duration: @duration;
+    -moz-transition-duration: @duration;
+    -o-transition-duration: @duration;
+    transition-duration: @duration;
+    -webkit-transition-timing-function: @function;
+    -moz-transition-timing-function: @function;
+    -o-transition-timing-function: @function;
+    transition-timing-function: @function;
+    -webkit-transition-delay: @delay;
+    -moz-transition-delay: @delay;
+    -o-transition-delay: @delay;
+    transition-delay: @delay;
 }
 
 
+ 

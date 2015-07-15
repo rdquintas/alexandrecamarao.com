@@ -2,7 +2,7 @@
  * Superfish navigation menu
  ************************************/
 $(document).ready(function() {
-    var example = $('#super-fish-menu').superfish({
+    var example = $('nav#original-menu').superfish({
         delay: 0,
         speed: 0,
         speedOut: 0,
@@ -46,13 +46,12 @@ $("#year").change(function(e) {
 });
 
 
-// /************************************
-//  * Initializes the lazy-load library
-//  ************************************/
-// $(document).ready(function() {
-//     echo.init({
-//         offset: 100,
-//         throttle: 250,
-//         unload: false
-//     });
-// });
+/************************************
+ * burger icon click event (mobile only)
+ ************************************/
+$(".burger-icon").on("click", function(e) {
+    e.preventDefault();    
+    $("nav#mobile-menu").toggleClass("move");
+    $(".container").toggleClass("move");
+    $(window).scrollTop(0);
+});

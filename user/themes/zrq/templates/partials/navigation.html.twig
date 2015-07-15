@@ -17,7 +17,12 @@
     {% endfor %}
 {% endmacro %}
 
-<ul class="sf-menu" id="super-fish-menu">
+{% if withSuperFish == "true" %}
+    <ul class="sf-menu" id="super-fish-menu">
+{% else %}
+    <ul>
+{% endif %}
+
     {% if config.themes.zrq.dropdown.enabled %}
         {{ _self.loop(pages) }}
     {% else %}

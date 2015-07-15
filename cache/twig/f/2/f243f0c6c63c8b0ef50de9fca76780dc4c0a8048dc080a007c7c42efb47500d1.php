@@ -17,65 +17,77 @@ class __TwigTemplate_f243f0c6c63c8b0ef50de9fca76780dc4c0a8048dc080a007c7c42efb47
     {
         // line 19
         echo "
-<ul class=\"sf-menu\" id=\"super-fish-menu\">
+";
+        // line 20
+        if (((isset($context["withSuperFish"]) ? $context["withSuperFish"] : null) == "true")) {
+            // line 21
+            echo "    <ul class=\"sf-menu\" id=\"super-fish-menu\">
+";
+        } else {
+            // line 23
+            echo "    <ul>
+";
+        }
+        // line 25
+        echo "
     ";
-        // line 21
+        // line 26
         if ($this->getAttribute($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "themes", array()), "zrq", array()), "dropdown", array()), "enabled", array())) {
-            // line 22
+            // line 27
             echo "        ";
             echo $this->getAttribute($this, "loop", array(0 => (isset($context["pages"]) ? $context["pages"] : null)), "method");
             echo "
     ";
         } else {
-            // line 24
+            // line 29
             echo "        ";
             $context['_parent'] = (array) $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["pages"]) ? $context["pages"] : null), "children", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
-                // line 25
+                // line 30
                 echo "            ";
                 if ($this->getAttribute($context["page"], "visible", array())) {
-                    // line 26
+                    // line 31
                     echo "                ";
                     $context["current_page"] = ((($this->getAttribute($context["page"], "active", array()) || $this->getAttribute($context["page"], "activeChild", array()))) ? ("active") : (""));
-                    // line 27
+                    // line 32
                     echo "                <li class=\"";
                     echo (isset($context["current_page"]) ? $context["current_page"] : null);
                     echo "\">
                     <a href=\"";
-                    // line 28
+                    // line 33
                     echo $this->getAttribute($context["page"], "url", array());
                     echo "\">                     
                         ";
-                    // line 29
+                    // line 34
                     echo $this->getAttribute($context["page"], "menu", array());
                     echo "
                     </a>
                 </li>
             ";
                 }
-                // line 33
+                // line 38
                 echo "        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['page'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 34
+            // line 39
             echo "    ";
         }
-        // line 35
+        // line 40
         echo "    ";
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["site"]) ? $context["site"] : null), "menu", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["mitem"]) {
-            // line 36
+            // line 41
             echo "        <li>
             <a href=\"";
-            // line 37
+            // line 42
             echo $this->getAttribute($context["mitem"], "url", array());
             echo "\">
                 ";
-            // line 38
+            // line 43
             echo $this->getAttribute($context["mitem"], "text", array());
             echo "
             </a>
@@ -85,7 +97,7 @@ class __TwigTemplate_f243f0c6c63c8b0ef50de9fca76780dc4c0a8048dc080a007c7c42efb47
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['mitem'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 47
         echo "</ul>           ";
     }
 
@@ -174,6 +186,6 @@ class __TwigTemplate_f243f0c6c63c8b0ef50de9fca76780dc4c0a8048dc080a007c7c42efb47
 
     public function getDebugInfo()
     {
-        return array (  151 => 17,  147 => 15,  141 => 12,  138 => 11,  136 => 10,  130 => 8,  124 => 7,  120 => 6,  115 => 5,  112 => 4,  109 => 3,  104 => 2,  93 => 1,  89 => 42,  79 => 38,  75 => 37,  72 => 36,  67 => 35,  64 => 34,  58 => 33,  51 => 29,  47 => 28,  42 => 27,  39 => 26,  36 => 25,  31 => 24,  25 => 22,  23 => 21,  19 => 19,);
+        return array (  163 => 17,  159 => 15,  153 => 12,  150 => 11,  148 => 10,  142 => 8,  136 => 7,  132 => 6,  127 => 5,  124 => 4,  121 => 3,  116 => 2,  105 => 1,  101 => 47,  91 => 43,  87 => 42,  84 => 41,  79 => 40,  76 => 39,  70 => 38,  63 => 34,  59 => 33,  54 => 32,  51 => 31,  48 => 30,  43 => 29,  37 => 27,  35 => 26,  32 => 25,  28 => 23,  24 => 21,  22 => 20,  19 => 19,);
     }
 }

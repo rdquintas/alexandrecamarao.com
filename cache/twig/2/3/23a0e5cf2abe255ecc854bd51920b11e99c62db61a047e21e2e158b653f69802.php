@@ -44,10 +44,10 @@ class __TwigTemplate_23a0e5cf2abe255ecc854bd51920b11e99c62db61a047e21e2e158b653f
         if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "noticia", array()), "mostra_noticia", array())) {
             // line 10
             echo "\t\t\t<div class=\"news\">
-\t\t\t\t<h3>";
+\t\t\t\t<h4>";
             // line 11
             echo $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "noticia", array()), "texto1", array());
-            echo "</h3>       
+            echo "</h4>       
 \t\t\t\t<p>";
             // line 12
             echo $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "noticia", array()), "texto2", array());

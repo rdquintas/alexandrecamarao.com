@@ -48,8 +48,7 @@ class __TwigTemplate_192853850050418731bbce9198584dee31c78a7db83d38d7ef627604103
         // line 22
         $this->displayBlock('head', $context, $blocks);
         // line 37
-        echo "
-</head>
+        echo "</head>
 
 <body>
    <!--[if lte IE 9]>
@@ -66,22 +65,29 @@ class __TwigTemplate_192853850050418731bbce9198584dee31c78a7db83d38d7ef627604103
     </noscript>
     
     ";
-        // line 54
+        // line 53
         $this->displayBlock('header', $context, $blocks);
-        // line 64
+        // line 67
         echo "
-    ";
-        // line 65
-        $this->displayBlock('body', $context, $blocks);
-        // line 71
-        echo "
-    ";
+    <nav id=\"mobile-menu\" class=\"\">
+        ";
+        // line 69
+        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 69)->display(array_merge($context, array("withSuperFish" => "false")));
+        // line 70
+        echo "    </nav>
+    <div class=\"container\">
+        ";
         // line 72
-        $this->displayBlock('javascripts', $context, $blocks);
+        $this->displayBlock('body', $context, $blocks);
         // line 78
+        echo "    </div>
+    ";
+        // line 79
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 84
         echo "    ";
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "js", array(), "method");
-        echo "    
+        echo "
 </body>
 </html>
 ";
@@ -117,7 +123,7 @@ class __TwigTemplate_192853850050418731bbce9198584dee31c78a7db83d38d7ef627604103
         echo "    ";
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "css", array(), "method");
         echo "
-
+.
     ";
         // line 34
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/modernizr.custom.31616.js", 1 => 100), "method");
@@ -138,71 +144,79 @@ class __TwigTemplate_192853850050418731bbce9198584dee31c78a7db83d38d7ef627604103
         echo "    ";
     }
 
-    // line 54
+    // line 53
     public function block_header($context, array $blocks = array())
     {
-        // line 55
+        // line 54
         echo "    <header class=\"header\">
+            <a class=\"burger-icon\" href=\"#\">
+                <img src=\"";
+        // line 56
+        echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
+        echo "/images/burguer.png\">
+            </a>        
             <div class=\"logo\">
+                <img src=\"";
+        // line 59
+        echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
+        echo "/images/camarao.jpg\">
                 <h5>";
-        // line 57
+        // line 60
         echo $this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "site", array()), "title", array());
         echo "</h5>
             </div>
-            <nav class=\"navigation-menu\">
+            <nav id=\"original-menu\" class=\"navigation-menu\">
                 ";
-        // line 60
-        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 60)->display($context);
-        // line 61
+        // line 63
+        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 63)->display(array_merge($context, array("withSuperFish" => "true")));
+        // line 64
         echo "            </nav>
     </header>
     ";
     }
 
-    // line 65
+    // line 72
     public function block_body($context, array $blocks = array())
     {
-        // line 66
-        echo "        ";
+        // line 73
+        echo "            ";
         $this->displayBlock('content', $context, $blocks);
         echo "        
-        ";
-        // line 67
+            ";
+        // line 74
         $this->displayBlock('footer', $context, $blocks);
-        // line 70
-        echo "    ";
+        // line 77
+        echo "        ";
     }
 
-    // line 66
+    // line 73
     public function block_content($context, array $blocks = array())
     {
     }
 
-    // line 67
+    // line 74
     public function block_footer($context, array $blocks = array())
     {
-        // line 68
-        echo "        ";
-        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 68)->display($context);
-        // line 69
-        echo "        ";
+        // line 75
+        echo "            ";
+        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 75)->display($context);
+        // line 76
+        echo "            ";
     }
 
-    // line 72
+    // line 79
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 73
+        // line 80
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "jquery", 1 => 101), "method");
-        // line 74
+        // line 81
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/libs.dist.js", 1 => 100), "method");
-        // line 75
+        // line 82
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/app.dist.js"), "method");
-        // line 76
-        echo "        ";
-        // line 77
+        // line 83
         echo "    ";
     }
 
@@ -218,6 +232,6 @@ class __TwigTemplate_192853850050418731bbce9198584dee31c78a7db83d38d7ef627604103
 
     public function getDebugInfo()
     {
-        return array (  206 => 77,  204 => 76,  201 => 75,  198 => 74,  195 => 73,  192 => 72,  188 => 69,  185 => 68,  182 => 67,  177 => 66,  173 => 70,  171 => 67,  166 => 66,  163 => 65,  157 => 61,  155 => 60,  149 => 57,  145 => 55,  142 => 54,  138 => 31,  135 => 30,  132 => 29,  125 => 35,  123 => 34,  117 => 32,  115 => 29,  110 => 27,  107 => 26,  105 => 25,  97 => 24,  94 => 23,  91 => 22,  82 => 78,  80 => 72,  77 => 71,  75 => 65,  72 => 64,  70 => 54,  51 => 37,  49 => 22,  26 => 1,);
+        return array (  220 => 83,  217 => 82,  214 => 81,  211 => 80,  208 => 79,  204 => 76,  201 => 75,  198 => 74,  193 => 73,  189 => 77,  187 => 74,  182 => 73,  179 => 72,  173 => 64,  171 => 63,  165 => 60,  161 => 59,  155 => 56,  151 => 54,  148 => 53,  144 => 31,  141 => 30,  138 => 29,  131 => 35,  129 => 34,  123 => 32,  121 => 29,  116 => 27,  113 => 26,  111 => 25,  103 => 24,  100 => 23,  97 => 22,  88 => 84,  86 => 79,  83 => 78,  81 => 72,  77 => 70,  75 => 69,  71 => 67,  69 => 53,  51 => 37,  49 => 22,  26 => 1,);
     }
 }

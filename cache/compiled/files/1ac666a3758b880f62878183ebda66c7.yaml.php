@@ -2,9 +2,9 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'user/config/site.yaml',
-    'modified' => 1436008828,
+    'modified' => 1436818668,
     'data' => [
-        'title' => 'Alexandre Camarao',
+        'title' => 'Alexandre Camarão',
         'author' => [
             'name' => 'Ricardo Quintas',
             'email' => 'rqcenter-web@yahoo.com',

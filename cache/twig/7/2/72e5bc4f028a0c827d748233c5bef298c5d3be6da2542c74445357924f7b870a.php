@@ -33,14 +33,18 @@ class __TwigTemplate_72e5bc4f028a0c827d748233c5bef298c5d3be6da2542c74445357924f7
         // line 5
         echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "title", array());
         echo "</h2>
+\t\t<p class=\"date\">";
+        // line 6
+        echo twig_date_format_filter($this->env, $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "date", array()), "d/M/Y");
+        echo "</p>
 \t\t<div class=\"image\">
 \t\t\t";
-        // line 7
+        // line 8
         echo twig_first($this->env, $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "media", array()), "images", array()));
         echo "
 \t\t</div>
 \t\t";
-        // line 9
+        // line 10
         echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
         echo "
 \t</div>
@@ -59,6 +63,6 @@ class __TwigTemplate_72e5bc4f028a0c827d748233c5bef298c5d3be6da2542c74445357924f7
 
     public function getDebugInfo()
     {
-        return array (  44 => 9,  39 => 7,  34 => 5,  28 => 3,  11 => 1,);
+        return array (  48 => 10,  43 => 8,  38 => 6,  34 => 5,  28 => 3,  11 => 1,);
     }
 }
