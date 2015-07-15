@@ -16,7 +16,7 @@ class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        $this->loadTemplate("exhibitions.html.twig", "exhibitions.html.twig", 1, "134636281")->display($context);
+        $this->loadTemplate("exhibitions.html.twig", "exhibitions.html.twig", 1, "1615594088")->display($context);
         // line 79
         echo "
 ";
@@ -40,7 +40,7 @@ class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22
 
 
 /* exhibitions.html.twig */
-class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22fc110_134636281 extends Twig_Template
+class __TwigTemplate_f6bc5c72cd786ee3c19f5cea303074083c32211ff7b41014bf909366f22fc110_1615594088 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {

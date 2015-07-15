@@ -66,31 +66,5 @@
         </section>		
 		{{ page.content }}
 	</div>
-	<script type="text/javascript">
-
-		$( window ).resize(function() {
-  			// Initializes the hoverdir stuff
-			if ($( window ).width() <= 850) {	
-				$(' #da-thumbs > li ').hoverdir("destroy");
-			} else{
-				$(' #da-thumbs > li ').hoverdir();
-			};	
-		});
-
-		$(document).ready(function() {
-			// Initializes the hoverdir stuff
-			if ($( window ).width() <= 850) {	
-				$(' #da-thumbs > li ').hoverdir("destroy");
-			} else{
-				$(' #da-thumbs > li ').hoverdir();
-			};		
-
-			// Initializes the lazy-load library
-		    echo.init({
-		        offset: 100,
-		        throttle: 250,
-		        unload: false
-		    });
-		});	
-	</script>
+	
 {% endblock %}

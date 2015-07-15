@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'user/config/site.yaml',
-    'modified' => 1436818668,
+    'modified' => 1436994391,
     'data' => [
         'title' => 'Alexandre Camarão',
         'author' => [

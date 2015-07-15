@@ -199,33 +199,7 @@ class __TwigTemplate_0ed884b5d43b572db91849b7861ec448dee45d4c27ed7c042f72d03a266
         echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
         echo "
 \t</div>
-\t<script type=\"text/javascript\">
-
-\t\t\$( window ).resize(function() {
-  \t\t\t// Initializes the hoverdir stuff
-\t\t\tif (\$( window ).width() <= 850) {\t
-\t\t\t\t\$(' #da-thumbs > li ').hoverdir(\"destroy\");
-\t\t\t} else{
-\t\t\t\t\$(' #da-thumbs > li ').hoverdir();
-\t\t\t};\t
-\t\t});
-
-\t\t\$(document).ready(function() {
-\t\t\t// Initializes the hoverdir stuff
-\t\t\tif (\$( window ).width() <= 850) {\t
-\t\t\t\t\$(' #da-thumbs > li ').hoverdir(\"destroy\");
-\t\t\t} else{
-\t\t\t\t\$(' #da-thumbs > li ').hoverdir();
-\t\t\t};\t\t
-
-\t\t\t// Initializes the lazy-load library
-\t\t    echo.init({
-\t\t        offset: 100,
-\t\t        throttle: 250,
-\t\t        unload: false
-\t\t    });
-\t\t});\t
-\t</script>
+\t
 ";
     }
 
@@ -285,6 +259,6 @@ class __TwigTemplate_0ed884b5d43b572db91849b7861ec448dee45d4c27ed7c042f72d03a266
 
     public function getDebugInfo()
     {
-        return array (  266 => 11,  259 => 9,  256 => 8,  248 => 7,  245 => 6,  233 => 5,  199 => 67,  196 => 66,  186 => 63,  178 => 58,  171 => 56,  167 => 55,  164 => 54,  162 => 53,  156 => 52,  152 => 50,  148 => 49,  146 => 48,  136 => 45,  133 => 44,  130 => 43,  128 => 42,  122 => 41,  117 => 39,  113 => 37,  107 => 36,  102 => 34,  99 => 33,  94 => 32,  90 => 31,  84 => 30,  81 => 29,  76 => 27,  73 => 26,  68 => 25,  64 => 24,  59 => 21,  56 => 20,  53 => 19,  51 => 18,  48 => 17,  46 => 16,  42 => 15,  38 => 14,  34 => 12,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  240 => 11,  233 => 9,  230 => 8,  222 => 7,  219 => 6,  207 => 5,  199 => 67,  196 => 66,  186 => 63,  178 => 58,  171 => 56,  167 => 55,  164 => 54,  162 => 53,  156 => 52,  152 => 50,  148 => 49,  146 => 48,  136 => 45,  133 => 44,  130 => 43,  128 => 42,  122 => 41,  117 => 39,  113 => 37,  107 => 36,  102 => 34,  99 => 33,  94 => 32,  90 => 31,  84 => 30,  81 => 29,  76 => 27,  73 => 26,  68 => 25,  64 => 24,  59 => 21,  56 => 20,  53 => 19,  51 => 18,  48 => 17,  46 => 16,  42 => 15,  38 => 14,  34 => 12,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
