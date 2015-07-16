@@ -1,6 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}	
-	<div class="page-biography">	    
+	<div class="page-biography">	 
+		<h2>{{ page.header.title }}</h2>   
 		{{ page.content }}
 		<div class="image">
 			{{ page.media.images|first }}

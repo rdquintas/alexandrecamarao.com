@@ -31,36 +31,14 @@ h6 {
     font-weight: @header_font_weight;
 }
 
-h1 {
-    font-size: @body_font_size * @scale * @scale * @scale * @scale;
-    line-height: @body_font_size * @scale * @scale * @scale * @scale * @scale;
-}
-
-h2 {
-    font-size: @body_font_size * @scale * @scale * @scale;
-    line-height: @body_font_size * @scale * @scale * @scale * @scale;
-}
-
-h3 {
-    font-size: @body_font_size * @scale * @scale;
-    line-height: @body_font_size * @scale * @scale * @scale;
-}
-
-h4 {
-    font-size: @body_font_size * @scale;
-    line-height: @body_font_size * @scale * @scale;
-}
-
-h5 {
-    font-size: @body_font_size;
-    line-height: @body_font_size * @scale;
-}
-
-h6 {
-    font-size: @body_font_size / @scale;
-    line-height: @body_font_size / @scale;
-}
-
+.setHeaderFontSize(@body_font_size * @scale * @scale * @scale * @scale);
+@media screen and (max-width: 850px) {
+    body {
+        // font-size: @body_font_size * @scale / @scale;
+        // line-height: @body_font_line_height * @scale;
+    }
+    .setHeaderFontSize(@body_font_size * @scale * @scale * @scale);
+} // media 850px
 a {
     text-decoration: underline;
     text-transform: uppercase;

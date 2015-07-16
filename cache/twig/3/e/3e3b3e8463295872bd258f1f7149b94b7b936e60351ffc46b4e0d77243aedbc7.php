@@ -1,14 +1,14 @@
 <?php
 
-/* biography.html.twig */
-class __TwigTemplate_de9b18ea2881c944ac31aee2ae950065b6f06fc912a0fce1b2b41e066e7e1488 extends Twig_Template
+/* bibliography.html.twig */
+class __TwigTemplate_3e3b3e8463295872bd258f1f7149b94b7b936e60351ffc46b4e0d77243aedbc7 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("partials/base.html.twig", "biography.html.twig", 1);
+        $this->parent = $this->loadTemplate("partials/base.html.twig", "bibliography.html.twig", 1);
         $this->blocks = array(
             'content' => array($this, 'block_content'),
         );
@@ -28,28 +28,22 @@ class __TwigTemplate_de9b18ea2881c944ac31aee2ae950065b6f06fc912a0fce1b2b41e066e7
     public function block_content($context, array $blocks = array())
     {
         echo "\t
-\t<div class=\"page-biography\">\t 
+\t<div class=\"page-bibliography\">\t    
 \t\t<h2>";
         // line 4
         echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "title", array());
-        echo "</h2>   
+        echo "</h2>
 \t\t";
         // line 5
         echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
         echo "
-\t\t<div class=\"image\">
-\t\t\t";
-        // line 7
-        echo twig_first($this->env, $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "media", array()), "images", array()));
-        echo "
-\t\t</div>
 \t</div>
 ";
     }
 
     public function getTemplateName()
     {
-        return "biography.html.twig";
+        return "bibliography.html.twig";
     }
 
     public function isTraitable()
@@ -59,6 +53,6 @@ class __TwigTemplate_de9b18ea2881c944ac31aee2ae950065b6f06fc912a0fce1b2b41e066e7
 
     public function getDebugInfo()
     {
-        return array (  43 => 7,  38 => 5,  34 => 4,  28 => 2,  11 => 1,);
+        return array (  38 => 5,  34 => 4,  28 => 2,  11 => 1,);
     }
 }
