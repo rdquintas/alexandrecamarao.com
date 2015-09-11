@@ -1,5 +1,5 @@
 ---
-title: Artwork
-menu: Artwork
+title: Works
+menu: Works
 routable: false
 ---

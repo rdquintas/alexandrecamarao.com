@@ -6,25 +6,25 @@ $(document).ready(function() {
         delay: 0,
         speed: 0,
         speedOut: 0,
-        // cssArrows: false,
+        cssArrows: false,
         autoArrows: false // disable generation of arr
     });
 
-    // Initializes the hoverdir stuff
-    $(window).resize(function() {
-        if ($(window).width() <= 850) {
-            $(' #da-thumbs > li ').hoverdir("destroy");
-        } else {
-            $(' #da-thumbs > li ').hoverdir();
-        }
-    });
+    // // Initializes the hoverdir stuff
+    // $(window).resize(function() {
+    //     if ($(window).width() <= 850) {
+    //         $(' #da-thumbs > li ').hoverdir("destroy");
+    //     } else {
+    //         $(' #da-thumbs > li ').hoverdir();
+    //     }
+    // });
 
-    // Initializes the hoverdir stuff
-    if ($(window).width() <= 850) {
-        $(' #da-thumbs > li ').hoverdir("destroy");
-    } else {
-        $(' #da-thumbs > li ').hoverdir();
-    }
+    // // Initializes the hoverdir stuff
+    // if ($(window).width() <= 850) {
+    //     $(' #da-thumbs > li ').hoverdir("destroy");
+    // } else {
+    //     $(' #da-thumbs > li ').hoverdir();
+    // }
 
     // Initializes the lazy-load library
     echo.init({

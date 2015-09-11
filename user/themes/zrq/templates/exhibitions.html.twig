@@ -4,17 +4,10 @@
 
 	{% block content %}		
 
-	{% macro createSelectEntry(selected, value) %}
-		{% if selected == "true"  %}
-			<option value="{{ value }}" selected="selected">{{ value }}</option>
-		{% else %}			
-			<option value="{{ value }}">{{ value }}</option>
-		{% endif %}
-	{% endmacro %}
+
 
 	<div class="page-exhibitions">
-		<h2>{{ page.header.title }}</h2>
-		{% set currentYear = "now"|date("Y") %}	
+		<h3>{{ page.header.title }}</h3>
 		{% set yearURLparam = uri.query('year') %}
 
 		{% if not yearURLparam %}
@@ -22,22 +15,21 @@
 		{% endif %}
 		
 		<label for="year">YEAR:</label>
-		<select id="year">
-			{% if yearURLparam == "ALL"  %}		
-				{{ _self.createSelectEntry("true", "ALL") }}
+
+		{% if yearURLparam  == "ALL" %}	
+			<a class="selected" href="{{ uri.path }}">ALL</a>
+		{% else %}	
+			<a href="{{ uri.path }}">ALL</a>
+		{% endif %}
+
+		{% for ano in page.header.anos %}    	
+    		{% if ano == yearURLparam  %}	
+    			<a class="selected" href="#">{{ ano }}</a>	
 			{% else %}	
-				{{ _self.createSelectEntry("false", "ALL") }}
+				<a href="{{ uri.path }}?year={{ ano }}">{{ ano }}</a>	
 			{% endif %}
-
-			{% for i in range(currentYear, page.header.ano_inicial) %}    	
-	    		{% if i == yearURLparam  %}		
-					{{ _self.createSelectEntry("true", i) }}
-				{% else %}	
-					{{ _self.createSelectEntry("false", i) }}
-				{% endif %}
-			{% endfor %}
-		</select>
-
+		{% endfor %}
+	
 		{% set counter = 0 %}	
 		
 		{% for item in collection %}	    

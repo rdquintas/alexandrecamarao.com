@@ -1,0 +1,6 @@
+{
+ "directory": "bower_components",
+ "registry": "http://bower.herokuapp.com",
+ "proxy":"http://sequintasr:Tetra123%21@10.67.8.39:8080",
+ "https-proxy":"http://sequintasr:Tetra123%21@10.67.8.39:8080"
+}
