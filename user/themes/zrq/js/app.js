@@ -65,3 +65,14 @@ $(".burger-icon").on("click", function(e) {
     $(".container").toggleClass("move");
     $(window).scrollTop(0);
 });
+
+
+$('.da-thumbs').magnificPopup({
+    delegate: 'a', // child items selector, by clicking on it popup will open
+    type: 'image',
+    gallery: {
+        // options for gallery
+        enabled: true
+    }
+    // other options
+});
