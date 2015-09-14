@@ -7,19 +7,20 @@
 
 
 	<div class="page-exhibitions">
-		<h3>{{ page.header.title }}</h3>
+		<div class="intro">
+		<p>{{ page.header.title }}</p>
 		{% set yearURLparam = uri.query('year') %}
 
 		{% if not yearURLparam %}
 			{% set yearURLparam = "ALL" %}
 		{% endif %}
 		
-		<label for="year">YEAR:</label>
+		{# <label for="year">YEAR:</label> #}
 
 		{% if yearURLparam  == "ALL" %}	
-			<a class="selected" href="{{ uri.path }}">ALL</a>
+			<a class="selected" href="{{ uri.path }}">All</a>
 		{% else %}	
-			<a href="{{ uri.path }}">ALL</a>
+			<a href="{{ uri.path }}">All</a>
 		{% endif %}
 
 		{% for ano in page.header.anos %}    	
@@ -38,6 +39,8 @@
 		    {% endif %}
 		{% endfor %} 
 
+		</div>
+		
 		{% if counter == 0 %}
 	    	<h4>No results found for that year</h4>
 		{% else %}	
@@ -46,7 +49,7 @@
 				    <div class="exhibition-item">
 				    	<hr>
 				    	{% set img = item.media.images|first.cropZoom(300,300) %}	
-				    	<h4 class="title">{{ item.title }}</h4>
+				    	<h5 class="title">{{ item.title }}</h5>
 					    {% if img %}
 						    <div class="image">
 						    	<a href="{{ item.url }}">

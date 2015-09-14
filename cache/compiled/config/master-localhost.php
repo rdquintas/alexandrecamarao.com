@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\Config',
-    'timestamp' => 1441994802,
-    'checksum' => '57d6e6e522ab6862170e029453d5c304',
+    'timestamp' => 1442140909,
+    'checksum' => '645d252f9fd8ac5cfaac7b922bbc7efb',
     'data' => [
         'streams' => [
             'schemes' => [
@@ -279,7 +279,7 @@ return [
             ]
         ],
         'site' => [
-            'title' => 'CAMARAO',
+            'title' => 'Alexandre Camarao',
             'author' => [
                 'name' => 'Ricardo Quintas',
                 'email' => 'rqcenter-web@yahoo.com',

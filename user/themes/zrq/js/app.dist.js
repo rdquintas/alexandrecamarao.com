@@ -10,6 +10,26 @@ $(document).ready(function() {
         autoArrows: false // disable generation of arr
     });
 
+    var theWindow = $(window),
+        $bg = $("img#bg"),
+        aspectRatio = $bg.width() / $bg.height();
+
+    function resizeBg() {
+        if ((theWindow.width() / theWindow.height()) < aspectRatio) {
+            $bg.removeClass().addClass('bgheight');
+        } else {
+            $bg.removeClass().addClass('bgwidth');
+        }
+    }
+
+    theWindow.resize(resizeBg).trigger("resize");
+
+    // var img_url = $("section.page-home")[0].attr("data-img-url");
+
+    // console.log(img_url);
+    // $(".other").backstretch(img_url);
+    // // $.backstretch(img.src);
+
     // // Initializes the hoverdir stuff
     // $(window).resize(function() {
     //     if ($(window).width() <= 850) {
@@ -67,12 +87,19 @@ $(".burger-icon").on("click", function(e) {
 });
 
 
+/************************************
+ * Initialize Lightbox 
+ ************************************/
 $('.da-thumbs').magnificPopup({
     delegate: 'a', // child items selector, by clicking on it popup will open
     type: 'image',
     gallery: {
         // options for gallery
         enabled: true
+    },
+    image: {
+        // options for image content type
+        titleSrc: 'title'
     }
     // other options
 });

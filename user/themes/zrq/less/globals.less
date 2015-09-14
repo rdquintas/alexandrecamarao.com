@@ -40,13 +40,14 @@ h6 {
     .setHeaderFontSize(@body_font_size * @scale * @scale * @scale);
 } // media 850px
 a {
-    text-decoration: underline;
-    text-transform: uppercase;
+    text-decoration: none;
+    // text-transform: uppercase;
     color: @primary_color;
     &:hover {
-        text-decoration: none;
-        color: contrast(@primary_color);
-        background-color: @primary_color;
+        text-decoration: underline;
+        // color: contrast(@primary_color);
+        color: lighten(@primary_color, 50%);
+        // background-color: @primary_color;
     }
 }
 
@@ -82,4 +83,26 @@ hr {
     // position: absolute;
     // top: 0;
     .clearfix();
+}
+
+.mfp-wrap.mfp-gallery {
+    background-color: #fff;
+}
+
+.mfp-bottom-bar {
+    .mfp-title {
+        color: #000;
+    }
+    .mfp-counter {
+        color: #fff;
+        display: none;
+    }
+}
+
+.mfp-figure:after {
+    box-shadow: none;
+}
+
+.sf-menu ul {
+    box-shadow: none;
 }

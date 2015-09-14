@@ -67,24 +67,24 @@ class __TwigTemplate_9896e483a99f97ccc4d2b22109817542fc45c7884cf848bf40ebe43885b
     ";
         // line 61
         $this->displayBlock('header', $context, $blocks);
-        // line 77
+        // line 75
         echo "
     <nav id=\"mobile-menu\" class=\"\">
         ";
-        // line 79
-        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 79)->display(array_merge($context, array("withSuperFish" => "false")));
-        // line 80
+        // line 77
+        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 77)->display(array_merge($context, array("withSuperFish" => "false")));
+        // line 78
         echo "    </nav>
     <div class=\"container\">
         ";
-        // line 82
+        // line 80
         $this->displayBlock('body', $context, $blocks);
-        // line 88
+        // line 86
         echo "    </div>
     ";
-        // line 89
+        // line 87
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 94
+        // line 92
         echo "    ";
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "js", array(), "method");
         echo "
@@ -166,65 +166,62 @@ class __TwigTemplate_9896e483a99f97ccc4d2b22109817542fc45c7884cf848bf40ebe43885b
             <div class=\"logo\">
                 ";
         // line 68
-        echo "                <a href=\"/\">
-                  <h2>";
-        // line 69
+        echo "                <a href=\"/\">";
         echo $this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "site", array()), "title", array());
-        echo "</h2>
-                </a>
+        echo "</a>
             </div>
             <nav id=\"original-menu\" class=\"navigation-menu\">
                 ";
-        // line 73
-        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 73)->display(array_merge($context, array("withSuperFish" => "true")));
-        // line 74
+        // line 71
+        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 71)->display(array_merge($context, array("withSuperFish" => "true")));
+        // line 72
         echo "            </nav>
     </header>
     ";
     }
 
-    // line 82
+    // line 80
     public function block_body($context, array $blocks = array())
     {
-        // line 83
+        // line 81
         echo "            ";
         $this->displayBlock('content', $context, $blocks);
         echo "        
             ";
-        // line 84
+        // line 82
         $this->displayBlock('footer', $context, $blocks);
-        // line 87
+        // line 85
         echo "        ";
     }
 
-    // line 83
+    // line 81
     public function block_content($context, array $blocks = array())
     {
     }
 
-    // line 84
+    // line 82
     public function block_footer($context, array $blocks = array())
     {
-        // line 85
+        // line 83
         echo "            ";
-        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 85)->display($context);
-        // line 86
+        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 83)->display($context);
+        // line 84
         echo "            ";
     }
 
-    // line 89
+    // line 87
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 90
+        // line 88
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "jquery", 1 => 101), "method");
-        // line 91
+        // line 89
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/libs.dist.js", 1 => 100), "method");
-        // line 92
+        // line 90
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/app.dist.js"), "method");
-        // line 93
+        // line 91
         echo "    ";
     }
 
@@ -240,6 +237,6 @@ class __TwigTemplate_9896e483a99f97ccc4d2b22109817542fc45c7884cf848bf40ebe43885b
 
     public function getDebugInfo()
     {
-        return array (  228 => 93,  225 => 92,  222 => 91,  219 => 90,  216 => 89,  212 => 86,  209 => 85,  206 => 84,  201 => 83,  197 => 87,  195 => 84,  190 => 83,  187 => 82,  181 => 74,  179 => 73,  172 => 69,  169 => 68,  163 => 64,  159 => 62,  156 => 61,  152 => 31,  149 => 30,  146 => 29,  131 => 35,  129 => 34,  123 => 32,  121 => 29,  116 => 27,  113 => 26,  111 => 25,  103 => 24,  100 => 23,  97 => 22,  88 => 94,  86 => 89,  83 => 88,  81 => 82,  77 => 80,  75 => 79,  71 => 77,  69 => 61,  51 => 45,  49 => 22,  26 => 1,);
+        return array (  225 => 91,  222 => 90,  219 => 89,  216 => 88,  213 => 87,  209 => 84,  206 => 83,  203 => 82,  198 => 81,  194 => 85,  192 => 82,  187 => 81,  184 => 80,  178 => 72,  176 => 71,  169 => 68,  163 => 64,  159 => 62,  156 => 61,  152 => 31,  149 => 30,  146 => 29,  131 => 35,  129 => 34,  123 => 32,  121 => 29,  116 => 27,  113 => 26,  111 => 25,  103 => 24,  100 => 23,  97 => 22,  88 => 92,  86 => 87,  83 => 86,  81 => 80,  77 => 78,  75 => 77,  71 => 75,  69 => 61,  51 => 45,  49 => 22,  26 => 1,);
     }
 }

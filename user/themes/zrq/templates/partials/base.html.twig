@@ -65,9 +65,7 @@
             </a>        
             <div class="logo">
                 {# <img src="{{ theme_url }}/images/camarao.jpg"> #}
-                <a href="/">
-                  <h2>{{ config.site.title }}</h2>
-                </a>
+                <a href="/">{{ config.site.title }}</a>
             </div>
             <nav id="original-menu" class="navigation-menu">
                 {% include 'partials/navigation.html.twig' with {"withSuperFish": "true"} %}

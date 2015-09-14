@@ -4,9 +4,10 @@
 	{% set img = random(page.media.images) %}
 	
 	<section class="page-home">
-		<img class="hero" src="{{ img.url }}" alt="">
+		{# <img class="hero" src="{{ img.url }}" alt=""> #}
+    	<img id="bg" src="{{ img.url }}" alt="">
 
-		{% if page.header.noticia.mostra_noticia %}
+	{# 	{% if page.header.noticia.mostra_noticia %}
 			<div class="news">
 				<h4>{{ page.header.noticia.texto1 }}</h4>       
 				<p>{{ page.header.noticia.texto2 }}</p>       
@@ -14,8 +15,9 @@
 					<a target="_blank" href="{{ page.header.noticia.link_para_mais_info }}">More info</a>
 			    {% endif %}
 			</div>
-	    {% endif %}
+	    {% endif %} #}
 	    
 		{{ page.content }}
 	</section>
+	
 {% endblock %}

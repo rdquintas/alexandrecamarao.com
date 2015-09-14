@@ -4,19 +4,20 @@
 
 {{ dump(uri) }}
 	<div class="page-artwork">
-		<h3>{{ page.header.title }}</h3>
+		<div class="intro">
+		<p>{{ page.header.title }}</p>
 		{% set yearURLparam = uri.query('year') %}
 
 		{% if not yearURLparam %}
 			{% set yearURLparam = "ALL" %}
 		{% endif %}
 		
-		<label for="year">YEAR:</label>
+		{# <label for="year">YEAR:</label> #}
 
 		{% if yearURLparam  == "ALL" %}	
-			<a class="selected" href="{{ uri.path }}">ALL</a>
+			<a class="selected" href="{{ uri.path }}">All</a>
 		{% else %}	
-			<a href="{{ uri.path }}">ALL</a>
+			<a href="{{ uri.path }}">All</a>
 		{% endif %}
 
 		{% for ano in page.header.anos %}    	
@@ -34,7 +35,7 @@
 			    {% set counter = counter + 1 %}
 		    {% endif %}
 		{% endfor %} 
-
+		</div>
   		<section class="container">
   			{% if counter == 0 %}
 		    	<h4>No results found for that year</h4>
@@ -43,7 +44,7 @@
 				{% for img in page.media.images %}	    
 				    {% if img.ano == yearURLparam or yearURLparam == "ALL"%}
 					<li>
-						<a href="{{ img.url }}">
+						<a href="{{ img.url }}" title="{{ img.descricao }}">
 						{# <img src="{{ theme_url }}/images/loading_spinner.gif" alt="" data-echo="{{ img.crop(0,0,300, 300).url }}"> #}
 						<img src="{{ theme_url }}/images/loading_spinner.gif" alt="" data-echo="{{ img.resize(300, 300).url }}">
 					{# 	<div class="texto">
