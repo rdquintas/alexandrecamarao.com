@@ -34,12 +34,13 @@ class __TwigTemplate_f578a020aabb8549a587f975e6f6fc4dccab97188e6899fe7cd8451c4ea
         // line 5
         echo "\t
 \t<section class=\"page-home\">
-\t\t";
-        // line 8
-        echo "    \t<img id=\"bg\" src=\"";
+\t\t<img class=\"hero\" src=\"";
+        // line 7
         echo $this->getAttribute((isset($context["img"]) ? $context["img"] : null), "url", array());
         echo "\" alt=\"\">
-
+    \t";
+        // line 9
+        echo "
 \t";
         // line 19
         echo "\t    
@@ -64,6 +65,6 @@ class __TwigTemplate_f578a020aabb8549a587f975e6f6fc4dccab97188e6899fe7cd8451c4ea
 
     public function getDebugInfo()
     {
-        return array (  48 => 20,  45 => 19,  39 => 8,  35 => 5,  33 => 4,  28 => 3,  11 => 1,);
+        return array (  49 => 20,  46 => 19,  43 => 9,  39 => 7,  35 => 5,  33 => 4,  28 => 3,  11 => 1,);
     }
 }

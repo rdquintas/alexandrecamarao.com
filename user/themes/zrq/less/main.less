@@ -216,7 +216,7 @@ nav#mobile-menu {
     padding: 0;
     text-align: center;
     .hero {
-        width: 100%;
+        width: 50%;
         height: auto;
         top: 0;
         left: 0;
@@ -285,20 +285,29 @@ nav#mobile-menu {
     .initializePage(@header_height;
     8rem);
     a.selected {
-        text-decoration: underline;
-        // color: contrast(@primary_color);
-        // background-color: @primary_color;
+        text-decoration: none;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #ddd;
     }
     .intro {
+        padding-left: 0.3em;
         a {
             margin-right: 10px;
+            &:hover {
+                text-decoration: none;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: #ddd;
+            }
         }
     }
     .da-thumbs {
         width: 100%;
         margin: 0 auto;
         li {
-            width: 23%;
+            height: 450px;
+            width: 25%;
             box-shadow: none;
             margin: 0;
             padding: 0.2em;
@@ -372,14 +381,20 @@ nav#mobile-menu {
     .initializePage(@header_height;
     8rem);
     a.selected {
-        text-decoration: underline;
-        // text-decoration: none;
-        // color: contrast(@primary_color);
-        // background-color: @primary_color;
+        text-decoration: none;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #ddd;
     }
     .intro {
         a {
             margin-right: 10px;
+            &:hover {
+                text-decoration: none;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: #ddd;
+            }
         }
     }
     .exhibition-item {

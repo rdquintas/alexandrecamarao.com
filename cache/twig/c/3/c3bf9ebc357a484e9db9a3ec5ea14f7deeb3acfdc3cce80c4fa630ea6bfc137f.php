@@ -175,7 +175,7 @@ class __TwigTemplate_c3bf9ebc357a484e9db9a3ec5ea14f7deeb3acfdc3cce80c4fa630ea6bf
                     echo "\t\t\t\t\t\t<img src=\"";
                     echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
                     echo "/images/loading_spinner.gif\" alt=\"\" data-echo=\"";
-                    echo $this->getAttribute($this->getAttribute($context["img"], "resize", array(0 => 300, 1 => 300), "method"), "url", array());
+                    echo $this->getAttribute($this->getAttribute($context["img"], "cropResize", array(0 => 300, 1 => 300), "method"), "url", array());
                     echo "\">
 \t\t\t\t\t";
                     // line 53

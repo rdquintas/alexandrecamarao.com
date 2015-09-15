@@ -10,42 +10,21 @@ $(document).ready(function() {
         autoArrows: false // disable generation of arr
     });
 
-    var theWindow = $(window),
-        $bg = $("img#bg"),
-        aspectRatio = $bg.width() / $bg.height();
+    // var theWindow = $(window),
+    //     $bg = $("img#bg"),
+    //     aspectRatio = $bg.width() / $bg.height();
 
-    function resizeBg() {
-        if ((theWindow.width() / theWindow.height()) < aspectRatio) {
-            $bg.removeClass().addClass('bgheight');
-        } else {
-            $bg.removeClass().addClass('bgwidth');
-        }
-    }
-
-    theWindow.resize(resizeBg).trigger("resize");
-
-    // var img_url = $("section.page-home")[0].attr("data-img-url");
-
-    // console.log(img_url);
-    // $(".other").backstretch(img_url);
-    // // $.backstretch(img.src);
-
-    // // Initializes the hoverdir stuff
-    // $(window).resize(function() {
-    //     if ($(window).width() <= 850) {
-    //         $(' #da-thumbs > li ').hoverdir("destroy");
+    // function resizeBg() {
+    //     if ((theWindow.width() / theWindow.height()) < aspectRatio) {
+    //         $bg.removeClass().addClass('bgheight');
     //     } else {
-    //         $(' #da-thumbs > li ').hoverdir();
+    //         $bg.removeClass().addClass('bgwidth');
     //     }
-    // });
-
-    // // Initializes the hoverdir stuff
-    // if ($(window).width() <= 850) {
-    //     $(' #da-thumbs > li ').hoverdir("destroy");
-    // } else {
-    //     $(' #da-thumbs > li ').hoverdir();
     // }
 
+    // theWindow.resize(resizeBg).trigger("resize");
+
+  
     // Initializes the lazy-load library
     echo.init({
         offset: 100,
