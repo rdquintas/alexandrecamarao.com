@@ -16,8 +16,8 @@ class __TwigTemplate_51e73943c8ef075f4dc12c3dc62f48bd5d938c491ea5be7cb8aff89876a
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        $this->loadTemplate("exhibitions.html.twig", "exhibitions.html.twig", 1, "1983611189")->display($context);
-        // line 74
+        $this->loadTemplate("exhibitions.html.twig", "exhibitions.html.twig", 1, "1329585655")->display($context);
+        // line 73
         echo "
 ";
     }
@@ -34,13 +34,13 @@ class __TwigTemplate_51e73943c8ef075f4dc12c3dc62f48bd5d938c491ea5be7cb8aff89876a
 
     public function getDebugInfo()
     {
-        return array (  21 => 74,  19 => 1,);
+        return array (  21 => 73,  19 => 1,);
     }
 }
 
 
 /* exhibitions.html.twig */
-class __TwigTemplate_51e73943c8ef075f4dc12c3dc62f48bd5d938c491ea5be7cb8aff89876a4fae4_1983611189 extends Twig_Template
+class __TwigTemplate_51e73943c8ef075f4dc12c3dc62f48bd5d938c491ea5be7cb8aff89876a4fae4_1329585655 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -204,65 +204,64 @@ class __TwigTemplate_51e73943c8ef075f4dc12c3dc62f48bd5d938c491ea5be7cb8aff89876a
                 if (((twig_date_format_filter($this->env, $this->getAttribute($context["item"], "date", array()), "Y") == (isset($context["yearURLparam"]) ? $context["yearURLparam"] : null)) || ((isset($context["yearURLparam"]) ? $context["yearURLparam"] : null) == "ALL"))) {
                     // line 49
                     echo "\t\t\t\t    <div class=\"exhibition-item\">
-\t\t\t\t    \t<hr>
 \t\t\t\t    \t";
-                    // line 51
+                    // line 50
                     $context["img"] = $this->getAttribute(twig_first($this->env, $this->getAttribute($this->getAttribute($context["item"], "media", array()), "images", array())), "cropZoom", array(0 => 300, 1 => 300), "method");
                     echo "\t
 \t\t\t\t    \t<h5 class=\"title\">";
-                    // line 52
+                    // line 51
                     echo $this->getAttribute($context["item"], "title", array());
                     echo "</h5>
 \t\t\t\t\t    ";
-                    // line 53
+                    // line 52
                     if ((isset($context["img"]) ? $context["img"] : null)) {
-                        // line 54
+                        // line 53
                         echo "\t\t\t\t\t\t    <div class=\"image\">
 \t\t\t\t\t\t    \t<a href=\"";
-                        // line 55
+                        // line 54
                         echo $this->getAttribute($context["item"], "url", array());
                         echo "\">
 \t\t\t\t\t\t        \t";
-                        // line 56
+                        // line 55
                         echo $this->getAttribute((isset($context["img"]) ? $context["img"] : null), "html", array());
                         echo "
 \t\t\t\t\t\t        </a>
 \t\t\t\t\t\t    </div>
 \t\t\t\t\t    ";
                     }
-                    // line 60
+                    // line 59
                     echo "\t\t\t\t\t\t<div class=\"text\">
 \t\t\t\t\t\t\t";
-                    // line 61
+                    // line 60
                     if ($this->getAttribute($context["item"], "date", array())) {
-                        // line 62
+                        // line 61
                         echo "\t\t\t\t\t        \t<p class=\"date\">";
                         echo twig_date_format_filter($this->env, $this->getAttribute($context["item"], "date", array()), "d/M/Y");
                         echo "</p>
 \t\t\t\t\t        ";
                     }
-                    // line 64
+                    // line 63
                     echo "\t\t\t\t\t        <p class=\"summary\">";
                     echo $this->env->getExtension('GravTwigExtension')->truncateFilter($this->getAttribute($context["item"], "content", array()), 350);
                     echo "</p>
 \t\t\t\t\t        <p class=\"continue\"><a href=\"";
-                    // line 65
+                    // line 64
                     echo $this->getAttribute($context["item"], "url", array());
                     echo "\">Continue Reading...</a></p>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t    \t";
                 }
-                // line 69
+                // line 68
                 echo "\t\t    ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 70
+            // line 69
             echo "\t\t";
         }
-        // line 71
+        // line 70
         echo "\t</div>
 \t";
     }
@@ -279,6 +278,6 @@ class __TwigTemplate_51e73943c8ef075f4dc12c3dc62f48bd5d938c491ea5be7cb8aff89876a
 
     public function getDebugInfo()
     {
-        return array (  266 => 71,  263 => 70,  257 => 69,  250 => 65,  245 => 64,  239 => 62,  237 => 61,  234 => 60,  227 => 56,  223 => 55,  220 => 54,  218 => 53,  214 => 52,  210 => 51,  206 => 49,  204 => 48,  198 => 47,  195 => 46,  191 => 45,  189 => 44,  178 => 40,  175 => 39,  172 => 38,  170 => 37,  164 => 36,  159 => 34,  156 => 33,  150 => 32,  141 => 30,  138 => 29,  133 => 28,  129 => 27,  123 => 26,  120 => 25,  115 => 23,  112 => 22,  107 => 21,  103 => 20,  100 => 19,  97 => 17,  94 => 16,  91 => 15,  89 => 14,  86 => 13,  84 => 12,  80 => 11,  70 => 5,  66 => 1,  64 => 3,  50 => 1,  21 => 74,  19 => 1,);
+        return array (  265 => 70,  262 => 69,  256 => 68,  249 => 64,  244 => 63,  238 => 61,  236 => 60,  233 => 59,  226 => 55,  222 => 54,  219 => 53,  217 => 52,  213 => 51,  209 => 50,  206 => 49,  204 => 48,  198 => 47,  195 => 46,  191 => 45,  189 => 44,  178 => 40,  175 => 39,  172 => 38,  170 => 37,  164 => 36,  159 => 34,  156 => 33,  150 => 32,  141 => 30,  138 => 29,  133 => 28,  129 => 27,  123 => 26,  120 => 25,  115 => 23,  112 => 22,  107 => 21,  103 => 20,  100 => 19,  97 => 17,  94 => 16,  91 => 15,  89 => 14,  86 => 13,  84 => 12,  80 => 11,  70 => 5,  66 => 1,  64 => 3,  50 => 1,  21 => 73,  19 => 1,);
     }
 }

@@ -21,8 +21,8 @@
     clear: both;
     padding-top: 1rem * @scale;
     padding-bottom: 1rem * @scale;
-    padding-left: @side-rems * @scale;
-    padding-right: @side-rems * @scale;
+    padding-left: @side-rems * @scale * @scale;
+    padding-right: @side-rems * @scale * @scale;
 }
 /***********************************************************
  * adds necessary stuff for each page
@@ -58,27 +58,27 @@
         // font-size: @body_font_size * @scale * @scale * @scale * @scale;
         // line-height: @body_font_size * @scale * @scale * @scale * @scale * @scale;
         font-size: @fontsize;
-        line-height: @fontsize * @scale;
+        // line-height: @fontsize * @scale;
     }
     h2 {
         font-size: @fontsize / @scale;
-        line-height: @fontsize;
+        // line-height: @fontsize;
     }
     h3 {
         font-size: @fontsize / @scale / @scale;
-        line-height: @fontsize / @scale;
+        // line-height: @fontsize / @scale;
     }
     h4 {
         font-size: @fontsize / @scale / @scale / @scale;
-        line-height: @fontsize / @scale / @scale;
+        // line-height: @fontsize / @scale / @scale;
     }
     h5 {
         font-size: @fontsize / @scale / @scale / @scale / @scale;
-        line-height: @fontsize / @scale / @scale / @scale;
+        // line-height: @fontsize / @scale / @scale / @scale;
     }
     h6 {
         font-size: @fontsize / @scale / @scale / @scale / @scale / @scale;
-        line-height: @fontsize / @scale / @scale / @scale / @scale;
+        // line-height: @fontsize / @scale / @scale / @scale / @scale;
         text-transform: uppercase;
     }
 }

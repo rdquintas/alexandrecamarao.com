@@ -31,6 +31,10 @@ h6 {
     font-weight: @header_font_weight;
 }
 
+p {
+    text-align: justify;
+}
+
 .setHeaderFontSize(@body_font_size * @scale * @scale * @scale * @scale);
 @media screen and (max-width: 850px) {
     body {
@@ -92,6 +96,7 @@ hr {
 .mfp-bottom-bar {
     .mfp-title {
         color: #000;
+        font-size: 1rem;
     }
     .mfp-counter {
         color: #fff;
@@ -101,6 +106,30 @@ hr {
 
 .mfp-figure:after {
     box-shadow: none;
+}
+
+.mfp-arrow-left {
+    &:before {
+        border: 0;
+        font-size: 3rem;
+        font-family: "FontAwesome";
+        content: "\f053";
+    }
+    &:after {
+        border: 0;
+    }
+}
+
+.mfp-arrow-right {
+    &:before {
+        border: 0;
+        font-size: 3rem;
+        font-family: "FontAwesome";
+        content: "\f054";
+    }
+    &:after {
+        border: 0;
+    }
 }
 
 .sf-menu ul {

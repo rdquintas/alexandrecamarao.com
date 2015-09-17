@@ -33,21 +33,10 @@ class __TwigTemplate_cbdf0949b888a89e9262eef72188a1f2c06e0227e20997af53256912d4d
         // line 4
         echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "title", array());
         echo "</p>
-\t\t<div class=\"phone\">
-\t\t\t<img src=\"";
-        // line 6
-        echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
-        echo "/images/phone.png\">
-\t\t\t<p>";
-        // line 7
-        echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "telefone", array());
-        echo "</p>
-\t\t</div>
-\t\t<div class=\"email\">
-\t\t\t<img src=\"";
-        // line 10
-        echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
-        echo "/images/email.png\">
+\t\t";
+        // line 9
+        echo "\t\t<div class=\"email\">\t\t\t
+\t\t\t<i class=\"fa fa-envelope\"></i>
 \t\t\t<a href=\"mailto:";
         // line 11
         echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "email", array());
@@ -75,6 +64,6 @@ class __TwigTemplate_cbdf0949b888a89e9262eef72188a1f2c06e0227e20997af53256912d4d
 
     public function getDebugInfo()
     {
-        return array (  60 => 46,  53 => 11,  49 => 10,  43 => 7,  39 => 6,  34 => 4,  28 => 2,  11 => 1,);
+        return array (  49 => 46,  42 => 11,  38 => 9,  34 => 4,  28 => 2,  11 => 1,);
     }
 }

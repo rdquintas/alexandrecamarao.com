@@ -47,7 +47,6 @@
 			{% for item in collection %}	
 			    {% if item.date|date("Y") == yearURLparam or yearURLparam == "ALL"%}
 				    <div class="exhibition-item">
-				    	<hr>
 				    	{% set img = item.media.images|first.cropZoom(300,300) %}	
 				    	<h5 class="title">{{ item.title }}</h5>
 					    {% if img %}

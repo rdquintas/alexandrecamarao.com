@@ -20,9 +20,7 @@ class __TwigTemplate_6474e16e8a119ae894ab7d60f9f9344a2c4156d8c752145e8785e9bbba2
 \t<a target=\"_blank\" href=\"";
         // line 2
         echo $this->getAttribute($this->getAttribute((isset($context["site"]) ? $context["site"] : null), "author", array()), "url", array());
-        echo " \">";
-        echo $this->getAttribute($this->getAttribute((isset($context["site"]) ? $context["site"] : null), "author", array()), "copyright", array());
-        echo " </a>
+        echo " \">Website by Ricardo Quintas</a>
 </section>
 ";
     }

@@ -2,12 +2,12 @@
 {% block content %}	
 	<div class="page-contacts">	    
 		<p>{{ page.header.title }}</p>
-		<div class="phone">
-			<img src="{{ theme_url }}/images/phone.png">
+		{# <div class="phone">		
+			<i class="fa fa-phone"></i>
 			<p>{{ page.header.telefone }}</p>
-		</div>
-		<div class="email">
-			<img src="{{ theme_url }}/images/email.png">
+		</div> #}
+		<div class="email">			
+			<i class="fa fa-envelope"></i>
 			<a href="mailto:{{ page.header.email }}<">{{ page.header.email }}</a>
 		</div>
 {# 
