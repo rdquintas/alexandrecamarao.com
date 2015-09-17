@@ -597,6 +597,14 @@ nav#mobile-menu {
         }
     } // media 850px
 } // page-contacts
+.page-default {
+    .initializePage(@header_height;
+    8rem);
+    @media screen and (max-width: 1200px) {
+        .initializePage(@header_height_small;
+        1rem);
+    }
+} // page-default
 .footer {
     height: 200px;
     font-size: 1rem;
