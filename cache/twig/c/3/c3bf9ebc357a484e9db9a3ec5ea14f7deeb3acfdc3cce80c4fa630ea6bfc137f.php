@@ -177,9 +177,13 @@ class __TwigTemplate_c3bf9ebc357a484e9db9a3ec5ea14f7deeb3acfdc3cce80c4fa630ea6bf
                     echo "/images/loading_spinner.gif\" alt=\"\" data-echo=\"";
                     echo $this->getAttribute($this->getAttribute($context["img"], "cropResize", array(0 => 300, 1 => 300), "method"), "url", array());
                     echo "\">
-\t\t\t\t\t";
-                    // line 53
-                    echo "\t\t\t\t\t\t</a>
+\t\t\t\t\t\t<div class=\"texto\">
+\t\t\t\t\t\t\t<p class=\"description\">";
+                    // line 51
+                    echo $this->getAttribute($context["img"], "descricao", array());
+                    echo "</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
 \t\t\t\t    ";
                 }
@@ -216,6 +220,6 @@ class __TwigTemplate_c3bf9ebc357a484e9db9a3ec5ea14f7deeb3acfdc3cce80c4fa630ea6bf
 
     public function getDebugInfo()
     {
-        return array (  200 => 60,  197 => 59,  187 => 56,  182 => 53,  175 => 49,  169 => 47,  166 => 46,  164 => 45,  158 => 44,  154 => 42,  150 => 41,  148 => 40,  138 => 37,  135 => 36,  132 => 35,  130 => 34,  124 => 33,  119 => 31,  116 => 30,  110 => 29,  101 => 27,  98 => 26,  93 => 25,  89 => 24,  83 => 23,  80 => 22,  75 => 20,  72 => 19,  67 => 18,  63 => 17,  60 => 16,  57 => 14,  54 => 13,  51 => 12,  49 => 11,  46 => 10,  44 => 9,  40 => 8,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  204 => 60,  201 => 59,  191 => 56,  183 => 51,  175 => 49,  169 => 47,  166 => 46,  164 => 45,  158 => 44,  154 => 42,  150 => 41,  148 => 40,  138 => 37,  135 => 36,  132 => 35,  130 => 34,  124 => 33,  119 => 31,  116 => 30,  110 => 29,  101 => 27,  98 => 26,  93 => 25,  89 => 24,  83 => 23,  80 => 22,  75 => 20,  72 => 19,  67 => 18,  63 => 17,  60 => 16,  57 => 14,  54 => 13,  51 => 12,  49 => 11,  46 => 10,  44 => 9,  40 => 8,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
     }
 }

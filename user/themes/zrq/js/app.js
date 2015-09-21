@@ -24,7 +24,7 @@ $(document).ready(function() {
 
     // theWindow.resize(resizeBg).trigger("resize");
 
-  
+
     // Initializes the lazy-load library
     echo.init({
         offset: 100,
@@ -72,6 +72,12 @@ $(".burger-icon").on("click", function(e) {
 $('.da-thumbs').magnificPopup({
     delegate: 'a', // child items selector, by clicking on it popup will open
     type: 'image',
+    disableOn: function() {
+        if ($(window).width() < 850) {
+            return false;
+        }
+        return true;
+    },
     gallery: {
         // options for gallery
         enabled: true

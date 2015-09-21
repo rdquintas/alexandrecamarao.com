@@ -307,7 +307,10 @@ nav#mobile-menu {
         width: 100%;
         margin: 0 auto;
         li {
-            height: 450px;
+            &:nth-child(4n+1) {
+                clear: left
+            }
+            height: auto;
             width: 25%;
             box-shadow: none;
             margin: 0;
@@ -316,7 +319,11 @@ nav#mobile-menu {
                 width: 100%;
             }
             .texto {
-                padding: 1rem;
+                background-color: #fff;
+                color: #000;
+                display: none;
+                float: left;
+                padding: 0;
                 p {
                     text-transform: none;
                 }
@@ -330,9 +337,6 @@ nav#mobile-menu {
             li {
                 width: 33%;
                 padding: 0.2em;
-                .texto {
-                    padding: 1rem;
-                }
             }
         }
     } // media 1200px
@@ -343,9 +347,6 @@ nav#mobile-menu {
             li {
                 width: 50%;
                 padding: 0.2em;
-                .texto {
-                    padding: 1rem;
-                }
             }
         }
     } // media 980px
@@ -363,17 +364,20 @@ nav#mobile-menu {
             padding: 0;
         }
         .da-thumbs {
+            position: static;
+            height: 100%;
             li {
                 width: 100%;
+                height: 100%;
                 padding: 0;
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
                 img {
                     float: left;
                 }
                 .texto {
+                    padding: 0rem 1rem 3rem 1rem;
+                    display: block;
                     position: static;
-                    float: left;
-                    padding: 1rem;
                 }
             }
         }

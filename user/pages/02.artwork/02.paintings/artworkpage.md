@@ -1,5 +1,5 @@
 ---
 title: Paintings
 menu: Paintings
-ano_inicial: 2010
+anos: [2015,2014,2013]
 ---
