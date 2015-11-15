@@ -10,6 +10,22 @@ $(document).ready(function() {
         autoArrows: false // disable generation of arr
     });
 
+    if ($('.page-home').length > 0) {
+        $('header.header').css('background-color', 'rgba(255, 255, 255, 0)');
+        $('.sf-menu li').css('background-color', 'rgba(255, 255, 255, 0)');
+        $('.sf-menu li a').css('background-color', 'rgba(255, 255, 255, 0)');
+        $('section.footer').css('position', 'absolute');
+        $('section.footer').css('bottom', '0px');
+        $('section.footer').css('height', '0px');
+
+        $.supersized({
+            slides: [{
+                image: window.home_page_img,
+                title: 'Image Credit: Maria Kazvan'
+            }]
+        });
+    }
+    
     // var theWindow = $(window),
     //     $bg = $("img#bg"),
     //     aspectRatio = $bg.width() / $bg.height();

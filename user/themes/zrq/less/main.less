@@ -99,7 +99,7 @@ nav#mobile-menu {
             text-transform: none;
             &:hover {
                 color: lighten(#000, 50%);
-                background-color: #fff;
+                background-color: rgba(255, 255, 255, 0);
             }
         }
         float: left;
@@ -135,6 +135,7 @@ nav#mobile-menu {
                     // background-color: #ddd;
                     text-decoration: none;
                     border-bottom: 1px solid #ddd;
+                    // width: 50%;
                 }
             }
             li {
@@ -153,8 +154,7 @@ nav#mobile-menu {
                     // color: contrast(@primary_color);
                     a {
                         text-decoration: none;
-                        // border-bottom: 3px solid #000;
-                        // color: contrast(@primary_color);
+                        // border-bottom: 0px solid #ddd;
                     }
                 }
                 &.sfHover {
@@ -175,7 +175,7 @@ nav#mobile-menu {
             } // li
         } //sf-menu
     } // nav 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 980px) {
         height: @header_height_small;
         padding: 1rem;
         overflow: hidden;
@@ -245,7 +245,7 @@ nav#mobile-menu {
             margin-top: 0;
         }
     }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 980px) {
         .initializePage(@header_height_small;
         0);
         padding: 0;
@@ -610,6 +610,7 @@ nav#mobile-menu {
     }
 } // page-default
 .footer {
+    width: 100%;
     height: 200px;
     font-size: 1rem;
     clear: both;

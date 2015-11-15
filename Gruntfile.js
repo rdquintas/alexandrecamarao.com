@@ -5,6 +5,7 @@ module.exports = function(grunt) {
         "bower_components/superfish/dist/js/hoverIntent.js",
         "bower_components/superfish/dist/js/superfish.min.js",
         'user/themes/zrq/js/jquery.hoverdir.js',
+        'user/themes/zrq/js/supersized.core.3.2.1.min.js',
         'user/themes/zrq/js/magnific-popup.js'
     ];
 

@@ -1,10 +1,35 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}	
-	{% set img = random(page.media.images) %}
+	{# {% set img = random(page.media.images) %} #}
+	{% set img = page.media.images|first %}
+
 	
+	<style type="text/css">
+		#supersized {
+		    position: fixed;
+		    left: 0;
+		    top: 0;
+		    overflow: hidden;
+		    z-index: -999;
+		    height: 100%;
+		    width: 100%;
+		}
+
+		#supersized img {
+		    width: auto;
+		    height: auto;
+		    position: relative;
+		    outline: none;
+		    border: none;
+		}
+	</style>
+
 	<section class="page-home">
-		<img class="hero" src="{{ img.url }}" alt="">
+		<script type="text/javascript">
+		window.home_page_img = "{{ img.url }}";
+		</script>
+		{# <img class="hero" src="{{ img.url }}" alt=""> #}
     	{# <img id="bg" src="{{ img.url }}" alt=""> #}
 
 	{# 	{% if page.header.noticia.mostra_noticia %}
@@ -17,7 +42,7 @@
 			</div>
 	    {% endif %} #}
 	    
-		{{ page.content }}
+		{# {{ page.content }} #}
 	</section>
 	
 {% endblock %}
