@@ -2,6 +2,12 @@
  * Superfish navigation menu
  ************************************/
 $(document).ready(function() {
+
+    var zrq = $('.zrq');
+    if (zrq.length === 0) {
+        return;
+    }
+
     var example = $('nav#original-menu').superfish({
         delay: 0,
         speed: 0,
@@ -25,7 +31,7 @@ $(document).ready(function() {
             }]
         });
     }
-    
+
     // var theWindow = $(window),
     //     $bg = $("img#bg"),
     //     aspectRatio = $bg.width() / $bg.height();
