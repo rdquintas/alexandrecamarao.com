@@ -8,6 +8,8 @@ $(document).ready(function() {
         return;
     }
 
+    $.slidebars();
+
     var example = $('nav#original-menu').superfish({
         delay: 0,
         speed: 0,

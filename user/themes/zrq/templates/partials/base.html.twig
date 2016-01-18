@@ -30,7 +30,7 @@
         {% do assets.addCss('theme://css/app.dist.css',100) %}
     {% endblock %}
     {{ assets.css() }}
-.
+
     {% do assets.addJs('theme://js/modernizr.custom.31616.js', 100) %}
     {{ assets.js() }} 
     <script type="text/javascript">
@@ -58,32 +58,37 @@
         </div>
     </noscript>
     
-    {% block header %}
-    <header class="header">
-            <a class="burger-icon" href="#">
-                <img src="{{ theme_url }}/images/burguer.png">
-            </a>        
-            <div class="logo">
-                {# <img src="{{ theme_url }}/images/camarao.jpg"> #}
-                <a href="/">{{ config.site.title }}</a>
-            </div>
-            <nav id="original-menu" class="navigation-menu">
-                {% include 'partials/navigation.html.twig' with {"withSuperFish": "true"} %}
-            </nav>
-    </header>
-    {% endblock %}
-
-    <nav id="mobile-menu" class="">
-        {% include 'partials/navigation.html.twig' with {"withSuperFish": "false"} %}
-    </nav>
-    <div class="container">
-        {% block body %}
-            {% block content %}{% endblock %}        
-     {#        {% block footer %}
-            {% include 'partials/footer.html.twig' %}
-            {% endblock %} #}
-        {% endblock %}
+    <div id="sb-site">
+      <i class="sb-toggle-left fa fa-bars"></i>
+      {% block header %}
+      <header class="header">
+              <a class="burger-icon" href="#">
+                  <img src="{{ theme_url }}/images/burguer.png">
+              </a>        
+              <div class="logo">
+                  {# <img src="{{ theme_url }}/images/camarao.jpg"> #}
+                  <a href="/">{{ config.site.title }}</a>
+              </div>
+              <nav id="original-menu" class="navigation-menu">
+                  {% include 'partials/navigation.html.twig' with {"withSuperFish": "true"} %}
+              </nav>
+      </header>
+      {% endblock %}
+      <div class="container">
+          {% block body %}
+              {% block content %}{% endblock %}        
+       {#        {% block footer %}
+              {% include 'partials/footer.html.twig' %}
+              {% endblock %} #}
+          {% endblock %}
+      </div>
     </div>
+{#     <nav id="mobile-menu" class="">
+      {% include 'partials/navigation.html.twig' with {"withSuperFish": "false"} %}
+    </nav> #}
+    <section id="nav-menu-mobile" class="sb-slidebar sb-left">
+        <!-- Here will be the mobile nav menu. jQuery will copy menu entries here.  -->
+    </section>
     {% block javascripts %}
         {% do assets.add('jquery', 101) %}
         {% do assets.addJs('theme://js/libs.dist.js', 100) %}

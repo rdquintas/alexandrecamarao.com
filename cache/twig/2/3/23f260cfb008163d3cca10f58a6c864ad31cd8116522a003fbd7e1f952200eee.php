@@ -63,27 +63,28 @@ class __TwigTemplate_23f260cfb008163d3cca10f58a6c864ad31cd8116522a003fbd7e1f9522
         </div>
     </noscript>
     
-    ";
-        // line 61
+    <div id=\"sb-site\">
+      <i class=\"sb-toggle-left fa fa-bars\"></i>
+      ";
+        // line 63
         $this->displayBlock('header', $context, $blocks);
-        // line 75
-        echo "
-    <nav id=\"mobile-menu\" class=\"\">
-        ";
         // line 77
-        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 77)->display(array_merge($context, array("withSuperFish" => "false")));
+        echo "      <div class=\"container\">
+          ";
         // line 78
-        echo "    </nav>
-    <div class=\"container\">
-        ";
-        // line 80
         $this->displayBlock('body', $context, $blocks);
-        // line 86
-        echo "    </div>
+        // line 84
+        echo "      </div>
+    </div>
+";
+        // line 89
+        echo "    <section id=\"nav-menu-mobile\" class=\"sb-slidebar sb-left\">
+        <!-- Here will be the mobile nav menu. jQuery will copy menu entries here.  -->
+    </section>
     ";
-        // line 87
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 92
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 97
         echo "    ";
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "js", array(), "method");
         echo "
@@ -122,7 +123,7 @@ class __TwigTemplate_23f260cfb008163d3cca10f58a6c864ad31cd8116522a003fbd7e1f9522
         echo "    ";
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "css", array(), "method");
         echo "
-.
+
     ";
         // line 34
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/modernizr.custom.31616.js", 1 => 100), "method");
@@ -151,64 +152,64 @@ class __TwigTemplate_23f260cfb008163d3cca10f58a6c864ad31cd8116522a003fbd7e1f9522
         echo "    ";
     }
 
-    // line 61
+    // line 63
     public function block_header($context, array $blocks = array())
     {
-        // line 62
-        echo "    <header class=\"header\">
-            <a class=\"burger-icon\" href=\"#\">
-                <img src=\"";
         // line 64
+        echo "      <header class=\"header\">
+              <a class=\"burger-icon\" href=\"#\">
+                  <img src=\"";
+        // line 66
         echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
         echo "/images/burguer.png\">
-            </a>        
-            <div class=\"logo\">
-                ";
-        // line 68
-        echo "                <a href=\"/\">";
+              </a>        
+              <div class=\"logo\">
+                  ";
+        // line 70
+        echo "                  <a href=\"/\">";
         echo $this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "site", array()), "title", array());
         echo "</a>
-            </div>
-            <nav id=\"original-menu\" class=\"navigation-menu\">
-                ";
-        // line 71
-        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 71)->display(array_merge($context, array("withSuperFish" => "true")));
-        // line 72
-        echo "            </nav>
-    </header>
-    ";
+              </div>
+              <nav id=\"original-menu\" class=\"navigation-menu\">
+                  ";
+        // line 73
+        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 73)->display(array_merge($context, array("withSuperFish" => "true")));
+        // line 74
+        echo "              </nav>
+      </header>
+      ";
     }
 
-    // line 80
+    // line 78
     public function block_body($context, array $blocks = array())
     {
-        // line 81
-        echo "            ";
+        // line 79
+        echo "              ";
         $this->displayBlock('content', $context, $blocks);
         echo "        
-     ";
-        // line 85
-        echo "        ";
+       ";
+        // line 83
+        echo "          ";
     }
 
-    // line 81
+    // line 79
     public function block_content($context, array $blocks = array())
     {
     }
 
-    // line 87
+    // line 92
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 88
+        // line 93
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "jquery", 1 => 101), "method");
-        // line 89
+        // line 94
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/libs.dist.js", 1 => 100), "method");
-        // line 90
+        // line 95
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/app.dist.js"), "method");
-        // line 91
+        // line 96
         echo "    ";
     }
 
@@ -224,6 +225,6 @@ class __TwigTemplate_23f260cfb008163d3cca10f58a6c864ad31cd8116522a003fbd7e1f9522
 
     public function getDebugInfo()
     {
-        return array (  212 => 91,  209 => 90,  206 => 89,  203 => 88,  200 => 87,  195 => 81,  191 => 85,  186 => 81,  183 => 80,  177 => 72,  175 => 71,  168 => 68,  162 => 64,  158 => 62,  155 => 61,  151 => 31,  148 => 30,  145 => 29,  130 => 35,  128 => 34,  122 => 32,  120 => 29,  115 => 27,  112 => 26,  110 => 25,  102 => 24,  99 => 23,  96 => 22,  87 => 92,  85 => 87,  82 => 86,  80 => 80,  76 => 78,  74 => 77,  70 => 75,  68 => 61,  50 => 45,  48 => 22,  25 => 1,);
+        return array (  213 => 96,  210 => 95,  207 => 94,  204 => 93,  201 => 92,  196 => 79,  192 => 83,  187 => 79,  184 => 78,  178 => 74,  176 => 73,  169 => 70,  163 => 66,  159 => 64,  156 => 63,  152 => 31,  149 => 30,  146 => 29,  131 => 35,  129 => 34,  123 => 32,  121 => 29,  116 => 27,  113 => 26,  111 => 25,  103 => 24,  100 => 23,  97 => 22,  88 => 97,  86 => 92,  81 => 89,  77 => 84,  75 => 78,  72 => 77,  70 => 63,  50 => 45,  48 => 22,  25 => 1,);
     }
 }
