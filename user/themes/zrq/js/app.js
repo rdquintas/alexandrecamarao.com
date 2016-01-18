@@ -24,12 +24,12 @@ $(document).ready(function() {
         $('section.footer').css('bottom', '0px');
         $('section.footer').css('height', '0px');
 
-        $.supersized({
-            slides: [{
-                image: window.home_page_img,
-                title: 'Image Credit: Maria Kazvan'
-            }]
-        });
+        // $.supersized({
+        //     slides: [{
+        //         image: window.home_page_img,
+        //         title: 'Image Credit: Maria Kazvan'
+        //     }]
+        // });
     }
 
     // var theWindow = $(window),
