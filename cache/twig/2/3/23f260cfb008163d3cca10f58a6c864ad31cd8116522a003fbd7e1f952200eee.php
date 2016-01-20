@@ -63,28 +63,36 @@ class __TwigTemplate_23f260cfb008163d3cca10f58a6c864ad31cd8116522a003fbd7e1f9522
         </div>
     </noscript>
     
-    <div id=\"sb-site\">
-      <i class=\"sb-toggle-left fa fa-bars\"></i>
       ";
-        // line 63
+        // line 61
         $this->displayBlock('header', $context, $blocks);
-        // line 77
+        // line 76
+        echo "    <div id=\"sb-site\">
+      ";
+        // line 78
         echo "      <div class=\"container\">
           ";
-        // line 78
+        // line 79
         $this->displayBlock('body', $context, $blocks);
-        // line 84
+        // line 85
         echo "      </div>
     </div>
 ";
-        // line 89
+        // line 90
         echo "    <section id=\"nav-menu-mobile\" class=\"sb-slidebar sb-left\">
+      <ul>
+        <li>1111</li>
+        <li>2222</li>
+        <li>3333</li>
+        <li>4444</li>
+        <li>5555</li>
+      </ul>
         <!-- Here will be the mobile nav menu. jQuery will copy menu entries here.  -->
     </section>
     ";
-        // line 92
+        // line 100
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 97
+        // line 105
         echo "    ";
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "js", array(), "method");
         echo "
@@ -146,70 +154,68 @@ class __TwigTemplate_23f260cfb008163d3cca10f58a6c864ad31cd8116522a003fbd7e1f9522
     public function block_stylesheets($context, array $blocks = array())
     {
         // line 30
-        echo "        ";
+        echo "      ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css/app.dist.css", 1 => 100), "method");
         // line 31
         echo "    ";
     }
 
-    // line 63
+    // line 61
     public function block_header($context, array $blocks = array())
     {
-        // line 64
-        echo "      <header class=\"header\">
-              <a class=\"burger-icon\" href=\"#\">
-                  <img src=\"";
+        // line 62
+        echo "      <header class=\"header sb-slide\">
+              <i class=\"burger-icon sb-toggle-left fa fa-bars\"></i>
+             ";
         // line 66
-        echo (isset($context["theme_url"]) ? $context["theme_url"] : null);
-        echo "/images/burguer.png\">
-              </a>        
+        echo "       
               <div class=\"logo\">
                   ";
-        // line 70
+        // line 69
         echo "                  <a href=\"/\">";
         echo $this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "site", array()), "title", array());
         echo "</a>
               </div>
               <nav id=\"original-menu\" class=\"navigation-menu\">
                   ";
+        // line 72
+        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 72)->display(array_merge($context, array("withSuperFish" => "true")));
         // line 73
-        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 73)->display(array_merge($context, array("withSuperFish" => "true")));
-        // line 74
         echo "              </nav>
       </header>
       ";
     }
 
-    // line 78
+    // line 79
     public function block_body($context, array $blocks = array())
     {
-        // line 79
+        // line 80
         echo "              ";
         $this->displayBlock('content', $context, $blocks);
         echo "        
        ";
-        // line 83
+        // line 84
         echo "          ";
     }
 
-    // line 79
+    // line 80
     public function block_content($context, array $blocks = array())
     {
     }
 
-    // line 92
+    // line 100
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 93
+        // line 101
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "jquery", 1 => 101), "method");
-        // line 94
+        // line 102
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/libs.dist.js", 1 => 100), "method");
-        // line 95
+        // line 103
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/app.dist.js"), "method");
-        // line 96
+        // line 104
         echo "    ";
     }
 
@@ -225,6 +231,6 @@ class __TwigTemplate_23f260cfb008163d3cca10f58a6c864ad31cd8116522a003fbd7e1f9522
 
     public function getDebugInfo()
     {
-        return array (  213 => 96,  210 => 95,  207 => 94,  204 => 93,  201 => 92,  196 => 79,  192 => 83,  187 => 79,  184 => 78,  178 => 74,  176 => 73,  169 => 70,  163 => 66,  159 => 64,  156 => 63,  152 => 31,  149 => 30,  146 => 29,  131 => 35,  129 => 34,  123 => 32,  121 => 29,  116 => 27,  113 => 26,  111 => 25,  103 => 24,  100 => 23,  97 => 22,  88 => 97,  86 => 92,  81 => 89,  77 => 84,  75 => 78,  72 => 77,  70 => 63,  50 => 45,  48 => 22,  25 => 1,);
+        return array (  219 => 104,  216 => 103,  213 => 102,  210 => 101,  207 => 100,  202 => 80,  198 => 84,  193 => 80,  190 => 79,  184 => 73,  182 => 72,  175 => 69,  171 => 66,  167 => 62,  164 => 61,  160 => 31,  157 => 30,  154 => 29,  139 => 35,  137 => 34,  131 => 32,  129 => 29,  124 => 27,  121 => 26,  119 => 25,  111 => 24,  108 => 23,  105 => 22,  96 => 105,  94 => 100,  82 => 90,  78 => 85,  76 => 79,  73 => 78,  70 => 76,  68 => 61,  50 => 45,  48 => 22,  25 => 1,);
     }
 }

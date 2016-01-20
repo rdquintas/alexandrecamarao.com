@@ -10,6 +10,8 @@ $(document).ready(function() {
 
     $.slidebars();
 
+
+
     var example = $('nav#original-menu').superfish({
         delay: 0,
         speed: 0,
@@ -22,9 +24,10 @@ $(document).ready(function() {
         $('header.header').css('background-color', 'rgba(255, 255, 255, 0)');
         $('.sf-menu li').css('background-color', 'rgba(255, 255, 255, 0)');
         $('.sf-menu li a').css('background-color', 'rgba(255, 255, 255, 0)');
-        $('section.footer').css('position', 'absolute');
-        $('section.footer').css('bottom', '0px');
-        $('section.footer').css('height', '0px');
+        // $('section.footer').css('position', 'absolute');
+        // $('section.footer').css('bottom', '0px');
+        // $('section.footer').css('height', '0px');
+        $('html').css('overflow-y', 'hidden');
 
         // $.supersized({
         //     slides: [{
@@ -79,15 +82,15 @@ $("#year").change(function(e) {
 });
 
 
-/************************************
- * burger icon click event (mobile only)
- ************************************/
-$(".burger-icon").on("click", function(e) {
-    e.preventDefault();
-    $("nav#mobile-menu").toggleClass("move");
-    $(".container").toggleClass("move");
-    $(window).scrollTop(0);
-});
+// /************************************
+//  * burger icon click event (mobile only)
+//  ************************************/
+// $(".burger-icon").on("click", function(e) {
+//     e.preventDefault();
+//     $("nav#mobile-menu").toggleClass("move");
+//     $(".container").toggleClass("move");
+//     $(window).scrollTop(0);
+// });
 
 
 /************************************

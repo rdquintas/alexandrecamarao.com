@@ -27,7 +27,7 @@
     <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png" />
 
     {% block stylesheets %}
-        {% do assets.addCss('theme://css/app.dist.css',100) %}
+      {% do assets.addCss('theme://css/app.dist.css',100) %}
     {% endblock %}
     {{ assets.css() }}
 
@@ -58,13 +58,12 @@
         </div>
     </noscript>
     
-    <div id="sb-site">
-      <i class="sb-toggle-left fa fa-bars"></i>
       {% block header %}
-      <header class="header">
-              <a class="burger-icon" href="#">
+      <header class="header sb-slide">
+              <i class="burger-icon sb-toggle-left fa fa-bars"></i>
+             {#  <a class="burger-icon" href="#">
                   <img src="{{ theme_url }}/images/burguer.png">
-              </a>        
+              </a>  #}       
               <div class="logo">
                   {# <img src="{{ theme_url }}/images/camarao.jpg"> #}
                   <a href="/">{{ config.site.title }}</a>
@@ -74,6 +73,8 @@
               </nav>
       </header>
       {% endblock %}
+    <div id="sb-site">
+      {# <div class="sb-toggle-left">X</div> #}
       <div class="container">
           {% block body %}
               {% block content %}{% endblock %}        
@@ -87,6 +88,13 @@
       {% include 'partials/navigation.html.twig' with {"withSuperFish": "false"} %}
     </nav> #}
     <section id="nav-menu-mobile" class="sb-slidebar sb-left">
+      <ul>
+        <li>1111</li>
+        <li>2222</li>
+        <li>3333</li>
+        <li>4444</li>
+        <li>5555</li>
+      </ul>
         <!-- Here will be the mobile nav menu. jQuery will copy menu entries here.  -->
     </section>
     {% block javascripts %}
