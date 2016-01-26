@@ -8,11 +8,17 @@ $(document).ready(function() {
         return;
     }
 
+
+    // clone menu for mobile
+    $("#original-menu ul.sf-menu").clone().appendTo("#nav-menu-mobile");
+
+    $("#nav-menu-mobile ul").removeClass("sf-menu");
+
+    // initialize slide menu
     $.slidebars();
 
-
-
-    var example = $('nav#original-menu').superfish({
+    // initialize superfish dropdown menus
+    $('nav#original-menu').superfish({
         delay: 0,
         speed: 0,
         speedOut: 0,
@@ -22,35 +28,12 @@ $(document).ready(function() {
 
     if ($('.page-home').length > 0) {
         $('header.header').css('background-color', 'rgba(255, 255, 255, 0)');
-        $('.sf-menu li').css('background-color', 'rgba(255, 255, 255, 0)');
-        $('.sf-menu li a').css('background-color', 'rgba(255, 255, 255, 0)');
-        // $('section.footer').css('position', 'absolute');
-        // $('section.footer').css('bottom', '0px');
-        // $('section.footer').css('height', '0px');
+        $('#original-menu .sf-menu li').css('background-color', 'rgba(255, 255, 255, 0)');
+        $('#original-menu .sf-menu li a').css('background-color', 'rgba(255, 255, 255, 0)');
         $('html').css('overflow-y', 'hidden');
-
-        // $.supersized({
-        //     slides: [{
-        //         image: window.home_page_img,
-        //         title: 'Image Credit: Maria Kazvan'
-        //     }]
-        // });
     }
 
-    // var theWindow = $(window),
-    //     $bg = $("img#bg"),
-    //     aspectRatio = $bg.width() / $bg.height();
-
-    // function resizeBg() {
-    //     if ((theWindow.width() / theWindow.height()) < aspectRatio) {
-    //         $bg.removeClass().addClass('bgheight');
-    //     } else {
-    //         $bg.removeClass().addClass('bgwidth');
-    //     }
-    // }
-
-    // theWindow.resize(resizeBg).trigger("resize");
-
+    $('#sb-site').css('overflow-y', 'hidden');
 
     // Initializes the lazy-load library
     echo.init({
@@ -80,17 +63,6 @@ $(window).scroll(function() {
 $("#year").change(function(e) {
     window.location.href = "?year=" + $(this).val();
 });
-
-
-// /************************************
-//  * burger icon click event (mobile only)
-//  ************************************/
-// $(".burger-icon").on("click", function(e) {
-//     e.preventDefault();
-//     $("nav#mobile-menu").toggleClass("move");
-//     $(".container").toggleClass("move");
-//     $(window).scrollTop(0);
-// });
 
 
 /************************************

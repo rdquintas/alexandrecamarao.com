@@ -80,19 +80,12 @@ class __TwigTemplate_23f260cfb008163d3cca10f58a6c864ad31cd8116522a003fbd7e1f9522
 ";
         // line 90
         echo "    <section id=\"nav-menu-mobile\" class=\"sb-slidebar sb-left\">
-      <ul>
-        <li>1111</li>
-        <li>2222</li>
-        <li>3333</li>
-        <li>4444</li>
-        <li>5555</li>
-      </ul>
         <!-- Here will be the mobile nav menu. jQuery will copy menu entries here.  -->
     </section>
     ";
-        // line 100
+        // line 93
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 105
+        // line 98
         echo "    ";
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "js", array(), "method");
         echo "
@@ -203,19 +196,19 @@ class __TwigTemplate_23f260cfb008163d3cca10f58a6c864ad31cd8116522a003fbd7e1f9522
     {
     }
 
-    // line 100
+    // line 93
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 101
+        // line 94
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "jquery", 1 => 101), "method");
-        // line 102
+        // line 95
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/libs.dist.js", 1 => 100), "method");
-        // line 103
+        // line 96
         echo "        ";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/app.dist.js"), "method");
-        // line 104
+        // line 97
         echo "    ";
     }
 
@@ -231,6 +224,6 @@ class __TwigTemplate_23f260cfb008163d3cca10f58a6c864ad31cd8116522a003fbd7e1f9522
 
     public function getDebugInfo()
     {
-        return array (  219 => 104,  216 => 103,  213 => 102,  210 => 101,  207 => 100,  202 => 80,  198 => 84,  193 => 80,  190 => 79,  184 => 73,  182 => 72,  175 => 69,  171 => 66,  167 => 62,  164 => 61,  160 => 31,  157 => 30,  154 => 29,  139 => 35,  137 => 34,  131 => 32,  129 => 29,  124 => 27,  121 => 26,  119 => 25,  111 => 24,  108 => 23,  105 => 22,  96 => 105,  94 => 100,  82 => 90,  78 => 85,  76 => 79,  73 => 78,  70 => 76,  68 => 61,  50 => 45,  48 => 22,  25 => 1,);
+        return array (  212 => 97,  209 => 96,  206 => 95,  203 => 94,  200 => 93,  195 => 80,  191 => 84,  186 => 80,  183 => 79,  177 => 73,  175 => 72,  168 => 69,  164 => 66,  160 => 62,  157 => 61,  153 => 31,  150 => 30,  147 => 29,  132 => 35,  130 => 34,  124 => 32,  122 => 29,  117 => 27,  114 => 26,  112 => 25,  104 => 24,  101 => 23,  98 => 22,  89 => 98,  87 => 93,  82 => 90,  78 => 85,  76 => 79,  73 => 78,  70 => 76,  68 => 61,  50 => 45,  48 => 22,  25 => 1,);
     }
 }

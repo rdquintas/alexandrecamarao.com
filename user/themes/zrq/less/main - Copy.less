@@ -10,23 +10,65 @@
         margin-left: 100%;
     }
 } // container
-#nav-menu-mobile {
+nav#mobile-menu {
+    display: none;
+    // font-size: @body_font_size / @scale;
     li {
-        margin-top: 0.5rem;
         list-style-type: none;
-        a {
-            text-decoration: none;
-            color: #fff;
-            &:hover {
-                color: #666;
-            }
-        }
+        margin: 0.1rem;
+        // margin-top: 1rem;
     }
+    @media screen and (max-width: 1200px) {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        top: 55px;
+        margin-left: -100%;
+        width: 100%;
+        // background-color: #ddd;
+        float: left;
+        .menu-animation(margin;
+        200ms;
+        ease-in-out;
+        0s);
+        ul {
+            margin-left: -80px;
+            .menu-animation(margin;
+            500ms;
+            ease-in-out;
+            150ms);
+        }
+        li {
+            margin-left: -40px;
+            .menu-animation(margin;
+            225ms;
+            ease-in-out;
+            150ms);
+        }
+        &.move {
+            margin-left: 0;
+            ul {
+                margin-left: 10px;
+            }
+            li {
+                &:nth-child(n) {
+                    margin-left: 10px;
+                }
+                // &:nth-child(2) {
+                //     margin-left: 10px;
+                // }
+                // &:nth-child(3) {
+                //     margin-left: 10px;
+                // }
+            }
+        } //mobile-menu.move
+    } // media 850px
 } // nav#mobile-menu
 .header {
     .clearfix();
     top: 0;
-    z-index: 10;
+    z-index: 1;
     position: fixed;
     width: 100%;
     height: @header_height;
@@ -37,16 +79,8 @@
     transition: all 0.3s;
     padding: @header_padding;
     background-color: @header_color;
-    // background-color: rgba(255, 255, 255, 0);
+    // border-bottom: 1px solid lighten(@primary_color, 90%);
     .burger-icon {
-        position: absolute;
-        top: 0.5rem;
-        left: 2rem;
-        font-size: 2rem;
-        cursor: pointer;
-        &:hover {
-            color: lighten(#000, 50%);
-        }
         display: none;
     }
     &.smaller {
@@ -147,12 +181,19 @@
         padding: 1rem;
         overflow: hidden;
         .burger-icon {
+            margin-top: -4px;
             display: block;
+            float: left;
+            &:hover {
+                background-color: #fff;
+            }
+            img {
+                width: 1rem * @scale * @scale;
+            }
         }
         .logo {
             width: 70%;
-            margin-left: 30px;
-            margin-top: -3px;
+            margin-top: 0px;
             white-space: nowrap;
             a {
                 margin-left: 2rem;
@@ -214,7 +255,6 @@
         .initializePage(@header_height_small;
         0);
         padding: 0;
-        margin-top: 0;
         .hero {
             width: 100%;
         }
