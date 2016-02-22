@@ -29,13 +29,15 @@
 		{% endfor %}
 	
 		{% set counter = 0 %}	
-		
-		{% for img in page.media.images %}	    
+		{% set imgList =[] %}
+
+		{% for img in page.media.images %}								    
 			{% if img.ano == yearURLparam or yearURLparam == "ALL"%}
 			    {% set counter = counter + 1 %}
 		    {% endif %}
 		{% endfor %} 
 		</div>
+
   		<section class="container">
   			{% if counter == 0 %}
 		    	<h4>No results found for that year</h4>
