@@ -387,6 +387,9 @@
             float: left;
             padding-left: 1rem;
             width: 70%;
+            p.date {
+                margin-top: 0;
+            }
         }
     }
     @media screen and (max-width: 1200px) {
@@ -409,12 +412,10 @@
 .page-exhibitions-item {
     .initializePage(@header_height;
     8rem);
-    .image {
+    img {
         margin-top: 2rem * @scale;
         text-align: center;
-        img {
-            max-width: 75%;
-        }
+        max-width: 100%;
     }
     @media screen and (max-width: 1200px) {
         .initializePage(@header_height_small;

@@ -47,7 +47,7 @@
 			{% for item in collection %}	
 			    {% if item.date|date("Y") == yearURLparam or yearURLparam == "ALL"%}
 				    <div class="exhibition-item">
-				    	{% set img = item.media.images|first.cropZoom(300,300) %}	
+				    	{% set img = item.media.images|first.resize(300) %}	
 				    	<h5 class="title">{{ item.title }}</h5>
 					    {% if img %}
 						    <div class="image">
@@ -60,7 +60,7 @@
 							{% if item.date %}
 					        	<p class="date">{{ item.date|date("d/M/Y") }}</p>
 					        {% endif %}
-					        <p class="summary">{{ item.content|truncate(350) }}</p>
+					        <p class="summary">{{ item.header.resumo }}</p>
 					        <p class="continue"><a href="{{ item.url }}">Continue Reading...</a></p>
 						</div>
 					</div>
