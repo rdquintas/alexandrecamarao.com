@@ -45,7 +45,7 @@
 	            <ul id="da-thumbs" class="da-thumbs">
 				{% for img in page.media.images %}	    
 				    {% if img.ano == yearURLparam or yearURLparam == "ALL"%}
-					<li>
+					<li data-year="{{img.ano}}">
 						<a href="{{ img.url }}" title="{{ img.descricao }}">
 						{# <img src="{{ theme_url }}/images/loading_spinner.gif" alt="" data-echo="{{ img.crop(0,0,300, 300).url }}"> #}
 						<img src="{{ theme_url }}/images/loading_spinner.gif" alt="" data-echo="{{ img.cropResize(600, 600).url }}">
