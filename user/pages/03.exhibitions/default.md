@@ -4,5 +4,3 @@ menu: Exhibitions
 routable: false
 ---
 
-
-
