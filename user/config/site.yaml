@@ -13,7 +13,7 @@ metadata:
 summary:
   size: 300                                 # Maximum length of summary (characters)
 routes:
-  /artwork: '/artwork/drawings'             # ZRQ: This is just to invalidate the "artwork" page. There's nothing there
+  # /artwork: '/artwork/drawings'             # ZRQ: This is just to invalidate the "artwork" page. There's nothing there
   /exhibitions: '/exhibitions/solo'             # ZRQ: This is just to invalidate the "exhibitions" page. There's nothing there  
   # /something/else: '/'         # Alias for /blog/sample-3
   # /another/one/here: '/blog/sample-3'       # Another alias for /blog/sample-3
